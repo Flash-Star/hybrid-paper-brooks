@@ -177,22 +177,25 @@ Carlyn's starter text: (to end starter)
 When a main sequence star runs out of fuel, it dies off to become a dense
 remnant of the MS, known as a white dwarf. Type Ia Supernova are bright
 explosions produced from radioactive Ni-56 determined by the white dwarf
-(WD). Astronomers use the fact that they give off a known amount of light and
-the inverse square law to determine distances of far objects. They were also
-used to find Hubble’s expansion of the universe. 
+(WD). Astronomers use the fact that they give off a known amount of light
+and the inverse square law to determine distances of far objects. They
+were also used to find Hubble’s expansion of the universe.
 
-There has been debate over what triggers a WD explosion. One of the primary
-ideas is the single degenerate process. During this process the white dwarf
-accretes material from a giant companion. Once the white dwarf reaches the
-Chandrasekhar limit, the star is consumed by thermonuclear runaway and
-explodes. 
+ There has been debate over what triggers a WD explosion. One of the
+ primary ideas is the single degenerate process. During this process
+ the white dwarf accretes material from a giant companion. Once the
+ white dwarf reaches the Chandrasekhar limit, the star is consumed
+ by thermonuclear runaway and explodes. Another idea is the double
+ degenerate process: two white dwarfs merge to exceed the Chandrasekhar
+ limit. Hydrogen is not expected to be observed since both stars exhausted
+ their hydrogen long ago.
 
 In our study, we use the single degenerate process to ignite a flame. The
 flame in the core starts out in the deflagration process, sub sonically
-burning C/O/Ne in its path. Once it reaches a certain density, the wave moves
-into the detonation front and sweeps through the rest of the star.  This
-process is the deflagration to detonation process (DDT): when a wave moves
-from being subsonic to supersonic. 
+burning C/O/Ne in its path. Once it reaches a certain density, the
+wave moves into the detonation front and sweeps through the rest of
+the star. This process is the deflagration to detonation process (DDT):
+when a wave moves from being subsonic to supersonic.
 
 (end starter)
 
@@ -232,6 +235,47 @@ Give a read to see!
 
 
 \subsection{The Chandrasekhar-mass Single Degenerate Scenario}
+
+
+Carlyn's starter text: (to end starter)
+
+The fuel starts off cold. The elections in the plasma conduct heat
+and the fuel begins to heat up. Once the fuel reaches a certain
+temperature, the reaction starts. The fuel abundance begins to
+decline because it is consuming fuel. Energy is produced which
+makes the fuel hot. Eventually, all that’s left is ash. As
+surface area grows, conducted energy increases and density
+decreases. At low densities Rayleigh-Taylor instability causes
+the flame to get more tangled and unstable. Eventually, the
+star will get a large enough surface area in this volume that
+the net burning effect is supersonic. Therefore, the transition
+from deflagration to detonation is made.
+
+A deflagration alone will not produce an event of normal
+brightness and expansion velocity. Instead, the initial
+deflagration must transition to a detonation after the star has
+expanded some in order to produce abundances and a stratified
+ejecta in keeping with observations. The physics of this
+“deflagration-to- detonation transition” (DDT) are not
+completely understood, but there has been considerable study
+based on mechanisms involving flame fronts in highly turbulent
+conditions. These models generally reproduce the observations
+under certain assumptions about the ignition, but research has
+shown that the results are very sensitive to the details of the
+ignition. In our simulations, we initialize a detonation once
+the deflagration front reaches a characteristic DDT fuel density,
+which controls the degree of expansion the star undergoes during
+the deflagration stage.
+
+The comparison study of tradition C/O progenitor WDs used the same initial
+conditions for the realizations within the suite. The traditional models
+are simulated with the same code and the same set of perturbations on the
+initial match head (realization). The only difference is the different
+nuclear burning to include the other Ne and the initial profile of the
+1-d model. 
+
+(end starter)
+
 
 Explain the Single Degenerate scenario
 \citep{Baraffe2004Stability-of-Su,WoosWunsKuhl04,wunschwoosley2004,Kuhletal06,nonakaetal2012}.
@@ -292,28 +336,32 @@ words about what was done and cite \citet{willcoxetal2016}.
 \section{Methods}
 \section{Initial Conditions}
 
-We used MESA, a 1-D stellar evolution code, to create the hybrid model.
+We used MESA, a 1-D stellar evolution code, to create the hybrid
+model. We made the hybrid model have the same central temperature
+and density as the classic model.
 
-We found that the most abundant isotopes in the model were C12, O16, Ne20.
-There were a few other isotopes that were added to form Ne22 later. We saw
-that  ...
+We found that the most abundant isotopes in the model were C12, O16,
+Ne20. There were a few other isotopes that were added to form Ne22
+later. We saw that  ….
 
-Plotting the density verses solar radii, we found that the densest part of
-the star is in the center slowly decreasing until it hits 0 at the outer
-edge of the star. 
+Plotting the density verses solar radii, we found that the densest part
+of the star is in the center slowly decreasing until it hits 0 at the
+outer edge of the star.
 
-In order to see where we should ignite the flame, we plotted the temperature
-profile. It was found that the peak temperature is at the center of the
-star, therefore, it was obvious to ignite the flame in the core.
+In order to see where we should ignite the flame, we plotted the
+temperature profile. It was found that the peak temperature is at the
+center of the star, therefore, it was obvious to ignite the flame in
+the core. (PUT IN TEMP PROFILE)
 
 \subsection{Created 2D model from 1-D model}
 
 We mapped our hybrid model to the FLASH grid. In order to convert our 1-D
-MESA model into FLASH, which is a 2-D code, we needed the ratio of neutrons
-to protons in the nuclei to be the same ratio as in the mesa profile. This is
-because the amount of extra neutrons around is important when burning the
-star because that determines how much neutron rich isotopes the burring
-produces.
+MESA model into FLASH, which is a 2-D code, we needed symmetric nuclear
+matter. This means that the ratio of neutrons to protons in the nuclei
+must be the same ratio as in the mesa profile. This is because the amount
+of extra neutrons around is important when burning the star because that
+determines how much neutron rich isotopes the burning produces.
+
 
 \subsection{DDT Process and Suits of Explosions}
 
@@ -330,6 +378,48 @@ Therefore, the transition from deflagration to detonation is made.
 Using the FLASH code from University of Chicago, simulations of
 explosions were preformed. For each simulation we varied the central
 ignition seed. 
+
+----updated text-----
+
+DDT Process:
+The fuel starts off cold. The elections in the plasma conduct heat
+and the fuel begins to heat up. Once the fuel reaches a certain
+temperature, the reaction starts. The fuel abundance begins to
+decline because it is consuming fuel. Energy is produced which
+makes the fuel hot. Eventually, all that’s left is ash. As
+surface area grows, conducted energy increases and density
+decreases. At low densities Rayleigh-Taylor instability causes
+the flame to get more tangled and unstable. Eventually, the
+star will get a large enough surface area in this volume that
+the net burning effect is supersonic. Therefore, the transition
+from deflagration to detonation is made.
+
+A deflagration alone will not produce an event of normal
+brightness and expansion velocity. Instead, the initial
+deflagration must transition to a detonation after the star has
+expanded some in order to produce abundances and a stratified
+ejecta in keeping with observations. The physics of this
+“deflagration-to- detonation transition” (DDT) are not
+completely understood, but there has been considerable study
+based on mechanisms involving flame fronts in highly turbulent
+conditions. These models generally reproduce the observations
+under certain assumptions about the ignition, but research has
+shown that the results are very sensitive to the details of the
+ignition. In our simulations, we initialize a detonation once
+the deflagration front reaches a characteristic DDT fuel density,
+which controls the degree of expansion the star undergoes during
+the deflagration stage.
+
+The comparison study of tradition C/O progenitor WDs used the same initial
+conditions for the realizations within the suite. The traditional models
+are simulated with the same code and the same set of perturbations on the
+initial match head (realization). The only difference is the different
+nuclear burning to include the other Ne and the initial profile of the
+1-d model.
+
+----above updated text-----
+
+
 
 \section{Results}
 
@@ -362,10 +452,18 @@ Estimated Ni56 mass for CO Model
 }
 \end{figure}
 
-The figures show that the final Estimated Ni56 for the CO model is slightly
-larger then the Hybrid model. Therefore, the CO produces more Ni56. The
-Hybrid model has a larger range then the CO model. Also, on average, the CO
-model reaches the DDT phase sooner then the Hybrid model. 
+The figures show that the final Estimated Ni56 for the CO model is
+slightly larger then the Hybrid model. Therefore, the CO produces more
+Ni56. The Hybrid model has a larger range then the CO model. Also, on
+average, the CO model reaches the DDT phase sooner then the Hybrid model.
+
+
+This is a plot of the estimated Ni56 yield vs. mass below 2e7 g/cc at
+the time of the DDT.
+
+The degree of expansion was found using the time at which the first
+detonation point occurred, and the mass at density less then 2e7 g/cc. The
+estimated Ni56 Yield is the final estimated mass of the model.
 
 \begin{figure}
 \includegraphics[width=\columnwidth]{figures/ni56_yield_vs_mass_at_high_dens.png}
@@ -377,7 +475,22 @@ model reaches the DDT phase sooner then the Hybrid model.
 \section{Discussion and Conclusion}
 
 
+The conversion of Ni56 to Iron group elements are more pronounced in my
+case. There are two assumptions as to why figure 6 is more pronounced
+in my paper then in Dons.  First is that higher critical density leads
+to higher electron capture resulting in less Ni56 produced. The second
+is that the central ignition leads to early burning at higher density.
 
+
+As the star burns mass, the surface area grows, resulting in a decrease
+in density. The results show that the models that burned less mass during
+the deflagration phase, expand less, produce more Ni-56. This is because
+the density rich mass the model has at the DDT point is the ‘fuel’
+it needs to produce Ni-56. Therefore, the more mass, the more Ni-56. On
+average, the CO model, shown in figure 4, reaches the DDT faster then
+the hybrid model. Figures 3 and 4 show that the hybrid model has a wider
+range of estimated Ni-56 mass suggesting a greater range of burned mass
+and expansion during the deflagration phase.
 
 
 
