@@ -149,7 +149,7 @@ Recent studies of stellar evolution predict the existence of "hybrid" white
 dwarfs, made of a C/O/Ne
 core within a O/Ne shell, and that these are viable progenitors for supernovae.
 More recent work found that the C/O core is mixed with the surrounding O/Ne
-while the WD cools. Inspired by this scenario, we performed simulations of
+while the white dwarf cools. Inspired by this scenario, we performed simulations of
 thermonuclear supernovae from these hybrid progenitors. The progenitor model 
 was constructed with the one-dimensional stellar evolution code MESA and
 represented a star evolved through the phase of unstable interior mixing 
@@ -157,9 +157,9 @@ followed by accretion until it reached conditions for the ignition of
 carbon burning. The MESA model was then mapped to a two-dimensional initial 
 condition and an explosion simulated with FLASH. For comparison, a similar
 simulation of an explosion was performed from a traditional C/O progenitor
-WD. By comparing the yields of the explosions, we found....
+white dwarf. By comparing the yields of the explosions, we found....
 how explosions from these models differ from explosions from previous models
-without the mixing during the WD cooling.
+without the mixing during the white dwarf cooling.
 \end{abstract}
 
 \keywords{hydrodynamics --- nuclear reactions, nucleosynthesis, abundances
@@ -178,26 +178,60 @@ resulting in the discovery of the acceleration of the expansion of
 the Universe and thus the inference of Dark 
 Energy~\citep{riess.filippenko.ea:observational,
 perlmutter.aldering.ea:measurements,leibundgut2001}. 
+This special property of the light curve is thought to follow
+from the fact that the source of luminosity, the radioactive decay
+of \Ni{56}, synthesized by the thermonuclear burning, is also the
+principle source of opacity~\citep{Pinto2001The-type-Ia-sup}. 
 
-Supernovae are observationally classified 
+Supernovae are classified observationally 
 by their light curves and spectra~~\citet{minkowski41,bertola64,porterfilippenko87,
 wheelerharkness1990conf,Fili97}, with the type Ia designation following from
 the absence of H in the spectrum and the presence of a specific Si 
 line~\citep{filippenko:optical,hillebrandt.niemeyer:type}. These events
 have been associated with C burning under degenerate conditions
 for some time~\citep{hoylefowler60,arnett.truran.ea:nucleosynthesis},
-but discerning the setting of these events is proving difficult
+but discerning the setting(s) of these events is proving difficult
 and remains the subject of active research. At present there are three
-widely-accpeted scenarios, the {\em double detonation} or {\em sub-Chandrasekhar}
-scenario, the {\em white dwarf merger} scenario, and  
-the {\em single degenerate} scenario.
+widely-accpeted scenarios: the {\em single degenerate} scenario,
+the {\em double detonation} or {\em sub-Chandrasekhar} scenario, 
+the {\em white dwarf merger} or {\em double degenerate} scenario.
 
-When a main sequence star runs out of fuel, it dies off to become a dense
-remnant of the MS, known as a white dwarf. Type Ia Supernova are bright
-explosions produced from radioactive Ni-56 determined by the white dwarf
-(WD). Astronomers use the fact that they give off a known amount of light
-and the inverse square law to determine distances of far objects. They
-were also used to find Hubble’s expansion of the universe.
+The single degenerate picture posits a white dwarf gaining mass
+from a main-sequence companion. The process relies on a long
+period of accretion combined with either steady burning or a 
+series of nova explosions to allow the WD to gain
+~0.6 CHECK THIS \Msun needed for it to approach the
+limiting Chandrasekhar mass~\citep{starrfieldetal2012}. As it approaches
+the Chandrasekhar limit, conditions in the compressed core are right
+to ignite the thermonuclear buring that will incinerate the star. Within this
+progenitor setting, the models that best reproduce the observed
+stratified ejecta are those in which the burning begins as a 
+subsonic deflagration, which allows the star to react and expand
+thus lowering the density, that is followed by a 
+detonation~\citep{Nomo84,Khokhlov1991Delayed-detonat,HoefKhok96,GameKhokOran05}.
+We adopt this setting for the explosion simulations we present and 
+describe our approach in detail below. 
+
+
+
+The white dwarf merger progentor picture has two white dwarfs 
+coming together and subsequently exploding~\citep{webbink84,ibentutukov84}.
+
+. This scenario 
+provides an abundance of degenerate fuel, which may explain some 
+The other main class of models is the DD progenitor,
+\citep{webbink84,ibentutukov84}, in which two WDs inspiral and merge.
+This scenario includes inspiraling pairs, collisions, violent mergers,
+and also the ``core-degenerate'' model where the merger takes place in
+a common envelope
+\citep{raskinetal2009,pakmoretal2011,kashi:2011,pakmoretal2012a,Shenetal12}
+Also
+see~\citet{hillebrandt.niemeyer:type,howell2011,hillebrandtetal2013,calderetal2013}
+for additional discussion.
+
+
+
+
 
 There has been debate over what triggers a WD explosion. One of the
 primary ideas is the single degenerate process. During this process
@@ -249,7 +283,7 @@ Here's the other Books paper \citep{brooksetal2016}. Do we need to mention it?
 Give a read to see!
 
 
-\subsection{The Chandrasekhar-mass Single Degenerate Scenario}
+\subsection{The near-Chandrasekhar-mass Single Degenerate Scenario}
 
 
 Carlyn's starter text: (to end starter)
