@@ -208,14 +208,26 @@ series of nova explosions to allow the WD to gain
 ~0.6 CHECK THIS \Msun needed for it to approach the
 limiting Chandrasekhar mass~\citep{starrfieldetal2012}. As it approaches
 the Chandrasekhar limit, conditions in the compressed core are right
-to ignite the thermonuclear buring that will incinerate the star. Within this
-progenitor setting, the models that best reproduce the observed
+to ignite the thermonuclear buring that will incinerate the star. 
+
+Within this progenitor setting, many mechanisms for the explosion have 
+been studied with the result being that the outcome is sensitive to
+the ignition conditions and the nature of the thermonuclear buring.
+Studies indicate that neither a pure deflagration (subsonic flame front)
+nor a pure detonation (supersonic burning front) produce ejecta conisitent
+with observations \citep{arnett69,roepkeetal07}.
+Instead, the models that best reproduce the observed
 stratified ejecta are those in which the burning begins as a 
 subsonic deflagration, which allows the star to react and expand
 thus lowering the density, that is followed by a 
 detonation~\citep{Nomo84,Khokhlov1991Delayed-detonat,HoefKhok96,GameKhokOran05}.
-We adopt this setting for the explosion simulations we present and 
-describe our approach in detail below. 
+The classic delayed detonation model is that of 
+Khokhlov \cite{Khokhlov1991Delayed-detonat,hoflich.khokhlov.ea:delayed,GameKhokOran05},
+and many variations have been 
+explored \cite[and references therein]{hillebrandtetal2013,calderetal2013}.
+The approach we employ for this study is a variation, the deflagration-to-detonation
+transition (DDT).
+
 
 The double detionation picture is a variation of the single degenerate picture.
 In this case, a white dwarf accretes material from a companion, but rather
@@ -267,11 +279,51 @@ and the ``core-degenerate'' model in which the merger takes place in
 a common envelope \citep{raskinetal2009,pakmoretal2011,kashi:2011,pakmoretal2012a,Shenetal12,katzetal2016}.
 
 
+\subsection{The Deflagraiton to Detonation Transition Mechanism Within the Single Degenerate Scenario}
+
+Our models are within the DDT explosion paradigm \cite{1986SvAL,
+Khokhlov1991Delayed-detonat,NiemWoos97,Niem99,belletal2004, fishjump2015}. 
+Thermonuclear burning begins as a deflagration in the core of the WD.
+The flame is unstable, and as the deflagration propagates toward the surface
+of the WD, it is subject to the Rayleigh-Taylor instability that generates
+turbulence and boosts buring.  
+Burning proceeds as a deflagration
 
 
+and we 
+adopt a variation of the latter case, a deflagration-to-detonation transition
+that occurs at the top of a rising plume of hot, burned material when it
+reaches a threshold density.
 
+Because the two extremes of pure deflagrations or pure detonations cannot
+robustly reproduce events with characteristics consistent with the observations,
+researchers have investigated models evoking a combination of the two. These models
+may be broadly described as delayed detonation, and a variety of scenarios have
+been proposed. The classic delayed detonation model was introduced by
+Khokhlov \cite{Khokhlov1991Delayed-detonat,hoflich.khokhlov.ea:delayed,GameKhokOran05},
+and variations include pulsational
+detonations \cite{ivanovaetal1974,Khokhlov1991Delayed-detonat,
+arnettlivne94a, arnettlivne94b, bravogarcia-senz2006},
+gravitationally confined detonation \cite{PlewCaldLamb04,Jordan2008Three-Dimension,
+jordanetal2012}, and deflagration-to-detonation
+transitions (DDTs) \cite{1986SvAL,Khokhlov1991Delayed-detonat,NiemWoos97,Niem99,belletal2004,
+fishjump2015}. We adopt a variation of the latter case, a deflagration-to-detonation transition
+that occurs at the top of a rising plume of hot, burned material when it
+reaches a threshold density.
 
-\subsection{The near-Chandrasekhar-mass Single Degenerate Scenario}
+The physics by which a DDT may occur are not completely understood, but
+ideas have been proposed. One idea is that at low densities the flame
+enters a regime of distributed burning in which it is no longer
+well-defined but the net burning rate is high enough that it is
+effectively supersonic \cite{NiemWoos97}. Similarly, others argue
+that when the flame reaches a certain fractal dimension, it is
+effectively supersonic \cite{woosley90}. The Zel'dovich mechanism
+posits that composition and temperature gradients may ``prepare" the
+fuel in just the right way that it will detonate
+\cite{zeldovichetal1970,KhokOranWhee97,jacketal2014}. Our approach
+is to assume that when the top of a rising, Rayleigh-Taylor unstable
+plume reaches a particular density, conditions are favorable and the
+transition occurs \cite{townsley.calder.ea:flame}.
 
 
 
@@ -377,6 +429,10 @@ of~\citet{brooksetal2017}." Or, we can just cite it~\citep{brooksetal2017}.
 Here's the other Books paper \citep{brooksetal2016}. Do we need to mention it?
 Give a read to see!
 
+
+Recent population synthesis work indicating a substantial contribution
+to the Ia population rate from mergers where one member is a 
+hybrid~\citep{yungelsonkuranov2017}.
 
 \section{Methods}
 
