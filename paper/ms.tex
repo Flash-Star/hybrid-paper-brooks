@@ -205,7 +205,7 @@ The single degenerate picture posits a white dwarf gaining mass
 from a main-sequence companion. The process relies on a long
 period of accretion combined with either steady burning or a 
 series of nova explosions to allow the WD to gain
-~0.6 CHECK THIS \Msun\ needed for it to approach the
+$\sim 0.6$ CHECK THIS \Msun\ needed for it to approach the
 limiting Chandrasekhar mass~\citep{starrfieldetal2012}. As it approaches
 the Chandrasekhar limit, conditions in the compressed core are right
 to ignite the thermonuclear buring that will incinerate the star. 
@@ -285,12 +285,17 @@ a common envelope \citep{raskinetal2009,pakmoretal2011,kashi:2011,pakmoretal2012
 
 Our models are within the DDT explosion paradigm \cite{1986SvAL,
 Khokhlov1991Delayed-detonat,NiemWoos97,Niem99,belletal2004,fishjump2015}. 
-Thermonuclear burning begins as a deflagration in the core of the WD.
-The flame is unstable, and as the deflagration propagates toward the surface
+In this scenario, the accretion of mass on the white dwarf compresses and 
+heats the core, igniting carbon fusion and driving a period of convection
+\citep{WoosWunsKuhl04,wunschwoosley2004,Kuhletal06,nonakaetal2012}.
+At some point, the fusion rate becomes fast enough due to the rising
+temperature that energy production exceeds convective cooling and
+the deflagration phase begins in the core~\citep{Nomo84,WoosWunsKuhl04}.
+This flame is unstable, and as the deflagration propagates toward the surface
 of the WD, it is subject to the Rayleigh-Taylor instability that generates
 turbulence and boosts buring.  
 Burning proceeds as a deflagration for about one second, and then 
-the flame transitions to a detonation. 
+the flame transitions to a detonation~\citep{hoflich.khokhlov.ea:delayed}. 
 
 
 %Maybe add some of below?
@@ -307,7 +312,7 @@ the flame transitions to a detonation.
 The mechanism by which the deflagration transistions to a detonation
 is imcompletely understood, but the development of fluid instabilities
 at the deflagration front, particuarly the Rayleigh-Taylor 
-instability~\cite{}, is an accepted part of the process.
+instability~\cite{taylor+50,chandra+81}, is an accepted part of the process.
 Many ideas have been proposed, including the deflagration front
 entering a regime of distributed burning and the net
 rate becoming supersonic \cite{NiemWoos97}, the unstable
@@ -318,15 +323,6 @@ detonate~\cite{zeldovichetal1970,KhokOranWhee97,jacketal2014}.
 Our simulations assume that the transition occurs when the top of a 
 rising, Rayleigh-Taylor unstable plume reaches a characteristic low
 density \cite{townsley.calder.ea:flame}.
-
-The comparison study of tradition C/O progenitor WDs used the same initial
-conditions for the realizations within the suite. The traditional models
-are simulated with the same code and the same set of perturbations on the
-initial match head (realization). The only difference is the different
-nuclear burning to include the other Ne and the initial profile of the
-1-d model. 
-
-(end starter)
 
 %
 %
@@ -371,10 +367,20 @@ nuclear burning to include the other Ne and the initial profile of the
 
 \subsection{A Recent Advance in Stellar Evolution: Hybrid White Dwarfs}
 
+Modern computing resources now enable simulations with unprecedented 
+realism, allowing both one-dimensional simulations with a vast
+amount of included physics and full three-dimensional simulations
+albeit with less included physics~\cite{caldertownsley2018}.
+In the area of stellar evolution, recent investigations revisiting 
+late-time evolution of ????-mass stars indicate the existance of
+``hybrid" white dwarfs that 
+
 Hybrid models 
 old 
 \citep{denissenkovetal2015}
 \citet{Wangetal2014} and \citet{Mengetal2014} presented binary
+
+see however~\cite{lecoanetetal16}
 
 Recent results from stellar evolution
 The models we are exploding \citep{brooksetal2017}
@@ -386,7 +392,7 @@ Here's the other Books paper \citep{brooksetal2016}. Do we need to mention it?
 Give a read to see!
 
 
-Recent population synthesis work indicating a substantial contribution
+Also, recent population synthesis work indicating a substantial contribution
 to the Ia population rate from mergers where one member is a 
 hybrid~\citep{yungelsonkuranov2017}.
 
@@ -397,6 +403,13 @@ In our simulations, we initialize a detonation once the
 deflagration front reaches a
 characteristic DDT fuel density, which controls the degree of
 expansion the star undergoes during the deflagration stage.
+
+The comparison study of tradition C/O progenitor WDs used the same initial
+conditions for the realizations within the suite. The traditional models
+are simulated with the same code and the same set of perturbations on the
+initial match head (realization). The only difference is the different
+nuclear burning to include the other Ne and the initial profile of the
+1-d model. 
 
 The comparison study of tradition C/O progentor WDs used the same
 initial conditions for the realizations within the suite. Make the
@@ -498,7 +511,7 @@ nuclear burning to include the other Ne and the initial profile of the
 
 \section{Results}
 
-A plot of the estimated Ni56 yield as a function of the final, burned mass
+A plot of the estimated \Ni{56} yield as a function of the final, burned mass
 for all CO and Hybrid runs. The Hybrid model is shown in red, and the CO
 model is shown in blue. As it is shown, the CO model has a higher final mass
 then the Hybrid model. 
@@ -506,7 +519,7 @@ then the Hybrid model.
 \begin{figure}
 \includegraphics[width=\columnwidth]{figures/ni56_yield_cum_dist.png}
 \caption{\label{fig:cumdist}
-A plot of the estimated Ni56 yield as a function of the final, burned mass
+A plot of the estimated \Ni{56} yield as a function of the final, burned mass
 for all CO and Hybrid runs. The Hybrid model is shown in red, and the CO
 model is shown in blue. As it is shown, the CO model has a higher final mass
 then the Hybrid model. 
@@ -516,29 +529,29 @@ then the Hybrid model.
 \begin{figure}
 \includegraphics[width=\columnwidth]{figures/ni56_vs_time_hybrid.png}
 \caption{\label{fig:nithybrid}
-Estimated Ni56 mass for Hybrid Model
+Estimated \Ni{56} mass for Hybrid Model
 }
 \end{figure}
 
 \begin{figure}
 \includegraphics[width=\columnwidth]{figures/ni56_vs_time_CO.png}
 \caption{\label{fig:nitco}
-Estimated Ni56 mass for CO Model
+Estimated \Ni{56} mass for CO Model
 }
 \end{figure}
 
-The figures show that the final Estimated Ni56 for the CO model is
+The figures show that the final Estimated \Ni{56} for the CO model is
 slightly larger then the Hybrid model. Therefore, the CO produces more
-Ni56. The Hybrid model has a larger range then the CO model. Also, on
+\Ni{56}. The Hybrid model has a larger range then the CO model. Also, on
 average, the CO model reaches the DDT phase sooner then the Hybrid model.
 
 
-This is a plot of the estimated Ni56 yield vs. mass below 2e7 g/cc at
+This is a plot of the estimated \Ni{56} yield vs. mass below 2e7 g/cc at
 the time of the DDT.
 
 The degree of expansion was found using the time at which the first
 detonation point occurred, and the mass at density less then 2e7 g/cc. The
-estimated Ni56 Yield is the final estimated mass of the model.
+estimated \Ni{56} Yield is the final estimated mass of the model.
 
 \begin{figure}
 \includegraphics[width=\columnwidth]{figures/ni56_yield_vs_mass_at_high_dens_v2.png}
@@ -550,25 +563,22 @@ estimated Ni56 Yield is the final estimated mass of the model.
 \section{Discussion and Conclusion}
 
 
-The conversion of Ni56 to Iron group elements are more pronounced in my
+The conversion of \Ni{56} to Iron group elements are more pronounced in my
 case. There are two assumptions as to why figure 6 is more pronounced
 in my paper then in Dons.  First is that higher critical density leads
-to higher electron capture resulting in less Ni56 produced. The second
+to higher electron capture resulting in less \Ni{56} produced. The second
 is that the central ignition leads to early burning at higher density.
 
 
 As the star burns mass, the surface area grows, resulting in a decrease
 in density. The results show that the models that burned less mass during
-the deflagration phase, expand less, produce more Ni-56. This is because
+the deflagration phase, expand less, produce more \Ni{56}. This is because
 the density rich mass the model has at the DDT point is the ‘fuel’
-it needs to produce Ni-56. Therefore, the more mass, the more Ni-56. On
+it needs to produce \Ni{56}. Therefore, the more mass, the more Ni-56. On
 average, the CO model, shown in figure 4, reaches the DDT faster then
 the hybrid model. Figures 3 and 4 show that the hybrid model has a wider
-range of estimated Ni-56 mass suggesting a greater range of burned mass
+range of estimated \Ni{56} mass suggesting a greater range of burned mass
 and expansion during the deflagration phase.
-
-
-
 
 This work was supported in part by the Department of Energy under
 grant DE-FG02-87ER40317. The software used in this work was in part
