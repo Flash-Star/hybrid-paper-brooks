@@ -196,7 +196,7 @@ widely-accpeted scenarios: the {\em single degenerate} scenario,
 the {\em double detonation} or {\em sub-Chandrasekhar} scenario, 
 the {\em white dwarf merger} or {\em double degenerate} scenario.
 We briefly describe these in the subsection that follows. `
-Also see~\citet{hillebrandt.niemeyer:type,howell2011,hillebrandtetal2013,calderetal2013}
+Also see~\citet{hillebrandt.niemeyer:type,howell2011,hillebrandtetal2013,calderetal2013,roepkesim2018}
 for additional discussion.
 
 \subsection{Proposed Progenitor Settings}
@@ -396,6 +396,11 @@ Also, recent population synthesis work indicating a substantial contribution
 to the Ia population rate from mergers where one member is a 
 hybrid~\citep{yungelsonkuranov2017}.
 
+
+Explosions from hybrid models \citet{kromeretal2015,bravoetal2016,willcoxetal2016}
+
+
+
 \section{Methods}
 
 Summarize what we do a la:
@@ -424,32 +429,47 @@ words about what was done and cite \citet{willcoxetal2016}.
 
 \subsection{Initial Conditions}
 
-We used MESA, a 1-D stellar evolution code, to create the hybrid
-model. We made the hybrid model have the same central temperature
-and density as the classic model.
+A hybrid white dwarf model constructed with the one-dimensional stellar 
+evolution code MESA~\citep{mesa1,mesa2,mesa3,mesa3e} served as the 
+initial conditions for the simulations of supernova explosions presented
+in this work~\citep{brooksetal2017}.
+The hybrid model was constructed to have conditions as similar a possible
+to a ``classic" C/O model and the two shared the same central temperature
+and density.  Figure~\ref{fig:init_conds} shows the density and temperature
+profiles of the two initial one-dimensional models. 
+\begin{figure}
+\includegraphics[width=\columnwidth]{figures/initial_conds.png}
+\caption{\label{fig:init_conds}
+	We used MESA, a 1-D stellar evolution code, to create the hybrid model. We made the hybrid model have the same central temperature and density as the classic model. 
+ We found that the most abundant isotopes in the model were C12, O16, Ne20. There were a few other isotopes that were added to form Ne22 later. We saw that  ….
+Plotting the density verses solar radii, we found that the densest part of the star is in the center slowly decreasing until it hits 0 at the outer edge of the star. 
+In order to see where we should ignite the flame, we plotted the temperature profile. It was found that the peak temperature is at the center of the star, therefore, it was obvious to ignite the flame in the core. (PUT IN TEMP PROFILE)
+}
+\end{figure}
+In both models, and unlike the hybrid models of~\citet{willcoxetal2016}, the central
+temperature was the highest at the center of the star and accordingly the simulations 
+began with central initions. 
 
-We found that the most abundant isotopes in the model were C12, O16,
-Ne20. There were a few other isotopes that were added to form Ne22
-later. We saw that  ….
 
-Plotting the density verses solar radii, we found that the densest part
-of the star is in the center slowly decreasing until it hits 0 at the
-outer edge of the star.
+\subsection{Created two-dimensional models from one-dimensional models}
 
-In order to see where we should ignite the flame, we plotted the
-temperature profile. It was found that the peak temperature is at the
-center of the star, therefore, it was obvious to ignite the flame in
-the core. (PUT IN TEMP PROFILE)
+The two-dimensional simulations were performed with a modified version
+of the FLASH code developed at the University of Chicago. CITE
+The initial one-dimensional MESA models were mapped to the two-dimensional 
+FLASH grid. MORE HERE.
 
-\subsection{Created 2D model from 1-D model}
-
-We mapped our hybrid model to the FLASH grid. In order to convert our 1-D
+An additional step in constructing the two-dimensional initial conditions
+was aggregating nuclides representing neutron-rich metals. 
+The most abundant isotopes in the model were C12, O16,
+Ne20 CHECK NE@) IS SYMMETRIC, which are symmetric (the number of neutrons 
+equals the number of protons). Similarly to~\citet{willcoxetal2016}, other 
+neutron-rich isotopes in
+the initial model were to form Ne22, which serves as a proxy for metallicty. 
 MESA model into FLASH, which is a 2-D code, we needed symmetric nuclear
 matter. This means that the ratio of neutrons to protons in the nuclei
 must be the same ratio as in the mesa profile. This is because the amount
 of extra neutrons around is important when burning the star because that
 determines how much neutron rich isotopes the burning produces.
-
 
 \subsection{DDT Process and Suits of Explosions}
 
@@ -516,12 +536,19 @@ for all CO and Hybrid runs. The Hybrid model is shown in red, and the CO
 model is shown in blue. As it is shown, the CO model has a higher final mass
 then the Hybrid model. 
 
+The cumulative distribution of the \Ni{56} yield for the C/O and hybrid
+simulations is presented in \ref{fig:cumdist}. 
+The figure presents the estimated \Ni{56} yield as a function of the final burned 
+mass. The results show that the C/O models have a higher burned mass than the
+hybrid models for a given estimated mass of \Ni{56}. CHECK THIS.  
+
+
 \begin{figure}
 \includegraphics[width=\columnwidth]{figures/ni56_yield_cum_dist.png}
 \caption{\label{fig:cumdist}
 A plot of the estimated \Ni{56} yield as a function of the final, burned mass
-for all CO and Hybrid runs. The Hybrid model is shown in red, and the CO
-model is shown in blue. As it is shown, the CO model has a higher final mass
+for all CO and Hybrid runs. The Hybrid models are shown in red, and the CO
+models are shown in blue. As it is shown, the CO model has a higher final mass
 then the Hybrid model. 
 }
 \end{figure}
@@ -529,14 +556,16 @@ then the Hybrid model.
 \begin{figure}
 \includegraphics[width=\columnwidth]{figures/ni56_vs_time_hybrid.png}
 \caption{\label{fig:nithybrid}
-Estimated \Ni{56} mass for Hybrid Model
+Estimated \Ni{56} mass vs.\ time for ten hybrid model explosion simulations. 
+Shown are realizations 21-30. 
 }
 \end{figure}
 
 \begin{figure}
 \includegraphics[width=\columnwidth]{figures/ni56_vs_time_CO.png}
 \caption{\label{fig:nitco}
-Estimated \Ni{56} mass for CO Model
+Estimated \Ni{56} mass vs.\ time for ten C/O model explosion simulations.
+Shown are realizations 21-30. 
 }
 \end{figure}
 
@@ -556,7 +585,40 @@ estimated \Ni{56} Yield is the final estimated mass of the model.
 \begin{figure}
 \includegraphics[width=\columnwidth]{figures/ni56_yield_vs_mass_at_high_dens_v2.png}
 \caption{\label{fig:masshighdens}
-...
+This is a plot of the estimated Ni56 yield vs. mass below 2e7 g/cc at the time of the DDT. 
+The degree of expansion was found using the time at which the first detonation point occurred, and the mass at density less then 2e7 g/cc. The estimated Ni56 Yield is the final estimated mass of the model. 
+Hybrid- Red
+CO- Blue
+For a given amount of mass at high density, the CO produces more Iron group elements then the Hybrid model.  
+The rectangular regions show one stanadard deviation from the average for both the C/O and hybrid 
+models (SEE DON'S PAPER)
+}
+\end{figure}
+
+\begin{figure}
+\includegraphics[width=\columnwidth]{figures/compare.png}
+\caption{\label{fig:compare}
+The conversion of Ni56 to Iron group elements are more pronounced in my case. There are two assumptions as to why figure 6 is more pronounced in my paper then in Dons. 
+First is that higher critical density leads to higher electron capture resulting in less Ni56 produced. Figure 4 shows that CO model has a stronger electron capture then the hybrid model. The second is that the central ignition leads to early burning at higher density. Both of these cases lead to more electron capture resulting in a larger difference in evolution between the models.
+NEW: Production of 56Ni and mass burned to IGEs for CO (red) and
+hybrid CONe (green) WD realizations. SAME AS DON'S FIG 18
+}
+\end{figure}
+
+\begin{figure}
+\includegraphics[width=\columnwidth]{figures/compare_burned_mass.png}
+\caption{\label{fig:compare}
+SAME AS DON'S FIGURE 19.
+C/O blue hybrid red.
+Note that one of the C/O simulations presented did not complete.
+}
+\end{figure}
+
+\begin{figure}
+\includegraphics[width=\columnwidth]{figures/compare_ratio.png}
+\caption{\label{fig:compare_ratio}
+Figure 8 shows the evolution of the materials for both models. It is determined that the CO model had the greatest amount of Ni56, then the other IGE materials, compared to the hybrid model.  
+SAME AS DON'S FIGURE 20.
 }
 \end{figure}
 
