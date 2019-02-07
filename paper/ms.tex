@@ -458,33 +458,107 @@ models may explain Iax events.
 \Ni{56} yield when compared to explosions from traditional C/O progenitors.
 
 
-\section{Methods}
+\section{Methodology}
 
 The methodology of our study follows the approach of \citet{willcoxetal2016}. 
-We per
-Summarize what we do a la:
-In our simulations, we initialize a detonation once the 
-deflagration front reaches a
-characteristic DDT fuel density, which controls the degree of
-expansion the star undergoes during the deflagration stage.
+We performed a suite of two-dimensional simulations of supernova explosions
+from hybrid progenitors and compared the results to a suite of simulations
+of explosions from traditional C/O progenitor models performed with the
+same simulation code and from similar initial conditions. The simulations assumed
+the deflagration to detonation transition explosion paradigm, and the
+transition densities were the same in both suites. We briefly our methodoly
+here, and refer to the reader to previous work for additional details.
+In particular, we use the same simulation instrument, a modified version
+of the Flash Code, as \citet{willcoxetal2016} and we refer the reader there 
+for a description of modifications for C-O-Ne burning and verification tests
+of the burning module.
 
-The comparison study of tradition C/O progenitor WDs used the same initial
-conditions for the realizations within the suite. The traditional models
-are simulated with the same code and the same set of perturbations on the
-initial match head (realization). The only difference is the different
-nuclear burning to include the other Ne and the initial profile of the
-1-d model. 
+\subsection{Simulation Instrument}
 
-The comparison study of tradition C/O progentor WDs used the same
-initial conditions for the realizations within the suite. Make the
-point that the traditional models are simalted with the same code
-and the same set if perturbations on the initial match head (that is
-what we mean by a realization). The only difference is the different
-nuclear buring to include the other Ne and the initial profile of
-the 1-d model.  
+The simulations of supernova explosions presented here were performed
+with a customized version of the Flash code, originally developed
+at the University of Chicago.
+Flash is a parallel, adaptive mesh, multi-physics simulation code
+developed first for nuclear astrophysics applications and subsequently
+for high-energy-density applications~\cite{Fryxetal00,calder.curtis.ea:high-performance,
+calder.fryxell.ea:on,flash_pragmatic,flash_evolution}. 
+Flash has been applied to a variety of astropysical problems by a host
+of researchers, and the version we apply differs from other versions
+principally in the modules describing thermonuclear burning. 
+specifically routines to describe
+thermonuclear burning during both the deflagration and detonation
+phases, as well as routines to describe the evolution of
+the dynamic ash.
 
-For much of the methodology to be described below, just say a few
-words about what was done and cite \citet{willcoxetal2016}.
+The need for a model flame in simulating thermonuclear supernovae
+follows from the scales of the problem. At high densities, the
+width of a laminar nuclear flame is $< 1\ensuremath{\;}{\ensuremath{\mathrm{cm}}}$
+while the radius of the white dwarf 
+$\sim 10^9\ensuremath{\;}{\ensuremath{\mathrm{cm}}}$.
+Even with adaptive mesh refinement, whole-star simulations cannot simultaneousely
+directly simulate the nuclear flame, thus requiring use of a model to
+describe the burning on unresovable scales. For the deflagration phase,
+our burning model propagates an artificially
+broadened flame with an advection-diffusion-reaction (ADR)
+scheme~\cite{Khok95,VladWeirRyzh06} via evolution of
+a reaction progress variable to describe the consumption of C
+and additional variables to describe the evolution of intermediate-mass
+elements into the stastical quasi-equilibruim of the 
+Si-group~\cite{ifk1981,khok1981,khok1983} and then into iron-group elements
+(IGEs) in full nuclear statistical equilibrium (NSE).
+
+The reaction progress variable is $\phi$ and it varies from $\phi=0$ for
+unburned fuel and $\phi=1$ for burned ash. $\phi$ is evolved
+via an advection-diffusion-reaction equation,
+\begin{equation}
+  \label{eq:ard}
+  \partial_t \pv + \vec{u}\cdot\nabla \pv = \kappa \nabla^2 \pv +
+\frac{1}{\tau} R\left(\phi\right) ,
+\end{equation}
+where $\vec{u}$ is the velocity of the fluid, $\kappa$ is the
+diffusion coefficient, $\tau$ is the reaction timescale, and $R(\phi)$ is
+a non-dimensional function describing the reaction. The parameters
+$\kappa$, $\tau$, and $R(\phi)$ are tuned to propagate the reaction
+front at a prescribed speed.  Our model uses the ``sharpened KPP
+ described by~\cite{VladWeirRyzh06}, 
+with $R\propto(\phi-\epsilon)(1-\phi+\epsilon)$, where
+$\epsilon \simeq 10^{-3}$.  This scheme has been shown to be
+acoustically quiet, stable, and to give a unique flame speed
+\cite{townsley.calder.ea:flame}. The input flame speeds come from
+tabulated results obtained by direct numerical simulations of
+thermonuclear burning~\cite{timmes92,Chamulak2007The-Laminar-Fla},
+these are boosted to account for speed-up of burning due to
+unresolved buoyancy and background
+turbulence~\cite{Khok95,gamezo.khokhlov.ea:thermonuclear,townsley.calder.ea:flame,jacketal2014}.
+
+The ADR scheme describes the consumption of C and the subsequent stages
+are described by separate progress variables and
+separate relaxation times derived from full nuclear network calculations
+\cite{Caldetal07,townetal2016}. In both the quasi-equilibrium and full equilibrium, 
+the creation of light elements by photodisintegration balances the creation of heavy 
+elements by fusion, maintaining the equilibrium. The relative balance depends on
+thermodynamic conditions, e.g.\ density and temperature, and hydrodynamic motion
+during the explosion changes the thermodynamic conditions and thus the
+balance. Electron capture also influences the evolution by shifting the binding 
+energy of the material and thereby changing the temperature due to released energy, 
+by changing the Fermi energy and thus the pressure, and by emitting neutrinos that 
+escape and remove energy. Electron captures also neutronize the material, which 
+produces more neutron rich iron-group material at the expense of \Ni. Like the 
+input flame speed, the burning model includes tabulated rates for these effects 
+from detailed NSE calculations ~\cite{SeitTownetal09}. Accordingly, the burning
+model is able to describe dynamic evolution of the ash in addition to the 
+stages of C-O-Ne burning.
+
+The burning model also describes the detonation phase with progress variables.  
+In this case, the model evolves thermally-activated burning with the actual
+temperature-dependent rate for C consumption, which allow a propagating shock to
+trigger burning, i.e.\ to propagate a detonation front. The propagating detonation 
+is able to describe the same stages of C burning as the deflagration case, including 
+the relaxation into NSE~\cite[and references therein]{townetal2016}. Finally,
+we again note that the burning model was adapted for the case of burning in
+hybrid white dwarfs. Direct numerical simulations of burning that guided 
+the modifications, details of the modifications to the burning model, and
+verification tests may be found in \citet{willcoxetal2016}.
 
 \subsection{Initial Conditions}
 
@@ -701,13 +775,22 @@ the hybrid model. Figures 3 and 4 show that the hybrid model has a wider
 range of estimated \Ni{56} mass suggesting a greater range of burned mass
 and expansion during the deflagration phase.
 
-This work was supported in part by the Department of Energy under
-grant DE-FG02-87ER40317. The software used in this work was in part
-developed by the DOE-supported ASC/Alliances Center for Astrophysical
-Thermonuclear Flashes at the University of Chicago. Results in this
+This work was supported in part by the U.S.\ Department of Energy under
+grant DE-FG02-87ER40317 and in part by the U.S.\ National Science Foundation
+via a supplement to grant AST-1211563. 
+Support also came from the Data + Computing = Discovery summer program at
+the Institute for Advanced Computational Science at Stony Brook University.
+The software used in this work was developed in part by the DOE-supported 
+ASC/Alliances Center for Astrophysical Thermonuclear Flashes at the 
+University of Chicago. 
+The source code used for
+these studies is available as a package compatible with the
+current Flash code from \url{http://astronomy.ua.edu/townsley/code.}
+Results in this
 paper were obtained using the high-performance computing system at the
 Institute for Advanced Computational Science at Stony Brook
-University.  other grants...
+University. 
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % SOFTWARE
