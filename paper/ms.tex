@@ -145,21 +145,24 @@ and Alan C.\ Calder\altaffilmark{2,4}
 }
 
 \begin{abstract}
-Recent studies of stellar evolution predict the existence of "hybrid" white 
-dwarfs, made of a C/O/Ne
-core within a O/Ne shell, and that these are viable progenitors for supernovae.
-More recent work found that the C/O core is mixed with the surrounding O/Ne
-while the white dwarf cools. Inspired by this scenario, we performed simulations of
-thermonuclear supernovae from these hybrid progenitors. The progenitor model 
+The existence of "hybrid" white dwarfs, made of a C/O
+core within a O/Ne shell is accepted, and studies indicate that these are 
+viable progenitors for thermonuclear (type Ia) supernovae.
+Recent work found that the C/O core is mixed with the surrounding O/Ne
+while the white dwarf cools. To further investigate the efficacy
+of these white dwarfs as progenitors of thermonuclear supernovae, we performed 
+simulations of thermonuclear supernovae from a new series of hybrid progenitors
+that include the effects of cooling. The progenitor white dwarf model
 was constructed with the one-dimensional stellar evolution code MESA and
 represented a star evolved through the phase of unstable interior mixing 
 followed by accretion until it reached conditions for the ignition of 
-carbon burning. The MESA model was then mapped to a two-dimensional initial 
+carbon burning. This MESA model was then mapped to a two-dimensional initial 
 condition and an explosion simulated with FLASH. For comparison, a similar
 simulation of an explosion was performed from a traditional C/O progenitor
-white dwarf. By comparing the yields of the explosions, we found....
-how explosions from these models differ from explosions from previous models
-without the mixing during the white dwarf cooling.
+white dwarf. By comparing the yields of the explosions, we found that as
+with earlier studies, these hybrid models are viable supernova progenitors.
+We contrast explosions from these models with explosions 
+from previous models {\color{red} without the mixing during the white dwarf cooling.}
 \end{abstract}
 
 \keywords{hydrodynamics --- nuclear reactions, nucleosynthesis, abundances
@@ -171,17 +174,21 @@ without the mixing during the white dwarf cooling.
 Thermonuclear (Type Ia) supernovae (\SNeIa) are bright stellar explosions 
 thought to occur when approximately 1.0 \Msun\ of material composed principally 
 of C and O burns under degenerate conditions. This class of supernovae is
-know to synthesize much of the Fe-group elements found in the galaxy and
-the light curves of these events have a spectial property that allows
-their use as distance indicators for cosmological studies~\citep{phillips:absolute}
-resulting in the discovery of the acceleration of the expansion of
+know to synthesize much of the Fe-group elements found in the galaxy, and
+the light curves of these events have a special property that allows
+standardization of their light curves and thus use
+as distance indicators for cosmological studies~\citep{phillips:absolute}.
+This use resulted in the discovery of the acceleration of the expansion of
 the Universe and thus the inference of Dark 
 Energy~\citep{riess.filippenko.ea:observational,
-perlmutter.aldering.ea:measurements,leibundgut2001}. 
-This special property of the light curve is thought to follow
+perlmutter.aldering.ea:measurements,leibundgut2001}, and these events
+remain the premier distance indicators for cosmological studies {\color{red} REF?}. 
+The special property of the light curve is thought to follow
 from the fact that the source of luminosity, the radioactive decay
 of \Ni{56}, synthesized by the thermonuclear burning, is also the
-principle source of opacity~\citep{Pinto2001The-type-Ia-sup}. 
+principle source of opacity~\citep{Pinto2001The-type-Ia-sup}, giving
+the Phillips relation between the brightness of an event and the
+rate of decline of the B-band magnitude from maximum~\citep{phillips:absolute}. 
 
 Supernovae are classified observationally 
 by their light curves and spectra~\citep{minkowski41,bertola64,porterfilippenko87,
@@ -195,7 +202,7 @@ and remains the subject of active research. At present there are three
 widely-accpeted scenarios: the {\em single degenerate} scenario,
 the {\em double detonation} or {\em sub-Chandrasekhar} scenario, 
 the {\em white dwarf merger} or {\em double degenerate} scenario.
-We briefly describe these in the subsection that follows. `
+We briefly describe these in the subsection that follows.
 Also see~\citet{hillebrandt.niemeyer:type,howell2011,hillebrandtetal2013,calderetal2013,roepkesim2018}
 for additional discussion.
 
@@ -215,21 +222,21 @@ been studied with the result being that the outcome is sensitive to
 the ignition conditions and the nature of the thermonuclear buring.
 Studies indicate that neither a pure deflagration (subsonic flame front)
 nor a pure detonation (supersonic burning front) produce ejecta conisitent
-with observations \citep{arnett69,roepkeetal07}.
-Instead, the models that best reproduce the observed
-stratified ejecta are those in which the burning begins as a 
-subsonic deflagration, which allows the star to react and expand
-thus lowering the density, that is followed by a 
-detonation~\citep{Nomo84,Khokhlov1991Delayed-detonat,HoefKhok96,GameKhokOran05}.
+with observations \citep{arnett69,roepkeetal07}.  Instead, the models 
+that best reproduce the observed stratified ejecta are those in which 
+the burning begins as a subsonic deflagration, which allows the star 
+to react and expand thus lowering the density, and is then followed by a 
+supersonic detonation that incinerates the 
+star~\citep{Nomo84,Khokhlov1991Delayed-detonat,HoefKhok96,GameKhokOran05}.
 The ``classic'' delayed detonation model is that of 
-Khokhlov \cite{Khokhlov1991Delayed-detonat,hoflich.khokhlov.ea:delayed,GameKhokOran05},
+\citet{Khokhlov1991Delayed-detonat} \citep[See also][]{hoflich.khokhlov.ea:delayed,GameKhokOran05},
 and many variations have been 
-explored \cite[and references therein]{hillebrandtetal2013,calderetal2013}.
+explored \citep[and references therein]{hillebrandtetal2013,calderetal2013}.
 The approach we employ for this study is a variation, the 
 deflagration-to-detonation transition (DDT), in which the transition
 occurs at the top of a rising Rayleigh-Taylor unstable plume of hot, burned 
 material when it reaches a threshold density.
-Which we describe this approach and our methodology  in detail below.
+We describe this approach and our methodology in detail below.
 
 The double detionation picture is a variation of the single degenerate picture.
 In this case, a white dwarf accretes material from a companion, but rather
@@ -244,18 +251,16 @@ that this scenario could work for a wide range of white dwarf
 masses, not just the near-Chandrasekhar case \citep{livne90}, hence the
 moniker ``sub-Chandrasekhar'' \citep{ww94}. Multidimensional supported the
 efficacy of this picture~\citep{livneglasner91, livnearnett95,HoefKhok96,
-hoeflichetal96, wigginsfalle97,wigginsetal98,garciasenzbravowoosley99} 
-but indicated that uncertainties 
-like the initial conditions were found to play a significant role.
-on the explosion outcome. 
+hoeflichetal96, wigginsfalle97,wigginsetal98,garciasenzbravowoosley99}. 
+These studies indicated that uncertainties in the initial conditions, 
+however, were found to play a significant role on the explosion outcome. 
 
-A particular problem was that most models 
-included a massive He layer, which leads to 
-the unobserved result intermediate and heavy elements synthesized in 
-the He detonation in the outer parts of the ejecta~\citep{HoefKhok96, 
-hoeflichetal96,finkhillebrandtroepke2007,simetal2010}.
-\citet{bildstenetal2007}, however, found that fairly thin He layers
-could flash on sub-Chandrasekhar
+A particular problem was that most models included a massive He layer on 
+the white dwarf. Such a configuration leads to the unobserved result 
+intermediate and heavy elements synthesized in the He detonation appear in 
+the outer parts of the ejecta, which does not match obesrvation~\citep{HoefKhok96,
+hoeflichetal96,finkhillebrandtroepke2007,simetal2010}.  \citet{bildstenetal2007}, 
+however, found that fairly thin He layers could flash on sub-Chandrasekhar
 mass white dwarfs, partially resolving the issue and encouraging
 further research~\citep{simetal2012,brooksetal2015, shenetal2018,
 glasneretal2018}.
@@ -264,28 +269,28 @@ The white dwarf merger progentor picture has two white dwarfs coming
 together and subsequently exploding~\citep{tutukovyungelson76,tutukovyungelson79,
 webbink84,ibentutukov84}. This scenario provides an abundance of degenerate fuel, 
 which may explain some bright events~\citep{scalzo:2010,Yuan:2010}. 
-An early concern about this model came from studies finding that
-the white dwarf will ignite at the edge and the coalesced object, 
-and a flame will burn inward, converting the C-O white dwarf into 
-an O-Ne-Mg white dwarf~\citep{saionomoto1985,saionomoto2004}, with
-further accretion leading to the collapse of the white dwarf
+An early concern about this model came from studies finding that 
+the as the stars merge, the more massive white dwarf can ignite near
+its edge and a flame will burn inward, converting the C-O white dwarf into 
+an O-Ne-Mg white dwarf~\citep{saionomoto1985,saionomoto2004}.  Further accretion 
+leads to the collapse of the white dwarf
 into a neutron star, a scenario termed ``accretion-induced collapse''
 \citep{nomotokondo1991}.
 
 Subsequent work allayed this concern~\citep{yoonetal2007,lorenaguilaretal2009,
-Shenetal12, pakmoretal2012b} and motivated by the need to expain briht events
+Shenetal12, pakmoretal2012b} and motivated by the need to expain bright events
 and the estimated population WD pairs, active research continues. Contemporary
-research focuses on variations on the merger idea, including 
-inspiraling pairs, collisions, violent mergers,
-and the ``core-degenerate'' model in which the merger takes place in
-a common envelope \citep{raskinetal2009,pakmoretal2011,kashi:2011,pakmoretal2012a,Shenetal12,katzetal2016}.
+research focuses on variations on the merger idea, including inspiraling pairs, 
+collisions, violent mergers, and the ``core-degenerate'' model in which the merger 
+takes place in a common envelope \citep{raskinetal2009,pakmoretal2011,kashi:2011,
+pakmoretal2012a,Shenetal12,katzetal2016}.
 
 
 \subsection{The Deflagraiton to Detonation Transition Mechanism Within the Single Degenerate Scenario}
 
-Our models are within the DDT explosion paradigm \cite{1986SvAL,
+Our single-degenerate models are within the DDT explosion paradigm \cite{1986SvAL,
 Khokhlov1991Delayed-detonat,NiemWoos97,Niem99,belletal2004,fishjump2015}. 
-In this scenario, the accretion of mass on the white dwarf compresses and 
+In this case, the accretion of mass on the white dwarf compresses and 
 heats the core, igniting carbon fusion and driving a period of convection
 \citep{WoosWunsKuhl04,wunschwoosley2004,Kuhletal06,nonakaetal2012}.
 At some point, the fusion rate becomes fast enough due to the rising
@@ -312,17 +317,27 @@ the flame transitions to a detonation~\citep{hoflich.khokhlov.ea:delayed}.
 The mechanism by which the deflagration transistions to a detonation
 is imcompletely understood, but the development of fluid instabilities
 at the deflagration front, particuarly the Rayleigh-Taylor 
-instability~\cite{taylor+50,chandra+81}, is an accepted part of the process.
+instability~\citep{taylor+50,chandra+81}, is an accepted part of the process.
 Many ideas have been proposed, including the deflagration front
 entering a regime of distributed burning and the net
-rate becoming supersonic \cite{NiemWoos97}, the unstable
-flame reaching a certian fractal dimension~\cite{woosley90},
+rate becoming supersonic \citep{NiemWoos97}, the unstable
+flame reaching a certian fractal dimension~\citep{woosley90},
 and the Zel'dovich mechanism in which condtions are right for
 a pocket of fuel to 
-detonate~\cite{zeldovichetal1970,KhokOranWhee97,jacketal2014}.
+detonate~\citep{zeldovichetal1970,KhokOranWhee97,jacketal2014}.
+We note that regardless of
+the mechanism, the amount of expansion of the star prior to the bulk of burning
+is critical to the composition of material synthesized in the explosion. Also,
+early burning during the deflagtation phase is at high enough densites that
+the effects of electron capture are significant and similarly influence the 
+compositon the material synthesised in the explosion~\citep{hoeflichetal2004,
+hoeflich2006,fesenetal2007,diamondetal2018}.
 Our simulations assume that the transition occurs when the top of a 
 rising, Rayleigh-Taylor unstable plume reaches a characteristic low
-density \cite{townsley.calder.ea:flame}.
+density~\citep{townsley.calder.ea:flame}. 
+Variations on the choice of this density allowed earlier studies to explore
+the effects of physics influencing the transition 
+density~\citep{jacketal2010,Krueger2010On-Variations-o,kruegetal12}. 
 
 %
 %
@@ -370,7 +385,7 @@ density \cite{townsley.calder.ea:flame}.
 Modern computing resources now enable simulations with unprecedented 
 realism, allowing both one-dimensional simulations with a vast
 amount of included physics and full three-dimensional simulations
-albeit with less included physics~\cite{caldertownsley2018}.
+albeit with less included physics~\citep{caldertownsley2018}.
 In the area of stellar evolution, recent investigations revisiting 
 late-time evolution of roughly 8 \Msun stars indicate that under
 the right circumstances, ``hybrid" white dwarfs having a C/O core surrounded by O/Ne 
@@ -381,25 +396,26 @@ in the core. The situation is at best uncertain, however, and the
 results depending on assumptions about convective
 overshoot that have been questioned \citep{chenetal2014,lecoanetetal16,lattanzioetal2017}.
 
-Assuming a hybrid WD forms, there is subsequent evolution that will occur. There
-are two ways in which a hybrid WD can become a progenitor of a thermonuclear supernova.
+
+A hybrid WD can become a progenitor of a thermonuclear supernova via two 
+of the progenitor system. 
 First, the hybrid could be part of a binary system in which the companion star becomes
 another white dwarf and the two merge. Recent population synthesis work supports
 this pathway by indicating a substantial contribution to the Ia population rate from 
-mergers where one member is a hybrid~\citep{yungelsonkuranov2017}. The second way
-occurs if the hybrid WD is part of a binary with a main sequence or giant companion
-and gains enough mass to approach the Chandrasekhar mass and ignite C fusion (i.e.
-the single degenerate picture)~\citep{}. 
+mergers where one member is a hybrid~\citep{yungelsonkuranov2017}. Second, if the hybrid 
+WD is part of a binary with a main sequence or giant companion, it can gain mass and 
+approach the Chandrasekhar mass, i.e.\  the single degenerate picture~\citep{willcoxetal2016}. 
+{\color{red} COULD NOT FIND ANY EVIDENCE OF HYBRIDS IN THE SUBCHANDRA PATH. SAY 
+SOMETHING?}
 
-In either case, the hybrid WD will experience a period of cooling, which will
+In either {\color{red}ANY} case, the hybrid WD will experience a period of cooling, which will
 make the core-mantle interface subject to convective 
 instability \citep{brooksetal2017,schwabgaraud2018}. In the case of the 
 hybrid WD accreting and approaching the Chandrasekhar mass, accretion will
 heat the core and start C fusion, leading to a period of ``simmering" prior
-to the explosion \citep{who?}. The upshot is that is likely to be considerable
+to the explosion \citep{PiroBild08}. The upshot is that is likely to be considerable
 mixing after the hybrid forms that may homegenize the compostion 
 \citep{denissenkovetal2015,brooksetal2017,schwabgaraud2018}.
-
 
 Hybrid WDs have more mass than traditional C/O WDs, with some studies indicating the
 mass can approach 1.3 \Msun \citep{chenetal2014}. This increased mass
@@ -442,14 +458,10 @@ models may explain Iax events.
 \Ni{56} yield when compared to explosions from traditional C/O progenitors.
 
 
-If we refer to the work by name, it should appear ``The hybrid models
-of~\citet{brooksetal2017}." Or, we can just cite it~\citep{brooksetal2017}.
-
-
-
-
 \section{Methods}
 
+The methodology of our study follows the approach of \citet{willcoxetal2016}. 
+We per
 Summarize what we do a la:
 In our simulations, we initialize a detonation once the 
 deflagration front reaches a
