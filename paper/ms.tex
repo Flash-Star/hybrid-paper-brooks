@@ -587,55 +587,50 @@ profiles of the two initial one-dimensional models.
 Temperature, density, and  composition profiles of the one-dimensional hybrid 
 progenitor WD. The central temperature and density were the same as
 the tradtional C/O progenitor model. 
- We found that the most abundant isotopes in the model were C12, O16, Ne20. There were a few other isotopes that were added to form Ne22 later. We saw that  ….
-Plotting the density verses solar radii, we found that the densest part of the star is in the center slowly decreasing until it hits 0 at the outer edge of the star. 
-In order to see where we should ignite the flame, we plotted the temperature profile. It was found that the peak temperature is at the center of the star, therefore, it was obvious to ignite the flame in the core. (PUT IN TEMP PROFILE)
+The peak temperature of the hybrid model is at the center of the star, 
+so both the hybrid and traditional models could share the same 
+	central ignition initial conditions.
 }
 \end{figure}
 In both models, and unlike the hybrid models of~\citet{willcoxetal2016}, the central
 temperature was the highest at the center of the star and accordingly the simulations 
-began with central initions. 
+began with central ignitions. 
 
 
 \subsection{Ttwo-dimensional Models from One-dimensional Models}
 
 The initial progenitor models for the two-dimensional simulations were
-created from the one-dimensional \MESA models by mapping the one-dimensional
+created from the one-dimensional \MESA\ models by mapping the one-dimensional
 models onto the two-dimensional domain while 
 preserving hydrostatic equilibrium.
 As described above, the flame capturing scheme with progress
-variables describing the evolution as the material burns. The \MESA
+variables describing the evolution as the material burns. The \MESA\
 models, however, relied on a detailed reaction network that included
 many species. Accordingly, the process of creating the two-dimensional
-models for \FLASH required aggregating some of the species abundances.
+models for \FLASH\ required aggregating some of the species abundances.
 As with much of this study, we applied the 
 techniques of ~\citet{willcoxetal2016}.
 
 
-The process of mapping the \MESA models began by converting 
-the \MESA\ model to a uniform grid of $4$~km resolution. \MESA 
+The process of mapping the \MESA\ models began by converting 
+the \MESA\ model to a uniform grid of $4$~km resolution. \MESA\ 
 quantities in zones with spacing less than $4$~km 
 were mass-weighted averaged and a quadratic interpolation
-was used to calculate quantities for the case of \MESA zones having
+was used to calculate quantities for the case of \MESA\ zones having
 a spacing greater than $4$~km. At this point, 
-abundances of nuclides from the \MESA models were aggregated
-into abundances of 
+abundances of nuclides from the \MESA\ models were aggregated
+into the abundances tracked by the flame capturing scheme in
+\FLASH.
+The most abundant isotopes in the model were \C{12}, \Ox{16},
+and \Ne{20}, which are symmetric (the number of neutrons 
+equals the number of protons). Similarly to~\citet{willcoxetal2016}, 
+other neutron-rich isotopes in the initial model were combined into 
+\Ne{22}, which serves as a proxy for metallicty. The aggregation
+account for the $Y_e$ of the full set of nuclides, \Ne{20} 
+and \Ox{16} were constrained to be in the same ratio $R$ in both 
+sets of abundances. 
 
 
-representing neutron-rich metals were aggregated into
-
-a variable representing 
-
-
-
-
-An additional step in constructing the two-dimensional initial conditions
-was aggregating nuclides representing neutron-rich metals. 
-The most abundant isotopes in the model were C12, O16,
-Ne20 CHECK NE@) IS SYMMETRIC, which are symmetric (the number of neutrons 
-equals the number of protons). Similarly to~\citet{willcoxetal2016}, other 
-neutron-rich isotopes in
-the initial model were to form Ne22, which serves as a proxy for metallicty. 
 MESA model into FLASH, which is a 2-D code, we needed symmetric nuclear
 matter. This means that the ratio of neutrons to protons in the nuclei
 must be the same ratio as in the mesa profile. This is because the amount
