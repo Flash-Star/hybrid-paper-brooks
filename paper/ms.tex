@@ -484,22 +484,26 @@ for high-energy-density applications~\cite{Fryxetal00,calder.curtis.ea:high-perf
 calder.fryxell.ea:on,flash_pragmatic,flash_evolution}. 
 Flash has been applied to a variety of astropysical problems by a host
 of researchers, and the version we apply differs from other versions
-principally in the modules describing thermonuclear burning. 
-specifically routines to describe
-thermonuclear burning during both the deflagration and detonation
-phases, as well as routines to describe the evolution of
-the dynamic ash.
+principally in the modules describing thermonuclear burning via a 
+flame capturing model. 
 
-The need for a model flame in simulating thermonuclear supernovae
-follows from the scales of the problem. At high densities, the
-width of a laminar nuclear flame is $< 1\ensuremath{\;}{\ensuremath{\mathrm{cm}}}$
-while the radius of the white dwarf 
-$\sim 10^9\ensuremath{\;}{\ensuremath{\mathrm{cm}}}$.
-Even with adaptive mesh refinement, whole-star simulations cannot simultaneousely
-directly simulate the nuclear flame, thus requiring use of a model to
-describe the burning on unresovable scales. For the deflagration phase,
-our burning model propagates an artificially
-broadened flame with an advection-diffusion-reaction (ADR)
+The need for a model flame in simulating thermonuclear supernovae follows 
+from the scales of the problem. At high densities, the width of a laminar 
+nuclear flame is $< 1\ensuremath{\;}{\ensuremath{\mathrm{cm}}}$ while the 
+radius of the white dwarf $\sim 10^9\ensuremath{\;}{\ensuremath{\mathrm{cm}}}$.
+Even with adaptive mesh refinement, whole-star simulations cannot 
+simultaneousely resolve the nuclear flame, so simulations require a model to 
+describe the burning on unresovable scales.  The model we apply is a flame 
+capturing scheme and thermally-activated burning module to describe
+thermonuclear burning during both the deflagration and detonation phases, 
+as well as routines to describe the evolution of the dynamic ash. 
+This description of the burning was developed during the course of research in 
+thermonuclear supernovae and has been presented in a series of 
+papers \citep[See][and references therein]{chandlery}. For completeness, 
+we briefly review the flame capturing scheme here.
+
+For the deflagration phase, the flame capturing scheme propagates an 
+artificially broadened flame with an advection-diffusion-reaction (ADR)
 scheme~\cite{Khok95,VladWeirRyzh06} via evolution of
 a reaction progress variable to describe the consumption of C
 and additional variables to describe the evolution of intermediate-mass
@@ -527,9 +531,9 @@ acoustically quiet, stable, and to give a unique flame speed
 \cite{townsley.calder.ea:flame}. The input flame speeds come from
 tabulated results obtained by direct numerical simulations of
 thermonuclear burning~\cite{timmes92,Chamulak2007The-Laminar-Fla},
-these are boosted to account for speed-up of burning due to
-unresolved buoyancy and background
-turbulence~\cite{Khok95,gamezo.khokhlov.ea:thermonuclear,townsley.calder.ea:flame,jacketal2014}.
+these are boosted to account for speed-up of burning due to unresolved 
+buoyancy and background turbulence~\cite{Khok95,
+gamezo.khokhlov.ea:thermonuclear,townsley.calder.ea:flame,jacketal2014}.
 
 The ADR scheme describes the consumption of C and the subsequent stages
 are described by separate progress variables and
