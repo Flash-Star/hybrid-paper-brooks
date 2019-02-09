@@ -149,10 +149,12 @@ The existence of "hybrid" white dwarfs, made of a C/O
 core within a O/Ne shell is accepted, and studies indicate that these are 
 viable progenitors for thermonuclear (type Ia) supernovae.
 Recent work found that the C/O core is mixed with the surrounding O/Ne
-while the white dwarf cools. To further investigate the efficacy
-of these white dwarfs as progenitors of thermonuclear supernovae, we performed 
-simulations of thermonuclear supernovae from a new series of hybrid progenitors
-that include the effects of cooling. The progenitor white dwarf model
+as the white dwarf cools prior to accretion, which results in lower central 
+C fractions in the massive progenitor than previously assumed. To further 
+investigate the efficacy of hybrid white dwarfs as progenitors of 
+thermonuclear supernovae, we performed simulations of thermonuclear 
+supernovae from a new series of hybrid progenitors that include the 
+effects of cooling. The progenitor white dwarf model
 was constructed with the one-dimensional stellar evolution code MESA and
 represented a star evolved through the phase of unstable interior mixing 
 followed by accretion until it reached conditions for the ignition of 
@@ -162,7 +164,9 @@ simulation of an explosion was performed from a traditional C/O progenitor
 white dwarf. By comparing the yields of the explosions, we found that as
 with earlier studies, these hybrid models are viable supernova progenitors.
 We contrast explosions from these models with explosions 
-from previous models {\color{red} without the mixing during the white dwarf cooling.}
+from previous hybrid models 
+{\color{red} without the mixing during the white dwarf cooling}
+and traditional C/O progenitors.
 \end{abstract}
 
 \keywords{hydrodynamics --- nuclear reactions, nucleosynthesis, abundances
@@ -286,7 +290,8 @@ takes place in a common envelope \citep{raskinetal2009,pakmoretal2011,kashi:2011
 pakmoretal2012a,Shenetal12,katzetal2016}.
 
 
-\subsection{The Deflagraiton to Detonation Transition Mechanism Within the Single Degenerate Scenario}
+\subsection{The Deflagraiton to Detonation Transition Mechanism Within 
+the Single Degenerate Scenario}
 
 Our single-degenerate models are within the DDT explosion paradigm \cite{1986SvAL,
 Khokhlov1991Delayed-detonat,NiemWoos97,Niem99,belletal2004,fishjump2015}. 
@@ -476,7 +481,7 @@ of the burning module.
 \subsection{Simulation Instrument}
 
 The simulations of supernova explosions presented here were performed
-with a customized version of the Flash code, originally developed
+with a customized version of the \FLASH code, originally developed
 at the University of Chicago.
 Flash is a parallel, adaptive mesh, multi-physics simulation code
 developed first for nuclear astrophysics applications and subsequently
@@ -564,12 +569,14 @@ hybrid white dwarfs. Direct numerical simulations of burning that guided
 the modifications, details of the modifications to the burning model, and
 verification tests may be found in \citet{willcoxetal2016}.
 
-\subsection{Initial Conditions}
+\subsection{One-dimensional Hybrid Model}
 
-A hybrid white dwarf model constructed with the one-dimensional stellar 
-evolution code MESA~\citep{mesa1,mesa2,mesa3,mesa3e} served as the 
-initial conditions for the simulations of supernova explosions presented
-in this work~\citep{brooksetal2017}.
+The hybrid white dwarf model that served as the initial conditions 
+for the simulations of supernova explosions presented in this work
+was constructed with the one-dimensional stellar evolution code 
+MESA~\citep{mesa1,mesa2,mesa3,mesa3e}. The evolution of the model 
+included thermohalene mixing during the cooling phase and thus
+had a lower C fraction than previous hybrid models~\citep{brooksetal2017}.
 The hybrid model was constructed to have conditions as similar a possible
 to a ``classic" C/O model and the two shared the same central temperature
 and density.  Figure~\ref{fig:init_conds} shows the density and temperature
@@ -577,7 +584,9 @@ profiles of the two initial one-dimensional models.
 \begin{figure}
 \includegraphics[width=\columnwidth]{figures/initial_conds.png}
 \caption{\label{fig:init_conds}
-	We used MESA, a 1-D stellar evolution code, to create the hybrid model. We made the hybrid model have the same central temperature and density as the classic model. 
+Temperature, density, and  composition profiles of the one-dimensional hybrid 
+progenitor WD. The central temperature and density were the same as
+the tradtional C/O progenitor model. 
  We found that the most abundant isotopes in the model were C12, O16, Ne20. There were a few other isotopes that were added to form Ne22 later. We saw that  ….
 Plotting the density verses solar radii, we found that the densest part of the star is in the center slowly decreasing until it hits 0 at the outer edge of the star. 
 In order to see where we should ignite the flame, we plotted the temperature profile. It was found that the peak temperature is at the center of the star, therefore, it was obvious to ignite the flame in the core. (PUT IN TEMP PROFILE)
@@ -588,12 +597,37 @@ temperature was the highest at the center of the star and accordingly the simula
 began with central initions. 
 
 
-\subsection{Created two-dimensional models from one-dimensional models}
+\subsection{Ttwo-dimensional Models from One-dimensional Models}
 
-The two-dimensional simulations were performed with a modified version
-of the FLASH code developed at the University of Chicago. CITE
-The initial one-dimensional MESA models were mapped to the two-dimensional 
-FLASH grid. MORE HERE.
+The initial progenitor models for the two-dimensional simulations were
+created from the one-dimensional \MESA models by mapping the one-dimensional
+models onto the two-dimensional domain while 
+preserving hydrostatic equilibrium.
+As described above, the flame capturing scheme with progress
+variables describing the evolution as the material burns. The \MESA
+models, however, relied on a detailed reaction network that included
+many species. Accordingly, the process of creating the two-dimensional
+models for \FLASH required aggregating some of the species abundances.
+As with much of this study, we applied the 
+techniques of ~\citet{willcoxetal2016}.
+
+
+The process of mapping the \MESA models began by converting 
+the \MESA\ model to a uniform grid of $4$~km resolution. \MESA 
+quantities in zones with spacing less than $4$~km 
+were mass-weighted averaged and a quadratic interpolation
+was used to calculate quantities for the case of \MESA zones having
+a spacing greater than $4$~km. At this point, 
+abundances of nuclides from the \MESA models were aggregated
+into abundances of 
+
+
+representing neutron-rich metals were aggregated into
+
+a variable representing 
+
+
+
 
 An additional step in constructing the two-dimensional initial conditions
 was aggregating nuclides representing neutron-rich metals. 
