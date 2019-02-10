@@ -627,15 +627,26 @@ equals the number of protons). Similarly to~\citet{willcoxetal2016},
 other neutron-rich isotopes in the initial model were combined into 
 \Ne{22}, which serves as a proxy for metallicty. The aggregation
 account for the $Y_e$ of the full set of nuclides, \Ne{20} 
-and \Ox{16} were constrained to be in the same ratio $R$ in both 
+and \Ox{16} were constrained to be in the same ratio in both 
 sets of abundances. 
 
-
-MESA model into FLASH, which is a 2-D code, we needed symmetric nuclear
-matter. This means that the ratio of neutrons to protons in the nuclei
-must be the same ratio as in the mesa profile. This is because the amount
-of extra neutrons around is important when burning the star because that
-determines how much neutron rich isotopes the burning produces.
+The original \MESA\ model was in equilibrium, but to ensure
+the uniformly gridded model was in hydrostatic equilibrium we 
+constructed the appropriate pressure profile. This was done by
+integrating for the pressure in each zone from the central point up, 
+accounting for the local acceleration of gravity, temperature,
+composition, and the mass below and enclosed by the zone. As
+with \citet{willcoxetal2016} we used
+EOS routine from 
+\CASTRO\ ~\citep{timmes.swesty:accuracy,castro1}.\footnote{The 
+Helmholtz EOS table used in \CASTRO\ is in the public BoxLib 
+Microphysics repository at
+  \url{https://github.com/BoxLib-Codes/Microphysics.git} (commit 
+  hash $\mathrm{45ed859b6c1dc80d831d93f9728986d6ad6e1ddc}$).} As 
+ with the models in \citet{willcoxetal2016},this procedure produced 
+ a structure that was stable in \FLASH, with fluctuations in central
+density less than $3\%$, for at least $5$ seconds with no energy
+deposition.
 
 \subsection{DDT Process and Suits of Explosions}
 
