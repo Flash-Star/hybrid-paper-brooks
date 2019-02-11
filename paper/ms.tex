@@ -238,7 +238,8 @@ and many variations have been
 explored \citep[and references therein]{hillebrandtetal2013,calderetal2013}.
 The approach we employ for this study is a variation, the 
 deflagration-to-detonation transition (DDT), in which the transition
-occurs at the top of a rising Rayleigh-Taylor unstable plume of hot, burned 
+occurs at the top of a rising Rayleigh-Taylor~\citep{taylor+50,chandra+81} 
+unstable plume of hot, burned 
 material when it reaches a threshold density.
 We describe this approach and our methodology in detail below.
 
@@ -322,7 +323,7 @@ the flame transitions to a detonation~\citep{hoflich.khokhlov.ea:delayed}.
 The mechanism by which the deflagration transistions to a detonation
 is imcompletely understood, but the development of fluid instabilities
 at the deflagration front, particuarly the Rayleigh-Taylor 
-instability~\citep{taylor+50,chandra+81}, is an accepted part of the process.
+instability, is an accepted part of the process.
 Many ideas have been proposed, including the deflagration front
 entering a regime of distributed burning and the net
 rate becoming supersonic \citep{NiemWoos97}, the unstable
@@ -432,7 +433,7 @@ these progenitors.
 
 From population synthesis, \citet{mengpods2014} found that these
 %meng received may 5 accepted may 16
-progenitors may substantially contribue to the population of SNeIa (1-8\%) and have
+progenitors may substantially contribue to the population of \SNeIa (1-8\%) and have
 relatively short delay times. They also suggested that these 
 may produce part of the Iax class of events. \citet{Wangetal2014} also with population
 synthesis studied the case
@@ -536,9 +537,25 @@ acoustically quiet, stable, and to give a unique flame speed
 \cite{townsley.calder.ea:flame}. The input flame speeds come from
 tabulated results obtained by direct numerical simulations of
 thermonuclear burning~\cite{timmes92,Chamulak2007The-Laminar-Fla},
+and 
 these are boosted to account for speed-up of burning due to unresolved 
 buoyancy and background turbulence~\cite{Khok95,
 gamezo.khokhlov.ea:thermonuclear,townsley.calder.ea:flame,jacketal2014}.
+
+The two-dimensional models in this study do not utilize a subgrid-scale
+model for the turbulence-flame 
+interaction~\citep[See][for examples]{Schmetal06a,Schmetal06b,jacketal2014},
+The models only apply in three-dimensional
+simulations beacuse two-dimensional hydrodynamics cannot
+correctly describe turbulence. The simulations we present
+use the mimimal enhancement based on the Rayleigh-Taylor
+strength introduced by~\citet{townsley.calder.ea:flame}. The
+assumption here is that the burning self-regulate on resolved 
+scales so that results are insensitive to the detailed treatment 
+of the interaction with turbulence, and previous experience
+indicates this assumption is reasonable for comparisons
+like the one presented in this work~\citet{townsley.calder.ea:flame,
+willcoxetal2016}. 
 
 The ADR scheme describes the consumption of C and the subsequent stages
 are described by separate progress variables and
@@ -597,7 +614,7 @@ temperature was the highest at the center of the star and accordingly the simula
 began with central ignitions. 
 
 
-\subsection{Ttwo-dimensional Models from One-dimensional Models}
+\subsection{Two-dimensional Initial Conditions From One-dimensional Models}
 
 The initial progenitor models for the two-dimensional simulations were
 created from the one-dimensional \MESA\ models by mapping the one-dimensional
@@ -609,7 +626,7 @@ models, however, relied on a detailed reaction network that included
 many species. Accordingly, the process of creating the two-dimensional
 models for \FLASH\ required aggregating some of the species abundances.
 As with much of this study, we applied the 
-techniques of ~\citet{willcoxetal2016}.
+techniques of~\citet{willcoxetal2016}.
 
 
 The process of mapping the \MESA\ models began by converting 
@@ -628,7 +645,8 @@ other neutron-rich isotopes in the initial model were combined into
 \Ne{22}, which serves as a proxy for metallicty. The aggregation
 account for the $Y_e$ of the full set of nuclides, \Ne{20} 
 and \Ox{16} were constrained to be in the same ratio in both 
-sets of abundances. 
+sets of abundances. \figref{fig:init_conds} shows the initial
+profile of the one-dimensional models.
 
 The original \MESA\ model was in equilibrium, but to ensure
 the uniformly gridded model was in hydrostatic equilibrium we 
@@ -650,60 +668,85 @@ deposition.
 
 \subsection{DDT Process and Suits of Explosions}
 
-The fuel starts off cold. The elections in the plasma conduct heat and the
-fuel begins to heat up. Once the fuel reaches a certain temperature, the
-reaction starts. The fuel abundance begins to decline because it is consuming
-fuel. Energy is produced which makes the fuel hot. Eventually, all that’s
-left is ash. As surface area grows, conducted energy increases and density
-decreases. At low densities Rayleigh-Taylor instability causes the flame to
-get more tangled and unstable. Eventually, the star will get a large enough
-surface area in this volume that the net burning effect is supersonic.
-Therefore, the transition from deflagration to detonation is made. 
+The simulations performed for this study consisted to a suite of
+{\color{red} 35 CHECK THIS! 40?} two-dimensional simulations of 
+thermonuclear supernova
+explosions from hybrid C-O-Ne progenitors in the DDT explosion paradigm. These 
+were compared to a suite of supernova simulations from traditional
+C-O progenitors. In both suites, the simulation
+begins with a progenitor model mapped to the two-dimensional 
+\FLASH\ grid. The burning is initiated with a ``matchhead,'' a region 
+in the white dwarf's center that is fully burned to nuclear statistical
+equilibrium (NSE). 
+This initially burned regeion ignites a deflagration, a subsonic
+flame, and because the mathhead was perturbed it is unstable to
+the Rayleigh-Taylor instability with the result that buoyant plumes 
+rise. The star is partially consumed during this deflagration phase,
+and the star responds by expanding.
+When a plume reaches a specified density,
+a detonation is initiated, and the simulation continues until 
+the expanding star reaches low densities at which point burning
+effectively ends. The paragraphs in this section provide details
+of the implementation of this method.
 
-Using the FLASH code from University of Chicago, simulations of
-explosions were preformed. For each simulation we varied the central
-ignition seed. 
 
-----updated text-----
+{\color{red} ARE THE BELOW NUMBERS CORRECT?}
+The C-O and C-O-Ne models have the same central density
+and temperature $7 \times 10^8$~K, respectively.
+The C-O model had core composition of (\C{12} = 0.4, 
+\Ne{20} = 0.03, \Ox{16} = 0.57) and envelope composition 
+of (\C{12} = 0.5, \Ne{20} = 0.02, \Ox{16} = 0.48). 
+The C-O-Ne model had core composition of (\C{12} = 0.X, 
+\Ne{20} = 0.XX, \Ox{16} = 0.XX) and envelope composition 
+of (\C{12} = 0.XX, \Ne{20} = 0.0X, \Ox{16} = 0.XX). 
+\figref{fig:co_vs_cone_temp} show the density and temperature 
+profiles of the C-O and C-O-Ne hybrid WD.
 
-DDT Process:
-The fuel starts off cold. The elections in the plasma conduct heat
-and the fuel begins to heat up. Once the fuel reaches a certain
-temperature, the reaction starts. The fuel abundance begins to
-decline because it is consuming fuel. Energy is produced which
-makes the fuel hot. Eventually, all that’s left is ash. As
-surface area grows, conducted energy increases and density
-decreases. At low densities Rayleigh-Taylor instability causes
-the flame to get more tangled and unstable. Eventually, the
-star will get a large enough surface area in this volume that
-the net burning effect is supersonic. Therefore, the transition
-from deflagration to detonation is made.
+The simulations were performed in two-dimensional $\mathrm{z-r}$
+cylindrical coordinates, extending radially from 0 to
+$65,536$~\km\ and along the axis of symmetry from $-65,536$~\km\ to
+$65,536$~\km. The maximimum refinement level of the adaptive mesh 
+corresponded to $4$~\km\ resolution, which previous study has shown is
+is a good balance between efficiency and 
+accuracy~\citep{townsley.calder.ea:flame,townetal2009}.
+This resolution and geometry was used in previous studies
+allowing direct comparison to previous results~\citep{kruegetal12}.
 
-A deflagration alone will not produce an event of normal
-brightness and expansion velocity. Instead, the initial
-deflagration must transition to a detonation after the star has
-expanded some in order to produce abundances and a stratified
-ejecta in keeping with observations. The physics of this
-“deflagration-to- detonation transition” (DDT) are not
-completely understood, but there has been considerable study
-based on mechanisms involving flame fronts in highly turbulent
-conditions. These models generally reproduce the observations
-under certain assumptions about the ignition, but research has
-shown that the results are very sensitive to the details of the
-ignition. In our simulations, we initialize a detonation once
-the deflagration front reaches a characteristic DDT fuel density,
-which controls the degree of expansion the star undergoes during
-the deflagration stage.
+The ignition of the deflagration via a matchhead followed the 
+initialization described in~\citet{kruegetal12}, which
+followed the method of~\citet{townetal2009}.
+In both the hybrid and traditional cases, the matchhead had a 
+nominal radius of $150$~km before 
+a different randomly-seeded perturbation was applied to the 
+matchhead for each of the 35 simulations in both suites. {\color{red}
+IS THIS RIGHT- BOTH USED THE SAME REALIZATIONS?}
+The perturbation to the sphere's surface is a set of
+spherical harmonic functions with randomly chosen amplitudes, and
+each set of perturbations is referred to as a ``realization." 
+These perturbations have been shown to reproduce 
+the scatter in \Ni{56} 
+yield from \SNeIa\ \citet{townetal2009}.
 
-The comparison study of tradition C/O progenitor WDs used the same initial
-conditions for the realizations within the suite. The traditional models
-are simulated with the same code and the same set of perturbations on the
-initial match head (realization). The only difference is the different
-nuclear burning to include the other Ne and the initial profile of the
-1-d model.
 
-----above updated text-----
+The transition from deflagration to detonation again follows
+the previous studies, which assumed the transition location
+is parameterized by the fuel density $\rho_{\mathrm{DDT}}$.
+When a rising
+plume reaches the threshold density, in this case
+$\rho_{\mathrm{DDT}} = 10^{7.2}~\grampercc$, 
+a $12$~\km\ a region of fuel, (\C{12} and \Ne{20}, if present) is
+fully burned $32$~\km\ radially outwards from the flame. This
+instantaneous burning in the region of this size provides conditions
+to generate the shock and support the detonation at the chosen
+threshold density.  Multiple DDT points may arise, but they are
+constrained to be at least $200$~\km\ apart. The choice of DDT
+in the suite has been shown to be high enough to ensure 
+the robust ignition of a detonation shock.
 
+Once the detonation starts, the remaining fuel at densities
+high enough for the detonation to propagate is quickly consumed.
+The simulations were run to 4.0 s, at which time burning 
+has effectively ceased. 
 
 
 \section{Results}
