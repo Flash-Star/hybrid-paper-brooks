@@ -690,12 +690,18 @@ effectively ends. The paragraphs in this section provide details
 of the implementation of this method.
 
 
-{\color{red} ARE THE BELOW NUMBERS CORRECT?}
-The C-O and C-O-Ne models have the same central density
-and temperature $7 \times 10^8$~K, respectively.
+{\color{red} THE BELOW NUMBERS NEED SORTING OUT!}
+The C-O and C-O-Ne models has the same central temperature
+and density ????
+The C-O models had a central density and 
+temperature of $4.62 \times 10^{9}$ $4.27 \times 10^{9}$ ???
+and $7 \times 10^8$~K, respectively.
 The C-O model had core composition of (\C{12} = 0.4, 
 \Ne{20} = 0.03, \Ox{16} = 0.57) and envelope composition 
 of (\C{12} = 0.5, \Ne{20} = 0.02, \Ox{16} = 0.48). 
+The C-O models had a central density and 
+temperature of $4.62 \times 10^{9}$ 
+and $8.07 \times 10^8$~K, respectively.
 The C-O-Ne model had core composition of (\C{12} = 0.X, 
 \Ne{20} = 0.XX, \Ox{16} = 0.XX) and envelope composition 
 of (\C{12} = 0.XX, \Ne{20} = 0.0X, \Ox{16} = 0.XX). 
@@ -753,7 +759,7 @@ has effectively ceased.
 
 \section{Results}
 
-We frame the presention of the results of the suites of simulations 
+We frame the presentation of the results of the suites of simulations 
 principally in terms of the yield of \Ni{56}, the source of 
 the light curve of an event. \Ni{56} thus serves as a proxy
 for the brightness of an explosion and comparison of the yields
@@ -775,9 +781,9 @@ less \Ni{56} than explosions from traditional C-O models.
 \end{figure}
 The cumulative distribution of the \Ni{56} yield for explosions from
 C-O and hybrid C-O-Ne models is presented in \ref{fig:cumdist}. 
-The figure shows that the hybrid models consistenly have a higher
+The figure shows that the hybrid models consistently have a higher
 cumulative fraction at a given mass of \Ni{56}, which indicates
-that the yields of \Ni{56} are consistenly lower in explosions 
+that the yields of \Ni{56} are consistently lower in explosions 
 from hybrid progenitors. {\color{red} CHECK/EXPAND THIS}
 
 \begin{figure}
@@ -819,14 +825,14 @@ Final estimated IGE {\color{red}
 TO BE SURE- NOT \Ni{56} AS FIGURE IS LABELED?} yield 
 vs.\ mass {\color{red} above} $2\times 10^7~\grampercc$
 at the time of the first DDT in a simulation.  Individual 
-realizations are shown (C-O-NE
+realizations are shown (C-O-Ne
 progenitors in red, C-O in blue) along with rectangles of length
 $\pm 1 \sigma$ along each axis and centered at their average values 
 for C-O and C-O-Ne.
 }
 \end{figure}
 
-Figure \ref{fig:masshighdens} compares the final yield of IGE elemets
+Figure \ref{fig:masshighdens} compares the final yield of IGE elements
 for the C-O and C-O-Ne simulation suites with the amount of expansion of the
 WD during the deflagration phase. The amount of expansion is 
 characterized by the mass above $2 \times 10^7~\grampercc$ at the 
@@ -854,55 +860,99 @@ slower burning to IGE and thus a lower IGE yield.
 \begin{figure}
 \includegraphics[width=\columnwidth]{figures/FMBTI_v_Ni56Yield_plot.pdf}
 \caption{\label{fig:conversion}
-	The conversion of \Ni{56} to IGEs are more pronounced in my case. There are two assumptions as to why figure 6 is more pronounced in my paper then in Dons. 
-First is that higher critical density leads to higher electron capture resulting in less Ni56 produced. Figure 4 shows that CO model has a stronger electron capture then the hybrid model. The second is that the central ignition leads to early burning at higher density. Both of these cases lead to more electron capture resulting in a larger difference in evolution between the models.
-NEW: Production of 56Ni and mass burned to IGEs for CO (red) and
-hybrid CONe (green) WD realizations. SAME AS DON'S FIG 18
+Estimated yield of \Ni{56} as a function of final mass burned to IGE
+for C-O-Ne progenitors (red) and C-O progenitors (blue) at
+$t = 4.0 \second$.
 }
 \end{figure}
 Figure \ref{fig:conversion} shows the estimated \Ni{56} yields 
 across the range of masses burned to IGE
 for all C-O and C-O-Ne realizations at the end 
-of the simulaitons ($4.0$~\second),
+of the simulations ($4.0 \second$),
 at which point the total mass burned to \Ni{56} had become constant.
+The difference between the two sets of results is more pronounced
+than the difference between hybrid and tradition models
+found by \citet{willcoxetal2016}. This difference follows from
+differences in the electron capture rates, which follow from
+{\color{red} two} reasons. {\color{red} HIGHER CENTRAL DENSITY?
+MORE METALLICIY? HELP!}
+%The conversion of \Ni{56} to IGEs are more pronounced in my case. There are two assumptions as to why figure 6 is more pronounced in my paper then in Dons. 
+%First is that higher critical density leads to higher electron capture resulting in less N\Ni{56}i56 produced. Figure 4 shows that CO model has a stronger electron capture then the hybrid model. The second is that the central ignition leads to early burning at higher density. Both of these cases lead to more electron capture resulting in a larger difference in evolution between the models.
+%NEW: Production of 56Ni and mass burned to IGEs for CO (red) and
+%hybrid CONe (green) WD realizations. SAME AS DON'S FIG 18
 
 
 \begin{figure}
 \includegraphics[width=\columnwidth]{figures/compare_ratio_v2.png}
 \caption{\label{fig:compare_ratio}
-Figure 8 shows the evolution of the materials for both models. It is determined that the CO model had the greatest amount of Ni56, then the other IGE materials, compared to the hybrid model.  
-SAME AS DON'S FIGURE 19.
+Plot of estimated \Ni{56} mass vs.\ time showing the evolution
+for both suites of simulations. Results from 
+C-O-Ne progenitors are in red and C-O progenitors blue. 
+{\color{red} SAME AS DON'S FIGURE 19}.
+%SAME AS DON'S FIGURE 19
 }
 \end{figure}
-
 \begin{figure}
 \includegraphics[width=\columnwidth]{figures/compare_burned_mass_v2.png}
 \caption{\label{fig:compare_burned}
-SAME AS DON'S FIGURE 20.
-C/O blue hybrid red.
+Plot of estimated mass burned to IGEs vs.\ time showing the evolution
+for both suites of simulations. Results from C-O-Ne progenitors are 
+in red and C-O progenitors blue.  
 Note that one of the C/O simulations presented did not complete.
+%SAME AS DON'S FIGURE 20
+{\color{red} SAME AS DON'S FIGURE 20.} 
 }
 \end{figure}
 
+Figure \ref{fig:compare_ratio} shows the fraction by mass of IGE
+material producing \Ni{56} as it evolves in time and Figure
+\ref{fig:compare_burned} shows the concurrent evolution of mass
+burned to IGE for both suites. While there is considerable
+scatter in the results, differences are obvious. 
+
+During the deflagration phase, the C-O models
+on average burn more material to IGE and also had a significantly higher
+fraction of IGE material that is \Ni{56}, yielding more \Ni{56} than
+the C-O-Ne models. This result is counter to that observed in
+\citet{willcoxetal2016}. During the detonation phase, the differences
+are not as obvious and the final mass of IGEs are comparable. The
+fraction of IGE material that is \Ni{56} at the end of the evolution,
+however, is significantly higher. This result differs from 
+the results of \citet{willcoxetal2016} as well.
+
+We attribute these differences as following from the different
+compositions of the progenitors. The C-O-Ne hybrid progenitors
+had more more neutron-rich material (a lower $Y_e$) than the
+traditional C-O models. As expected, when this material burns
+to IGEs, the proportion of neutron-rich material only gets
+higher, as the results demonstrate. 
+
+The difference between these results and those of \citet{willcoxetal2016}
+follows from the hybrid C-O-Ne progenitors having a different
+temperature structure that led to ignition of the explosion at lower
+densities. The C-O models in the \citet{willcoxetal2016} study
+thus had more material burning at high densities and thus more
+neutronization and a lower relative \Ni{56} yield than the
+hybrid C-O-Ne models. In the case of the comparison here, the
+C-O and hybrid C-O-Ne models {\color{red} the same central 
+temperature and density and very similar temperature and density 
+profiles at high densities, so the simulations in both cases 
+began with central ignitions. Differences in the explosion outcome 
+accordingly follow from differences in the composition.}
+
 \section{Discussion and Conclusion}
 
+Below Rough:
 
-The conversion of \Ni{56} to Iron group elements are more pronounced in my
-case. There are two assumptions as to why figure 6 is more pronounced
-in my paper then in Dons.  First is that higher critical density leads
-to higher electron capture resulting in less \Ni{56} produced. The second
-is that the central ignition leads to early burning at higher density.
+The new generation of C-O-Ne hybrid progenitor models explode similarly to
+traditional C-O models. We conclude they are viable progenitors. 
 
+The new generation of C-O-Ne hybrid progenitor models yield
+slightly less \Ni{56}, which is actually in keeping with how
+the C-O models compare to observations. Our C-O models tend
+to produce enough \Ni{56} to imply bright events. 
 
-As the star burns mass, the surface area grows, resulting in a decrease
-in density. The results show that the models that burned less mass during
-the deflagration phase, expand less, produce more \Ni{56}. This is because
-the density rich mass the model has at the DDT point is the ‘fuel’
-it needs to produce \Ni{56}. Therefore, the more mass, the more Ni-56. On
-average, the CO model, shown in figure 4, reaches the DDT faster then
-the hybrid model. Figures 3 and 4 show that the hybrid model has a wider
-range of estimated \Ni{56} mass suggesting a greater range of burned mass
-and expansion during the deflagration phase.
+More.....
 
 This work was supported in part by the U.S.\ Department of Energy under
 grant DE-FG02-87ER40317 and in part by the U.S.\ National Science Foundation
