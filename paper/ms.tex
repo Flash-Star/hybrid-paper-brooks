@@ -115,6 +115,9 @@
 \newcommand{\rhoDDT}{\ensuremath{\rho_{\rm DDT}}}
 \newcommand{\COreac}{\ensuremath{\C{12}\left(\alpha,\gamma\right)\Ox{16}}}
 
+% editing
+\newcommand\redst{\bgroup\markoverwith{\textcolor{red}{\rule[0.5ex]{2pt}{0.4pt}}}\ULon}
+
 \bibliographystyle{apj}
 
 \shorttitle{Hybrid Ia Progenitors}
@@ -126,8 +129,8 @@
 \author{
 Carlyn N.\ Augustine\altaffilmark{1},
 Donald E.\ Willcox\altaffilmark{2},
-Dean M.\ Townsley\altaffilmark{3},
-and Alan C.\ Calder\altaffilmark{2,4}
+Dean M.\ Townsley\altaffilmark{1},
+and Alan C.\ Calder\altaffilmark{3,4}
 }
 
 \altaffiltext{1}{
@@ -135,11 +138,15 @@ and Alan C.\ Calder\altaffilmark{2,4}
   The University of Alabama, Tuscaloosa, AL, 35487-0324, USA
 }
 \altaffiltext{2}{
-  Department of Physics and Astronomy,
-  Stony Brook University, Stony Brook, NY, 11794-3800, USA; \\
-  \href{mailto:donald.willcox@stonybrook.edu}{donald.willcox@stonybrook.edu}
+  Center for Computational Sciences and Engineering,
+  Lawrence Berkeley National Lab, Berkeley, CA 94720, USA; \\
+  \href{mailto:dewillcox@lbl.gov}{dewillcox@lbl.gov}
 }
 \altaffiltext{3}{
+  Department of Physics and Astronomy,
+  Stony Brook University, Stony Brook, NY, 11794-3800, USA
+}
+\altaffiltext{4}{
   Institute for Advanced Computational Sciences,
   Stony Brook University, Stony Brook, NY, 11794-5250, USA
 }
@@ -178,9 +185,9 @@ and traditional C/O progenitors.
 Thermonuclear (Type Ia) supernovae (\SNeIa) are bright stellar explosions 
 thought to occur when approximately 1.0 \Msun\ of material composed principally 
 of C and O burns under degenerate conditions. This class of supernovae is
-know to synthesize much of the Fe-group elements found in the galaxy, and
+known to synthesize much of the Fe-group elements found in the galaxy, and
 the light curves of these events have a special property that allows
-standardization of their light curves and thus use
+standardization \redst{of their light curves and thus use}
 as distance indicators for cosmological studies~\citep{phillips:absolute}.
 This use resulted in the discovery of the acceleration of the expansion of
 the Universe and thus the inference of Dark 
@@ -190,7 +197,7 @@ remain the premier distance indicators for cosmological studies {\color{red} REF
 The special property of the light curve is thought to follow
 from the fact that the source of luminosity, the radioactive decay
 of \Ni{56}, synthesized by the thermonuclear burning, is also the
-principle source of opacity~\citep{Pinto2001The-type-Ia-sup}, giving
+principal source of opacity~\citep{Pinto2001The-type-Ia-sup}, giving
 the Phillips relation between the brightness of an event and the
 rate of decline of the B-band magnitude from maximum~\citep{phillips:absolute}. 
 
@@ -204,7 +211,7 @@ for some time~\citep{hoylefowler60,arnett.truran.ea:nucleosynthesis},
 but discerning the setting(s) of these events is proving difficult
 and remains the subject of active research. At present there are three
 widely-accepted scenarios: the {\em single degenerate} scenario,
-the {\em double detonation} or {\em sub-Chandrasekhar} scenario, 
+the {\em double detonation} or {\em sub-Chandrasekhar} scenario, and
 the {\em white dwarf merger} or {\em double degenerate} scenario.
 We briefly describe these in the subsection that follows.
 Also see~\citet{hillebrandt.niemeyer:type,howell2011,hillebrandtetal2013,calderetal2013,roepkesim2018}
@@ -215,7 +222,7 @@ for additional discussion.
 The single degenerate picture posits a white dwarf gaining mass
 from a main-sequence companion. The process relies on a long
 period of accretion combined with either steady burning or a 
-series of nova explosions to allow the WD to gain at least
+series of nova explosions. \color{{blue} During this accretion phase, the WD must} gain at least
 $\sim 0.4$ \Msun\ as needed for it to approach the
 limiting Chandrasekhar mass~\citep{starrfieldetal2012}. As it approaches
 the Chandrasekhar limit, conditions in the compressed core are right
