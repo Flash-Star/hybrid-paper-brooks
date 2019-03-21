@@ -485,8 +485,8 @@ from hybrid progenitors and compared the results to a suite of simulations
 of explosions from traditional C/O progenitor models performed with the
 same simulation code and from similar initial conditions. The simulations assumed
 the deflagration to detonation transition explosion paradigm, and the
-transition densities were the same in both suites. We briefly our methodology
-here, and refer to the reader to previous work for additional details.
+transition densities were the same in both suites. We briefly review our methodology
+here, and refer the reader to previous work for additional details.
 In particular, we use the same simulation instrument, a modified version
 of the Flash Code, as \citet{willcoxetal2016} and we refer the reader there
 for a description of modifications for C-O-Ne burning and verification tests
@@ -495,11 +495,11 @@ of the burning module.
 \subsection{Simulation Instrument}
 
 The simulations of supernova explosions presented here were performed
-with a customized version of the \FLASH code, originally developed
+with a customized version of the \FLASH\ code, originally developed
 at the University of Chicago.
 Flash is a parallel, adaptive mesh, multi-physics simulation code
 developed first for nuclear astrophysics applications and subsequently
-for high-energy-density applications~\cite{Fryxetal00,calder.curtis.ea:high-performance,
+for high-energy-density applications~\citep{Fryxetal00,calder.curtis.ea:high-performance,
 calder.fryxell.ea:on,flash_pragmatic,flash_evolution}.
 Flash has been applied to a variety of astrophysical problems by a host
 of researchers, and the version we apply differs from other versions
@@ -523,15 +523,15 @@ we briefly review the flame capturing scheme here.
 
 For the deflagration phase, the flame capturing scheme propagates an
 artificially broadened flame with an advection-diffusion-reaction (ADR)
-scheme~\cite{Khok95,VladWeirRyzh06} via evolution of
+scheme~\citep{Khok95,VladWeirRyzh06} via evolution of
 a reaction progress variable to describe the consumption of C
 and additional variables to describe the evolution of intermediate-mass
 elements into the statistical quasi-equilibrium of the
-Si-group~\cite{ifk1981,khok1981,khok1983} and then into iron-group elements
+Si-group~\citep{ifk1981,khok1981,khok1983} and then into iron-group elements
 (IGEs) in full nuclear statistical equilibrium (NSE).
 
 The reaction progress variable is $\phi$ and it varies from $\phi=0$ for
-unburned fuel and $\phi=1$ for burned ash. $\phi$ is evolved
+unburned fuel to $\phi=1$ for burned ash. $\phi$ is evolved
 via an advection-diffusion-reaction equation,
 \begin{equation}
   \label{eq:ard}
@@ -542,32 +542,32 @@ where $\vec{u}$ is the velocity of the fluid, $\kappa$ is the
 diffusion coefficient, $\tau$ is the reaction timescale, and $R(\phi)$ is
 a non-dimensional function describing the reaction. The parameters
 $\kappa$, $\tau$, and $R(\phi)$ are tuned to propagate the reaction
-front at a prescribed speed.  Our model uses the ``sharpened KPP
+front at a prescribed speed.  Our model uses the ``sharpened KPP''
  described by~\cite{VladWeirRyzh06},
 with $R\propto(\phi-\epsilon)(1-\phi+\epsilon)$, where
 $\epsilon \simeq 10^{-3}$.  This scheme has been shown to be
 acoustically quiet, stable, and to give a unique flame speed
-\cite{townsley.calder.ea:flame}. The input flame speeds come from
+\citep{townsley.calder.ea:flame}. The input flame speeds come from
 tabulated results obtained by direct numerical simulations of
-thermonuclear burning~\cite{timmes92,Chamulak2007The-Laminar-Fla},
+thermonuclear burning~\citep{timmes92,Chamulak2007The-Laminar-Fla},
 and
 these are boosted to account for speed-up of burning due to unresolved
-buoyancy and background turbulence~\cite{Khok95,
+buoyancy and background turbulence~\citep{Khok95,
 gamezo.khokhlov.ea:thermonuclear,townsley.calder.ea:flame,jacketal2014}.
 
 The two-dimensional models in this study do not utilize a sub-grid-scale
 model for the turbulence-flame
-interaction~\citep[See][for examples]{Schmetal06a,Schmetal06b,jacketal2014},
-The models only apply in three-dimensional
+interaction~\citep[See][for examples]{Schmetal06a,Schmetal06b,jacketal2014}.
+Those sub-grid-scale models only apply in three-dimensional
 simulations because two-dimensional hydrodynamics cannot
 correctly describe turbulence. The simulations we present
 use the minimal enhancement based on the Rayleigh-Taylor
 strength introduced by~\citet{townsley.calder.ea:flame}. The
-assumption here is that the burning self-regulate on resolved
+assumption here is that the burning self-regulates on resolved
 scales so that results are insensitive to the detailed treatment
 of the interaction with turbulence, and previous experience
 indicates this assumption is reasonable for comparisons
-like the one presented in this work~\citet{townsley.calder.ea:flame,
+like the one presented in this work~\citep{townsley.calder.ea:flame,
 willcoxetal2016}.
 
 The ADR scheme describes the consumption of C and the subsequent stages
@@ -578,19 +578,22 @@ the creation of light elements by photodisintegration balances the creation of h
 elements by fusion, maintaining the equilibrium. The relative balance depends on
 thermodynamic conditions, e.g.\ density and temperature, and hydrodynamic motion
 during the explosion changes the thermodynamic conditions and thus the
-balance. Electron capture also influences the evolution by shifting the binding
-energy of the material and thereby changing the temperature due to released energy,
-by changing the Fermi energy and thus the pressure, and by emitting neutrinos that
-escape and remove energy. Electron captures also neutronize the material, which
-produces more neutron rich iron-group material at the expense of \Ni. Like the
-input flame speed, the burning model includes tabulated rates for these effects
-from detailed NSE calculations ~\cite{SeitTownetal09}. Accordingly, the burning
+balance.
+{\color{blue} Electron capture also influences the evolution in several ways by
+neutronizing the material, which produces more neutron rich iron-group
+material at the expense of \Ni. Neutronization also shifts the binding
+energy of the material and the Fermi energy of electrons, respectively
+changing the temperature (due to released energy) and the pressure.
+Finally, individual electron capture reactions emit neutrinos that
+escape and remove energy from the system.}
+Like the input flame speed, the burning model includes tabulated rates for these effects
+from detailed NSE calculations ~\citep{SeitTownetal09}. Accordingly, the burning
 model is able to describe dynamic evolution of the ash in addition to the
 stages of C-O-Ne burning.
 
 The burning model also describes the detonation phase with progress variables.
 In this case, the model evolves thermally-activated burning with the actual
-temperature-dependent rate for C consumption, which allow a propagating shock to
+temperature-dependent rate for C consumption, which allows a propagating shock to
 trigger burning, i.e.\ to propagate a detonation front. The propagating detonation
 is able to describe the same stages of C burning as the deflagration case, including
 the relaxation into NSE~\cite[and references therein]{townetal2016}. Finally,
@@ -601,14 +604,14 @@ verification tests may be found in \citet{willcoxetal2016}.
 
 \subsection{One-dimensional Hybrid Model}
 
-The hybrid white dwarf model that served as the initial conditions
-for the simulations of supernova explosions presented in this work
+The hybrid white dwarf model that served as the initial condition
+for the simulations of supernova explosions presented in this work
 was constructed with the one-dimensional stellar evolution code
 MESA~\citep{mesa1,mesa2,mesa3,mesa3e}. The evolution of the model
 included thermohalene mixing during the cooling phase and thus
 had a lower C fraction than previous hybrid models~\citep{brooksetal2017}.
 The hybrid model was constructed to have conditions as similar a possible
-to a ``classic" C/O model and the two shared the same central temperature
+to a ``classic'' C/O model and the two shared the same central temperature
 and density.  Figure~\ref{fig:init_conds} shows the density and temperature
 profiles of the two initial one-dimensional models.
 \begin{figure}
@@ -621,10 +624,11 @@ The peak temperature of the hybrid model is at the center of the star,
 so both the hybrid and traditional models could share the same
 	central ignition initial conditions.
 }
-\end{figure}
-In both models, and unlike the hybrid models of~\citet{willcoxetal2016}, the central
-temperature was the highest at the center of the star and accordingly the simulations
-began with central ignitions.
+\end{figure} 
+{\color{blue} We centrally ignite our explosion simulations for both
+  C/O and hybrid models to coincide with the peak temperature at the
+  center of the WDs, unlike the hybrid models
+  of~\citet{willcoxetal2016}.}
 
 
 \subsection{Two-dimensional Initial Conditions From One-dimensional Models}
@@ -634,7 +638,7 @@ created from the one-dimensional \MESA\ models by mapping the one-dimensional
 models onto the two-dimensional domain while
 preserving hydrostatic equilibrium.
 As described above, the flame capturing scheme with progress
-variables describing the evolution as the material burns. The \MESA\
+variables describes the evolution as the material burns. The \MESA\
 models, however, relied on a detailed reaction network that included
 many species. Accordingly, the process of creating the two-dimensional
 models for \FLASH\ required aggregating some of the species abundances.
@@ -643,11 +647,10 @@ techniques of~\citet{willcoxetal2016}.
 
 
 The process of mapping the \MESA\ models began by converting
-the \MESA\ model to a uniform grid of $4$~km resolution. \MESA\
-quantities in zones with spacing less than $4$~km
-were mass-weighted averaged and a quadratic interpolation
-was used to calculate quantities for the case of \MESA\ zones having
-a spacing greater than $4$~km. At this point,
+the \MESA\ model to a uniform grid of $4$~km resolution. 
+{\color{blue}We mass-weighted and averaged quantities in \MESA\ zones with spacing less than $4$~km
+and quadratically interpolated quantities in \MESA\ zones with spacing greater than $4$~km.}
+At this point,
 abundances of nuclides from the \MESA\ models were aggregated
 into the abundances tracked by the flame capturing scheme in
 \FLASH.
@@ -656,7 +659,7 @@ and \Ne{20}, which are symmetric (the number of neutrons
 equals the number of protons). Similarly to~\citet{willcoxetal2016},
 other neutron-rich isotopes in the initial model were combined into
 \Ne{22}, which serves as a proxy for metallicity. The aggregation
-account for the $Y_e$ of the full set of nuclides, \Ne{20}
+accounts for the $Y_e$ of the full set of nuclides, and \Ne{20}
 and \Ox{16} were constrained to be in the same ratio in both
 sets of abundances. \figref{fig:init_conds} shows the initial
 profile of the one-dimensional models.
@@ -667,21 +670,20 @@ constructed the appropriate pressure profile. This was done by
 integrating for the pressure in each zone from the central point up,
 accounting for the local acceleration of gravity, temperature,
 composition, and the mass below and enclosed by the zone. As
-with \citet{willcoxetal2016} we used
-EOS routine from
+with \citet{willcoxetal2016} we used the EOS routine from
 \CASTRO\ ~\citep{timmes.swesty:accuracy,castro1}.\footnote{The
 Helmholtz EOS table used in \CASTRO\ is in the public BoxLib
 Microphysics repository at
   \url{https://github.com/BoxLib-Codes/Microphysics.git} (commit
   hash $\mathrm{45ed859b6c1dc80d831d93f9728986d6ad6e1ddc}$).} As
- with the models in \citet{willcoxetal2016},this procedure produced
+ with the models in \citet{willcoxetal2016}, this procedure produced
  a structure that was stable in \FLASH, with fluctuations in central
 density less than $3\%$, for at least $5$ seconds with no energy
 deposition.
 
-\subsection{DDT Process and Suits of Explosions}
+\subsection{DDT Process and Suites of Explosions}
 
-The simulations performed for this study consisted to a suite of
+The simulations performed for this study consisted of a suite of
 {\color{red} 35 CHECK THIS! 40?} two-dimensional simulations of
 thermonuclear supernova
 explosions from hybrid C-O-Ne progenitors in the DDT explosion paradigm. These
@@ -727,7 +729,7 @@ The simulations were performed in two-dimensional $\mathrm{z-r}$
 cylindrical coordinates, extending radially from 0 to
 $65,536$~\km\ and along the axis of symmetry from $-65,536$~\km\ to
 $65,536$~\km. The maximum refinement level of the adaptive mesh
-corresponded to $4$~\km\ resolution, which previous study has shown is
+corresponded to $4$~\km\ resolution, which previous study has shown
 is a good balance between efficiency and
 accuracy~\citep{townsley.calder.ea:flame,townetal2009}.
 This resolution and geometry was used in previous studies
@@ -755,7 +757,7 @@ is parameterized by the fuel density $\rho_{\mathrm{DDT}}$.
 When a rising
 plume reaches the threshold density, in this case
 $\rho_{\mathrm{DDT}} = 10^{7.2}~\grampercc$,
-a $12$~\km\ a region of fuel, (\C{12} and \Ne{20}, if present) is
+a $12$~\km\ region {\color{blue} [radius or diameter?]} of fuel, (\C{12} and \Ne{20}, if present) is
 fully burned $32$~\km\ radially outwards from the flame. This
 instantaneous burning in the region of this size provides conditions
 to generate the shock and support the detonation at the chosen
@@ -773,11 +775,11 @@ has effectively ceased.
 \section{Results}
 
 We frame the presentation of the results of the suites of simulations
-principally in terms of the yield of \Ni{56}, the source of
+principally in terms of the yield of \Ni{56}, the energy source of
 the light curve of an event. \Ni{56} thus serves as a proxy
 for the brightness of an explosion and comparison of the yields
-is equivalent to comparing the brightness events. The
-yields estimated from $Y_e$ and the NSE progress
+is equivalent to comparing the brightness of events. The
+yields were estimated from $Y_e$ and the NSE progress
 variable, by assuming the composition in NSE is \Ni{56} plus equal
 parts \Fe{54} and \Ni{58}, as described in
 \citet{townetal2009,Meaketal09}.
@@ -785,7 +787,7 @@ parts \Fe{54} and \Ni{58}, as described in
 \begin{figure}
 \includegraphics[width=\columnwidth]{figures/ni56_yield_cum_dist.pdf}
 \caption{\label{fig:cumdist}
-The cumulative distribution of the \Ni{56} yield for explosions from
+The cumulative distribution of the final \Ni{56} yield for explosions from
 C-O and hybrid C-O-Ne models. The hybrid results are shown in red, and the CO
 results are shown in blue. The curve for the hybrid models is shifted
 to the left, indicating that explosions from hybrid progenitors produce
@@ -793,7 +795,7 @@ less \Ni{56} than explosions from traditional C-O models.
 }
 \end{figure}
 The cumulative distribution of the \Ni{56} yield for explosions from
-C-O and hybrid C-O-Ne models is presented in \ref{fig:cumdist}.
+C-O and hybrid C-O-Ne models is presented in Figure \ref{fig:cumdist}.
 The figure shows that the hybrid models consistently have a higher
 cumulative fraction at a given mass of \Ni{56}, which indicates
 that the yields of \Ni{56} are consistently lower in explosions
@@ -818,18 +820,23 @@ The estimated production of \Ni{56} as a function of simulation time
 for 10 simulations of explosions from the hybrid progenitor is shown
 in Figure \ref{fig:nithybrid} and from the traditional C-O progenitor is
 shown in Figure \ref{fig:nitco}.
-The figures show that the final estimated \Ni{56} for the C-O model is
-slightly larger then the hybrid model. Therefore, the C-O produces more
-\Ni{56}. The hybrid model has a larger range then the C-O model. Also, on
-average, the CO model reaches the DDT phase sooner then the hybrid model.
-Both figures show that production of \Ni{56} effectively ceases (the
-curves flatten out) well before the end of the simulations at
-$4.0$~\second. Also, the figures show that a few simulations
-did not complete. {\color{red} OFFER A WHY?}
+{\color{blue} The figures show that the final estimated \Ni{56} for
+  the C-O model is slightly larger than the hybrid model. Therefore,
+  the C-O produces more \Ni{56}. The hybrid model has a larger range
+  then the C-O model. [Figure \ref{fig:nithybrid} and Figure
+  \ref{fig:nitco} cannot support general claims like this because they
+  only show ten of our realizations and it's hard to measure by
+  eye. Figure \ref{fig:cumdist} is much better at demonstrating both
+  of these statements.]}
+Also, on average, the CO model reaches the DDT phase sooner then the
+hybrid model.  Both figures show that production of \Ni{56}
+effectively ceases (the curves flatten out) well before the end of the
+simulations at $4.0$~\second. Also, the figures show that a few
+simulations did not complete. {\color{red} OFFER A WHY?}
 
-The degree of expansion was found using the time at which the first
-detonation point occurred, and the mass at density less then 2e7 g/cc. The
-estimated \Ni{56} Yield is the final estimated mass of the model.
+\blust{The degree of expansion was found using the time at which the first
+detonation point occurred, and the mass at density greater than 2e7 g/cc. The
+estimated \Ni{56} Yield is the final estimated mass of the model.}
 
 \begin{figure}
 \includegraphics[width=\columnwidth]{figures/ni56_yield_vs_mass_at_high_dens.pdf}
@@ -849,18 +856,17 @@ Figure \ref{fig:masshighdens} compares the final yield of IGEs
 for the C-O and C-O-Ne simulation suites with the amount of expansion of the
 WD during the deflagration phase. The amount of expansion is
 characterized by the mass above $2 \times 10^7~\grampercc$ at the
-time of the DDT, with more high-density mass
+time of the first DDT occurrence, with more high-density mass
 indicating less expansion during deflagration. The averages of both
 the C-O and C-O-Ne suites along both axes are indicated by the shaded
 regions with $\pm1\sigma$ widths.
 
 As expected from previous studies, the trend for both C-O and C-O-Ne
 models is that less expansion during the deflagration phase results in
-greater IGE yields, because less expansion gives more high
-density fuel to be consumed in the detonation.
-being more high density fuel for the detonation to consume.
-As the amount of expansion increases (the less
-mass above $2 \times 10^7 \grampercc$),
+greater IGE yields because less expansion allows the detonation to
+consume more high density fuel.
+As the amount of expansion increases (less
+mass remains above $2 \times 10^7~\grampercc$),
 for a similar amount of expansion, the C-O
 models tend to yield greater IGE mass. Following
 \citet{willcoxetal2016}, we interpret
@@ -884,7 +890,7 @@ for all C-O and C-O-Ne realizations at the end
 of the simulations ($4.0 \second$),
 at which point the total mass burned to \Ni{56} had become constant.
 The difference between the two sets of results is more pronounced
-than the difference between hybrid and tradition models
+than the difference between hybrid and traditional C/O models
 found by \citet{willcoxetal2016}. This difference follows from
 differences in the electron capture rates, which follow from
 {\color{red} two} reasons. {\color{red} HIGHER CENTRAL DENSITY?
@@ -930,28 +936,35 @@ the C-O-Ne models. This result is counter to that observed in
 \citet{willcoxetal2016}. During the detonation phase, the differences
 are not as obvious and the final mass of IGEs are comparable. The
 fraction of IGE material that is \Ni{56} at the end of the evolution,
-however, is significantly higher. This result differs from
-the results of \citet{willcoxetal2016} as well.
+however, is significantly higher for C/O models than for our hybrid models. 
+{\color{blue}This result differs from the results of
+  \citet{willcoxetal2016} as well and is consistent with the
+  observation that our hybrid models on average expand less during the
+  deflagration stage than our C/O models. By contrast, the hybrid models of
+  \citet{willcoxetal2016} expanded very slightly more
+  than C/O models on average during the deflagration stage.}
 
 We attribute these differences as following from the different
 compositions of the progenitors. The C-O-Ne hybrid progenitors
-had more more neutron-rich material (a lower $Y_e$) than the
+had more neutron-rich material (a lower $Y_e$) than the
 traditional C-O models. As expected, when this material burns
 to IGEs, the proportion of neutron-rich material only gets
 higher, as the results demonstrate.
 
-The difference between these results and those of \citet{willcoxetal2016}
-follows from the hybrid C-O-Ne progenitors having a different
-temperature structure that led to ignition of the explosion at lower
-densities. The C-O models in the \citet{willcoxetal2016} study
+The difference between these results and those of
+\citet{willcoxetal2016} follows from their hybrid C-O-Ne progenitors
+having a different temperature structure that
+led to ignition of the explosion at lower densities.
+The C-O models in the \citet{willcoxetal2016} study
 thus had more material burning at high densities and thus more
 neutronization and a lower relative \Ni{56} yield than the
-hybrid C-O-Ne models. In the case of the comparison here, the
-C-O and hybrid C-O-Ne models {\color{red} the same central
+corresponding hybrid C-O-Ne models. In the case of the comparison here, the
+C-O and hybrid C-O-Ne models {\color{red} have the same central
 temperature and density and very similar temperature and density
 profiles at high densities, so the simulations in both cases
-began with central ignitions. Differences in the explosion outcome
-accordingly follow from differences in the composition.}
+began with central ignitions. Differences in the explosion outcomes
+for our C/O and hybrid C-O-Ne WD models 
+accordingly follow from differences in their composition.}
 
 \section{Discussion and Conclusion}
 
