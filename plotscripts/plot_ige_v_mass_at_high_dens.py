@@ -8,17 +8,19 @@ params = {'backend': 'pdf',
           'figure.figsize': [3.38, 3.38],
           'font.family':'serif',
           'font.size':10,
-#          'font.serif': 'Times Roman',
+          'font.serif': 'Times Roman',
           'axes.titlesize': 'medium',
           'axes.labelsize': 'medium',
           'legend.fontsize': 8,
           'legend.frameon' : False,
-#         'text.usetex': True,
-#          'figure.dpi': 600,
+          'text.usetex': True,
+          'figure.dpi': 600,
           'lines.markersize': 4,
           'lines.linewidth': 1,
           'lines.antialiased': False,
-          'path.simplify': False }
+          'path.simplify': False,
+	  # mine below here
+	  'legend.numpoints': 1}
 
 matplotlib.rcParams.update(params)
 
@@ -32,15 +34,10 @@ RED_PURPLE = (0.80,0.60,0.70)
 
 
 
-#import integral file
-filelistCO = []
-filelistHY = []
-for i in range(11,41):
-    filelistCO.append("/dmt/caugustine/Hybrid_Research/flash_runs_CO/snia_%s/CO_WD_4km_cfbrooks_flash_2.dat" %i)
+gpermsun = 1.988435e33 # grams/Msun
 
-for i in range(11,41):
-    filelistHY.append("/dmt/caugustine/Hybrid_Research/flash_runs/snia_%s_hybrid2/profile21_flash_h201.dat" %i)
-
+#import data
+data = np.genfromtxt("yields_ige_ni56.dat", names=True)
 
 CO_Mass_ddt =[ 2.17181312005e+33, 2.35383629797e+33, 1.64772923719e+33, 2.2114160575e+33, 2.37942340721e+33, 1.83455769713e+33, 2.04200699334e+33, 2.42116213051e+33, 1.95113390103e+33, 2.05317281172e+33, 2.3668519475e+33, 2.07355503262e+33, 1.61643166914e+33, 2.08306944193e+33, 1.84652547594e+33, 2.22696805867e+33, 2.33884296911e+33, 2.33105831045e+33, 2.1501133085e+33, 2.27996712031e+33, 2.27569091886e+33, 2.14242405809e+33, 1.97286525029e+33, 1.77937470081e+33, 2.33282821471e+33, 1.81892363218e+33, 2.3855754721e+33, 2.29943937023e+33, 2.08965708799e+33, 2.03270740927e+33]
 
@@ -84,15 +81,8 @@ sumsqrtHYmass = np.sqrt(sumsqauredHYmass)
 SDHYmass = totalsqrtHYmass*sumsqrtHYmass
 
 
-gpermsun = 1.988435e33
-b = []
-sumb = 0
-for fname in filelistHY:
-        data = np.loadtxt(fname)
-        x = data[-1][13]
-        bsolar = x/gpermsun
-        b.append(bsolar)
-        sumb = sumb + bsolar
+b = data['CONe_IGE']
+sumb = sum(b)
 totalnumberHY = len(b)       #find the length of the array: total #
 averageHYIGE = sumb/totalnumberHY
 
@@ -113,21 +103,8 @@ SDHYIGE = totalsqrtHY*sumsqrtHY
 
 
 #CO model
-gpermsun = 1.988435e33 # grams/Msun
-a = []
-suma = 0
-for fname in filelistCO:
-	print(fname)
-	data = np.loadtxt(fname)
-	x = data[-1][13]   #final estimated mass
-	xsolar = x/gpermsun        #convert to solar mass
-	a.append(xsolar)
-	#print(xsolar)
-	suma = suma + xsolar
-	print(suma)
-
-#a.sort()                       # sort numbers in order
-print(a)
+a = data['CO_IGE']
+suma = sum(a)
 totalnumber = len(a)       #find the length of the array: total number
 
 averageCOIGE = suma/totalnumber
@@ -151,14 +128,34 @@ yH = averageHYIGE - SDHYIGE
 xH = averageHYmass - SDHYmass
 fig,ax1 = plt.subplots()
 
-plt.plot(np.array(CO_Mass_ddt)/gpermsun, a, "o", label ='CO', color = 'b')
-plt.plot(np.array(Hybrid_Mass_ddt)/gpermsun, b, "o", label = 'Hybrid', color = 'r')
+plt.plot(np.array(CO_Mass_ddt)/gpermsun, a, 'rs', label ='CO')
+plt.plot(np.array(Hybrid_Mass_ddt)/gpermsun, b, 'bo', label = 'CONe')
 
 plt.xlabel(r'Mass with $\rho_7>2$ at DDT (M$_\odot$)')
-plt.ylabel('Estimated IGE Yield (M$_\\odot$)')
+plt.ylabel(r'IGE Yield (M$_\odot$)')
 
-ax1.add_patch(patches.Rectangle((xC/gpermsun, yC), 2*SDCOmass/gpermsun, 2*SDCOIGE, alpha=0.25,edgecolor='b',facecolor='b'))
-ax1.add_patch(patches.Rectangle((xH/gpermsun, yH), 2* SDHYmass/gpermsun, 2* SDHYIGE ,alpha=0.25,edgecolor='r',facecolor='r'))
+ax1.add_patch(patches.Rectangle((xC/gpermsun, yC), 2*SDCOmass/gpermsun, 2*SDCOIGE, alpha=0.25,edgecolor='r',facecolor='r'))
+ax1.add_patch(patches.Rectangle((xH/gpermsun, yH), 2* SDHYmass/gpermsun, 2* SDHYIGE ,alpha=0.25,edgecolor='b',facecolor='b'))
+
+w16_cone_x = 0.5*(1.057+0.848)
+w16_cone_dx = 0.5*(1.057-0.848)
+w16_cone_y = 0.5*(1.087+0.865)
+w16_cone_dy = 0.5*(1.087-0.865)
+
+w16_co_x = 0.5*(1.062+0.858)
+w16_co_dx = 0.5*(1.062-0.858)
+w16_co_y = 0.5*(1.185+1.05)
+w16_co_dy = 0.5*(1.185-1.05)
+
+ax1.add_patch(patches.Rectangle((w16_co_x-w16_co_dx,w16_co_y-w16_co_dy), 2*w16_co_dx, 2*w16_co_dy, alpha=0.1, edgecolor='r',facecolor='r', linestyle='--'))
+ax1.add_patch(patches.Rectangle((w16_cone_x-w16_cone_dx,w16_cone_y-w16_cone_dy), 2*w16_cone_dx, 2*w16_cone_dy, alpha=0.1, edgecolor='b',facecolor='b', linestyle='--'))
+
+plt.legend(loc='lower right')
+
+plt.xlim([0.8,1.3])
+ax1.yaxis.set_minor_locator(matplotlib.ticker.AutoMinorLocator())
+ax1.xaxis.set_minor_locator(matplotlib.ticker.AutoMinorLocator())
+
 plt.tight_layout()
-plt.savefig('Fig5withSD_fixed_plot.pdf')
+plt.savefig('ige_v_mass_at_high_dens.pdf')
 #plt.show()
