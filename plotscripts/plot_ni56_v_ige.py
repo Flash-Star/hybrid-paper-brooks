@@ -8,17 +8,19 @@ params = {'backend': 'pdf',
  'figure.figsize': [3.38, 3.38],
  'font.family':'serif',
  'font.size':10,
-# 'font.serif': 'Times Roman',
+ 'font.serif': 'Times Roman',
  'axes.titlesize': 'medium' ,
  'axes.labelsize':'medium',
  'legend.fontsize':8,
  'legend.frameon':False,
-# 'text.usetex': True,
-# 'figure.dpi':600,
+ 'text.usetex': True,
+ 'figure.dpi':600,
  'lines.markersize':4,
  'lines.linewidth':1,
  'lines.antialiased':False,
- 'path.simplify':False}
+ 'path.simplify':False,
+ # Townsley below here
+ 'legend.numpoints': 1}
 
 matplotlib.rcParams.update(params)
 
@@ -30,52 +32,41 @@ BLUE = (0.00, 0.45, 0.70)
 VERMILLION = (0.80, 0.40, 0.00)
 RED_PURPLE = (0.80, 0.60, 0.70)
 
+ax = plt.subplot(111)
 
-#import integral file
-filelistCO = []
-filelistHY = []
-for i in range(11,41):
-    filelistCO.append("/dmt/caugustine/Hybrid_Research/flash_runs_CO/snia_%s/CO_WD_4km_cfbrooks_flash_2.dat" %i)
 
-for i in range(11,41):
-    filelistHY.append("/dmt/caugustine/Hybrid_Research/flash_runs/snia_%s_hybrid2/profile21_flash_h201.dat" %i)
+#import data
+data = np.genfromtxt("yields_ige_ni56.dat", names=True)
 
 #CO
-gpermsun = 1.988435e33
-a = []
-b = []
-for fname in filelistCO:
-	data = np.loadtxt(fname)
-	x = data[-1][13]
-	xsolar = x/gpermsun
-	a.append(xsolar)
-	y = data[-1][15]
-	ysolar = y/gpermsun
-	b.append(ysolar)
-print(a)
-print(b)
-plt.plot(a, b, "o", label ='CO', color = 'b')
+a = data['CO_IGE']
+b = data['CO_Ni56']
+plt.plot(a, b, "o", label ='CO', color = 'r', marker='s')
 
 #HY
-gpermsun = 1.988435e33
-c = []
-d = []
-for fname in filelistHY:
-	data = np.loadtxt(fname)
-	x = data[-1][13]
-	xsolar = x/gpermsun
-	c.append(xsolar)
-	y = data[-1][15]
-	ysolar = y/gpermsun
-	d.append(ysolar)
-print(c)
-print(d)
-plt.plot(c, d, "o", label ='CO', color = 'r')
+c = data['CONe_IGE']
+d = data['CONe_Ni56']
+plt.plot(c, d, "o", label ='CONe', color = 'b')
 
-plt.xlabel('Final Mass Burned to IGE (M$_\\odot$)')
-plt.ylabel('Estimated Ni56 Yield (M$_\\odot$)')
+
+don_x = np.array( [0.8, 1.3] )
+don_ni56_co = don_x*0.9251 - 0.0693
+
+plt.plot( don_x, don_ni56_co, 'r--', label='W16 CO' )
+
+don_ni56_hy = don_x*0.9368 - 0.0605
+
+plt.plot( don_x, don_ni56_hy, 'b-', label='W16 CONe' )
+
+plt.xlabel('IGE Yield (M$_\\odot$)')
+plt.ylabel('$^{56}$Ni Yield (M$_\\odot$)')
+plt.legend(loc='lower right')
+
+ax.yaxis.set_minor_locator(matplotlib.ticker.AutoMinorLocator())
+ax.xaxis.set_minor_locator(matplotlib.ticker.AutoMinorLocator())
+
 plt.tight_layout()
-plt.savefig('FMBI_v_Ni56Yield_plot.pdf')
+plt.savefig('ni56_v_ige.pdf')
 #plt.show()
 
 
