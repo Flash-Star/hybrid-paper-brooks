@@ -17,7 +17,9 @@ params = {'backend': 'pdf',
           'lines.markersize': 4,
           'lines.linewidth': 1,
           'lines.antialiased': False,
-          'path.simplify': False }
+          'path.simplify': False,
+	  # townsley below here
+	  'legend.numpoints': 1}
 
 matplotlib.rcParams.update(params)
 
@@ -44,7 +46,7 @@ totalnumber = len(a)           #find the length of the array: total number
 print(totalnumber)
 index = np.arange(1,totalnumber+1)
 y = index/float(totalnumber)
-plt.step(a, y, label = 'Hybrid', color = 'b', where='post')
+plt.step(a, y, label = 'CONe', color = 'b', where='post')
 
 
 #CO
@@ -56,7 +58,7 @@ totalnumber = len(a)           #find the length of the array: total number
 print(totalnumber)
 index = np.arange(1,totalnumber+1)
 y = index/float(totalnumber)
-plt.step(a, y, label = 'CO', color = 'r', linestyle=':', where='post')
+plt.step(a, y, label = 'CO', color = 'r', linestyle='--', where='post')
 
 
 
@@ -74,8 +76,12 @@ plt.legend(loc='best')
 #plt.title('Cumulative distribution of estimated Ni56 Yield')
 plt.xlabel('$^{56}$Ni Yield (M$_\\odot$)')
 plt.ylabel('Cumulative Distribution')
+plt.xlim( [ 0.6, 1.1] )
+
+ax.yaxis.set_minor_locator(matplotlib.ticker.AutoMinorLocator())
+ax.xaxis.set_minor_locator(matplotlib.ticker.AutoMinorLocator())
+
 plt.tight_layout()
-ax.yaxis.set_minor_locator(matplotlib.ticker.MultipleLocator(0.1))
 plt.savefig('cum_dis_Ni56.pdf')
 #plt.show()
              
