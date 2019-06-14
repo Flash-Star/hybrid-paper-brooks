@@ -804,9 +804,9 @@ The figure shows that the hybrid models consistently have a higher
 cumulative fraction at a given mass of \Ni{56}, which indicates
 that the yields of \Ni{56} are consistently lower in explosions
 from hybrid progenitors of the same central density.
-This contrast is in a similar direction but not as large as the difference between C-O and C-O-Ne progenitors seen in W16.
+This contrast is in a similar direction but not as large as the difference between C-O and C-O-Ne progenitors seen in \cite{willcoxetal2016}.
 
-{\color{red} TODO: make table of average yields (like table 1 in W16).}
+{\color{red} TODO: make table of average yields (like table 1 in \cite{willcoxetal2016}).}
 
 \begin{figure}
 \includegraphics[width=\columnwidth]{figures/Hybrid_Ni56mass_v_time_plot.pdf}
@@ -846,21 +846,36 @@ time of the first DDT occurrence, with more high-density mass
 indicating less expansion during deflagration. The averages of both
 the C-O and C-O-Ne suites along both axes are indicated by the shaded
 regions with $\pm1\sigma$ widths.
+Lighter shaded regions indicate the averages and standard deviations found by \citet{willcoxetal2016} for hybrid C-O-Ne progenitors that do not mix during cooling.
 
-As expected from previous studies, the trend for both C-O and C-O-Ne
+As expected from previous studies \citep[e.g.][]{townetal2009}, the trend for both C-O and C-O-Ne
 models is that less expansion during the deflagration phase results in
-greater IGE yields because less expansion allows the detonation to
-consume more high density fuel.
-As the amount of expansion increases (less
-mass remains above $2 \times 10^7~\grampercc$),
-for a similar amount of expansion, the C-O
-models tend to yield greater IGE mass. Following
+greater IGE yields.
+This is because less expansion allows the detonation to consume more high density fuel, which is burned more completely \citep{SeitenzahlTownsley2017}.
+At moderate expansion, where the mass at high density is between around 1.0 to 1.1 M$_\odot$, the C-O models tend to yield greater IGE mass.
+Following
 \citet{willcoxetal2016}, we interpret
 the lower IGE yield in C-O-Ne models as resulting
-from the lower \C{12} abundance and the fact that given
+from the lower \C{12} abundance and the fact that, given
 similar fuel density, the \Ne{20}-rich fuel will burn to cooler
 temperatures than fuel in the C-O models. The result is
 slower burning to IGE and thus a lower IGE yield.
+At lower degrees of expansion, where there is around 1.2~M$_\odot$ of material at high densities, there appears to be little difference between the IGE yields of C-O and C-O-Ne progenetiors.
+This convergence for dense, weakly expanded, cases was not noted in \citet{willcoxetal2016} because they had very few cases with more than 1.1~M$_\odot$.
+It does appear consistent with an extrapolation of their data and the two cases that did yield these higher masses at high density.
+
+This convergence of IGE yield also appears strongly in comparing the averages over the whole set found in this study and that of \citet{willcoxetal2016}.
+As seen from the shaded regions in Figure \ref{fig:masshighdens} (lighter shade is unmixed), the degree of expansion seen for the our mixed progenitors is significantly less than for the unmixed cases.
+This results in more mass at high density in the mixed cases, leading to more similar IGE yields.
+The most likely reason for the weaker expansion is the higher central density necessary to ignite carbon burning with the lower central carbon fraction resulting from mixing during cooling \citep{brooksetal2017}.
+The increase in the IGE yield that results from this higher central density is negligible for the C-O case.
+This is consistent with the results of \citet{Kruegeretal2012}, who found that IGE yield is fairly independent of central density.
+The C-O-Ne case, however, appears to act very differently.
+The steepness of the relation between IGE yield and mass at high density is such that the mean IGE yield found here is more than 0.15~M$_\odot$ larger than that found in \citet{willcoxetal2016}.
+This increase closes the gap, making the resulting IGE yields similar.
+
+While the higher central density makes the IGE yields quite similar, the hybrid C-O-Ne WD still produces less $^{56}$Ni than a C-O WD at similar central densitiy.
+In order to understand this we looked more carefully at how the process of electron capture during the explosion proceeds in our simulations.
 
 \begin{figure}
 \includegraphics[width=\columnwidth]{figures/ni56_v_ige.pdf}
@@ -874,9 +889,7 @@ during cooling.
 \end{figure}
 Figure \ref{fig:conversion} shows the estimated \Ni{56} yields
 across the range of masses burned to IGE
-for all C-O and C-O-Ne realizations at the end
-of the simulations ($4.0 \second$),
-at which point the total mass burned to \Ni{56} had become constant.
+for all C-O and C-O-Ne realizations.
 The difference between the two sets of results is more pronounced
 than the difference between hybrid and traditional C/O models
 found by \citet{willcoxetal2016}. This difference follows from
