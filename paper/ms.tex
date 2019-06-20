@@ -358,7 +358,7 @@ rising, Rayleigh-Taylor unstable plume reaches a characteristic low
 density~\citep{townsley.calder.ea:flame}.
 Variations on the choice of this density allowed earlier studies to explore
 the effects of physics influencing the transition
-density~\citep{jacketal2010,Krueger2010On-Variations-o,kruegetal12}.
+density~\citep{jacketal2010,Krueger2010On-Variations-o,Kruegeretal2012}.
 
 %
 %
@@ -690,7 +690,7 @@ deposition.
 \subsection{DDT Process and Suites of Explosions}
 
 The simulations performed for this study consisted of a suite of
-{\color{red} 35 CHECK THIS! 40?} two-dimensional simulations of
+30 two-dimensional simulations of
 thermonuclear supernova
 explosions from hybrid C-O-Ne progenitors in the DDT explosion paradigm. These
 were compared to a suite of supernova simulations from traditional
@@ -711,25 +711,11 @@ effectively ends. The paragraphs in this section provide details
 of the implementation of this method.
 
 
-{\color{red} THE BELOW NUMBERS NEED SORTING OUT!}
-The C-O and C-O-Ne models has the same central temperature
-and density ????
-The C-O models had a central density and
-temperature of $4.62 \times 10^{9}$ $4.27 \times 10^{9}$ ???
-and $7 \times 10^8$~K, respectively.
-The C-O model had core composition of (\C{12} = 0.4,
-\Ne{20} = 0.03, \Ox{16} = 0.57) and envelope composition
-of (\C{12} = 0.5, \Ne{20} = 0.02, \Ox{16} = 0.48).
-The C-O models had a central density and
-temperature of $4.62 \times 10^{9}$
-and $8.07 \times 10^8$~K, respectively.
-The C-O-Ne model had core composition of (\C{12} = 0.X,
-\Ne{20} = 0.XX, \Ox{16} = 0.XX) and envelope composition
-of (\C{12} = 0.XX, \Ne{20} = 0.0X, \Ox{16} = 0.XX).
-The profiles of the two-dimensional models match those of
-the one-dimensional models (shown in \figref{fig:init_conds})
-up to very slight errors from the mapping process. {\color{red}
-OMIT THIS LAST SENTENCE? DONT HAVE A FIGURE}
+The C-O and C-O-Ne models have the same central temperature
+and density, $8.2\times 10^8$~K and $2.2\times 10^9$~g~cm$^{-3}$ respectively.
+The C-O model's composition consisted of \C{12}, \O{16}, and \Ne{22} in mass fractions 0.4, 0.57, and 0.02 respectively in the convective core and 0.5, 0.48, and 0.02 outside the convective core.
+The C-O-Ne model used in flash had composition consisting of \C{12}, \O{16}, \Ne{20}, and \Ne{22}.
+The mass fractions in the central convection zone were 0.14, 0.68, 0.23, and 0.05 respectively, and vary smoothly outside the convectiov zone as shown in Figure~\ref{fig:init_conds}.
 
 The simulations were performed in two-dimensional $\mathrm{z-r}$
 cylindrical coordinates, extending radially from 0 to
@@ -739,19 +725,19 @@ corresponded to $4$~\km\ resolution, which previous study has shown
 is a good balance between efficiency and
 accuracy~\citep{townsley.calder.ea:flame,townetal2009}.
 This resolution and geometry was used in previous studies
-allowing direct comparison to previous results~\citep{kruegetal12}.
+allowing direct comparison to previous results~\citep{Kruegeretal2012}.
 
 The ignition of the deflagration via a match head followed the
-initialization described in~\citet{kruegetal12}, which
+initialization described in~\citet{Kruegeretal2012}, which
 followed the method of~\citet{townetal2009}.
 In both the hybrid and traditional cases, the match head had a
 nominal radius of $150$~km before
 a different randomly-seeded perturbation was applied to the
-match head for each of the 35 simulations in both suites. {\color{red}
-IS THIS RIGHT- BOTH USED THE SAME REALIZATIONS?}
+match head for each of the 30 simulations in both suites,
 The perturbation to the sphere's surface is a set of
 spherical harmonic functions with randomly chosen amplitudes, and
 each set of perturbations is referred to as a ``realization."
+Both suites use the same 30 realizations of the ignition geometry.
 These perturbations have been shown to reproduce
 the scatter in \Ni{56}
 yield from \SNeIa\ \citet{townetal2009}.
@@ -760,11 +746,8 @@ yield from \SNeIa\ \citet{townetal2009}.
 The transition from deflagration to detonation again follows
 the previous studies, which assumed the transition location
 is parameterized by the fuel density $\rho_{\mathrm{DDT}}$.
-When a rising
-plume reaches the threshold density, in this case
-$\rho_{\mathrm{DDT}} = 10^{7.2}~\grampercc$,
-a $12$~\km\ region {\color{blue} [radius or diameter?]} of fuel, (\C{12} and \Ne{20}, if present) is
-fully burned $32$~\km\ radially outwards from the flame. This
+When a rising plume reaches the threshold density, in this case $\rho_{\mathrm{DDT}} = 10^{7.2}~\grampercc$, a $12$~\km\ radius region of fuel, is fully burned $32$~\km\ radially outwards from the flame.
+This
 instantaneous burning in the region of this size provides conditions
 to generate the shock and support the detonation at the chosen
 threshold density.  Multiple DDT points may arise, but they are
