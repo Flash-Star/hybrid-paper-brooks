@@ -36,7 +36,7 @@ ax = plt.subplot(111)
 
 
 #import data
-data = np.genfromtxt("yields_ige_ni56.dat", names=True)
+data = np.genfromtxt("yields_ige_ni56_KE.dat", names=True)
 
 #CO
 a = data['CO_IGE']
