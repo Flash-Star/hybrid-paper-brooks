@@ -137,15 +137,15 @@ plt.ylabel(r'IGE Yield (M$_\odot$)')
 ax1.add_patch(patches.Rectangle((xC/gpermsun, yC), 2*SDCOmass/gpermsun, 2*SDCOIGE, alpha=0.25,edgecolor='r',facecolor='r'))
 ax1.add_patch(patches.Rectangle((xH/gpermsun, yH), 2* SDHYmass/gpermsun, 2* SDHYIGE ,alpha=0.25,edgecolor='b',facecolor='b'))
 
-w16_cone_x = 0.5*(1.057+0.848)
-w16_cone_dx = 0.5*(1.057-0.848)
-w16_cone_y = 0.5*(1.087+0.865)
-w16_cone_dy = 0.5*(1.087-0.865)
+w16_cone_x = 0.9540876248262445
+w16_cone_dx = 0.10675480927655573
+w16_cone_y = 0.9770366094406242
+w16_cone_dy = 0.10747137261307173
 
-w16_co_x = 0.5*(1.062+0.858)
-w16_co_dx = 0.5*(1.062-0.858)
-w16_co_y = 0.5*(1.185+1.05)
-w16_co_dy = 0.5*(1.185-1.05)
+w16_co_x = 0.967452651967802
+w16_co_dx = 0.10484200298926964
+w16_co_y = 1.1193157785209684
+w16_co_dy = 0.06713166534619701
 
 ax1.add_patch(patches.Rectangle((w16_co_x-w16_co_dx,w16_co_y-w16_co_dy), 2*w16_co_dx, 2*w16_co_dy, alpha=0.1, edgecolor='r',facecolor='r', linestyle='--'))
 ax1.add_patch(patches.Rectangle((w16_cone_x-w16_cone_dx,w16_cone_y-w16_cone_dy), 2*w16_cone_dx, 2*w16_cone_dy, alpha=0.1, edgecolor='b',facecolor='b', linestyle='--'))
