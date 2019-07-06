@@ -9,6 +9,9 @@
 \usepackage{amsmath}
 %\usepackage{hyperref}
 
+\setlength{\marginparwidth}{0.5in}
+\newcommand{\MarginPar}[1]{\marginpar{\vskip-\baselineskip\raggedright\tiny\sffamily\hrule\smallskip{\color{red}#1}\par\smallskip\hrule}}
+
 \newcommand{\eqqref}[1]{Equation (\ref{#1})}
 \newcommand{\tabref}[1]{Table~\ref{#1}}
 \newcommand{\figref}[1]{Figure~\ref{#1}}
@@ -497,8 +500,8 @@ transition densities were the same in both suites. We briefly review our methodo
 here, and refer the reader to previous work for additional details.
 In particular, we use the same simulation instrument, a modified version
 of the \FLASH\ Code, as \citet{willcoxetal2016} and we refer the reader there
-for a description of modifications for C-O-Ne burning and verification tests
-of the burning module.
+for a description of modifications for C-O-Ne burning \blust{and verification tests
+of the burning module}. \MarginPar{See below}
 
 \subsection{Simulation Instrument}
 
@@ -608,7 +611,7 @@ the relaxation into NSE~\cite[and references therein]{townetal2016}. Finally,
 we again note that the burning model was adapted for the case of burning in
 hybrid white dwarfs. Direct numerical simulations of burning that guided
 the modifications, details of the modifications to the burning model, and
-verification tests may be found in \citet{willcoxetal2016}.
+\blust{verification tests} may be found in \citet{willcoxetal2016}. \MarginPar{Strictly speaking, that paper did not have quantitative verification tests of the FLASH burning module.}
 
 \subsection{One-dimensional Hybrid Model}
 
