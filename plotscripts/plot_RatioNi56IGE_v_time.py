@@ -39,7 +39,7 @@ data21 = numpy.genfromtxt( '/dmt/caugustine/Hybrid_Research/flash_runs_CO/snia_2
 data22 = numpy.genfromtxt( '/dmt/caugustine/Hybrid_Research/flash_runs_CO/snia_22/CO_WD_4km_cfbrooks_flash_2.dat', unpack=True )
 data23 = numpy.genfromtxt( '/dmt/caugustine/Hybrid_Research/flash_runs_CO/snia_23/CO_WD_4km_cfbrooks_flash_2.dat', unpack=True )
 data24 = numpy.genfromtxt( '/dmt/caugustine/Hybrid_Research/flash_runs_CO/snia_24/CO_WD_4km_cfbrooks_flash_2.dat', unpack=True )
-data25 = numpy.genfromtxt( '/dmt/caugustine/Hybrid_Research/flash_runs_CO/snia_25/CO_WD_4km_cfbrooks_flash_2.dat', unpack=True )
+data25 = numpy.genfromtxt( '/dmt/townsley/mixed_hybrid_wd_snia/finish_runs/snia_25/CO_WD_4km_cfbrooks_flash_2.dat', unpack=True )
 data26 = numpy.genfromtxt( '/dmt/caugustine/Hybrid_Research/flash_runs_CO/snia_26/CO_WD_4km_cfbrooks_flash_2.dat', unpack=True )
 data27 = numpy.genfromtxt( '/dmt/caugustine/Hybrid_Research/flash_runs_CO/snia_27/CO_WD_4km_cfbrooks_flash_2.dat', unpack=True )
 data28 = numpy.genfromtxt( '/dmt/caugustine/Hybrid_Research/flash_runs_CO/snia_28/CO_WD_4km_cfbrooks_flash_2.dat', unpack=True )
@@ -47,10 +47,10 @@ data29 = numpy.genfromtxt( '/dmt/caugustine/Hybrid_Research/flash_runs_CO/snia_2
 data30 = numpy.genfromtxt( '/dmt/caugustine/Hybrid_Research/flash_runs_CO/snia_30/CO_WD_4km_cfbrooks_flash_2.dat', unpack=True )
 
 
-data21HY = numpy.genfromtxt( '/dmt/caugustine/Hybrid_Research/flash_runs/snia_21_hybrid2/profile21_flash_h201.dat', unpack=True )
+data21HY = numpy.genfromtxt( '/dmt/townsley/mixed_hybrid_wd_snia/finish_runs/snia_21_hybrid2/profile21_flash_h201.dat', unpack=True )
 data22HY = numpy.genfromtxt( '/dmt/caugustine/Hybrid_Research/flash_runs/snia_22_hybrid2/profile21_flash_h201.dat', unpack=True )
 data23HY = numpy.genfromtxt( '/dmt/caugustine/Hybrid_Research/flash_runs/snia_23_hybrid2/profile21_flash_h201.dat', unpack=True )
-data24HY = numpy.genfromtxt( '/dmt/caugustine/Hybrid_Research/flash_runs/snia_24_hybrid2/profile21_flash_h201.dat', unpack=True )
+data24HY = numpy.genfromtxt( '/dmt/townsley/mixed_hybrid_wd_snia/finish_runs/snia_24_hybrid2/profile21_flash_h201.dat', unpack=True )
 data25HY = numpy.genfromtxt( '/dmt/caugustine/Hybrid_Research/flash_runs/snia_25_hybrid2/profile21_flash_h201.dat', unpack=True )
 data26HY = numpy.genfromtxt( '/dmt/caugustine/Hybrid_Research/flash_runs/snia_26_hybrid2/profile21_flash_h201.dat', unpack=True )
 data27HY = numpy.genfromtxt( '/dmt/caugustine/Hybrid_Research/flash_runs/snia_27_hybrid2/profile21_flash_h201.dat', unpack=True )

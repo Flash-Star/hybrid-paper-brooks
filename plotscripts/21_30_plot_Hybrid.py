@@ -34,10 +34,10 @@ RED_PURPLE = (0.80,0.60,0.70)
 
 ax = plt.subplot(111)
 
-data21 = numpy.genfromtxt( '/dmt/caugustine/Hybrid_Research/flash_runs/snia_21_hybrid2/profile21_flash_h201.dat', unpack=True )
+data21 = numpy.genfromtxt( '/dmt/townsley/mixed_hybrid_wd_snia/finish_runs/snia_21_hybrid2/profile21_flash_h201.dat', unpack=True )
 data22 = numpy.genfromtxt( '/dmt/caugustine/Hybrid_Research/flash_runs/snia_22_hybrid2/profile21_flash_h201.dat', unpack=True )
 data23 = numpy.genfromtxt( '/dmt/caugustine/Hybrid_Research/flash_runs/snia_23_hybrid2/profile21_flash_h201.dat', unpack=True )
-data24 = numpy.genfromtxt( '/dmt/caugustine/Hybrid_Research/flash_runs/snia_24_hybrid2/profile21_flash_h201.dat', unpack=True )
+data24 = numpy.genfromtxt( '/dmt/townsley/mixed_hybrid_wd_snia/finish_runs/snia_24_hybrid2/profile21_flash_h201.dat', unpack=True )
 data25 = numpy.genfromtxt( '/dmt/caugustine/Hybrid_Research/flash_runs/snia_25_hybrid2/profile21_flash_h201.dat', unpack=True )
 data26 = numpy.genfromtxt( '/dmt/caugustine/Hybrid_Research/flash_runs/snia_26_hybrid2/profile21_flash_h201.dat', unpack=True )
 data27 = numpy.genfromtxt( '/dmt/caugustine/Hybrid_Research/flash_runs/snia_27_hybrid2/profile21_flash_h201.dat', unpack=True )
