@@ -501,8 +501,7 @@ transition densities were the same in both suites. We briefly review our methodo
 here, and refer the reader to previous work for additional details.
 In particular, we use the same simulation instrument, a modified version
 of the \FLASH\ Code, as \citet{willcoxetal2016} and we refer the reader there
-for a description of modifications for C-O-Ne burning \blust{and verification tests
-of the burning module}. \MarginPar{See below}
+for a description of the process and treatment of burning of C--O--Ne fuel and how it differs from C--O fuel.
 
 \subsection{Simulation Instrument}
 
@@ -524,7 +523,7 @@ nuclear flame is $< 1\ensuremath{\;}{\ensuremath{\mathrm{cm}}}$ while the
 radius of the white dwarf $\sim 10^9\ensuremath{\;}{\ensuremath{\mathrm{cm}}}$.
 Even with adaptive mesh refinement, whole-star simulations cannot
 simultaneously resolve the nuclear flame, so simulations require a model to
-describe the burning on unresovable scales.  The model we apply is a flame
+describe the burning on unresolved scales.  The model we apply is a flame
 capturing scheme and thermally-activated burning module to describe
 thermonuclear burning during both the deflagration and detonation phases,
 as well as routines to describe the evolution of the dynamic ash.
@@ -591,13 +590,13 @@ elements by fusion, maintaining the equilibrium. The relative balance depends on
 thermodynamic conditions, e.g.\ density and temperature, and hydrodynamic motion
 during the explosion changes the thermodynamic conditions and thus the
 balance.
-{\color{blue} Electron capture also influences the evolution in several ways by
+Electron capture also influences the evolution in several ways by
 neutronizing the material, which produces more neutron rich iron-group
 material at the expense of \Ni{56}. Neutronization also shifts the binding
 energy of the material and the Fermi energy of electrons, respectively
 changing the temperature (due to released energy) and the pressure.
 Finally, individual electron capture reactions emit neutrinos that
-escape and remove energy from the system.}
+escape and remove energy from the system.
 Like the input flame speed, the burning model includes tabulated rates for these effects
 from detailed NSE calculations ~\citep{SeitTownetal09}. Accordingly, the burning
 model is able to describe dynamic evolution of the ash in addition to the
@@ -610,9 +609,8 @@ trigger burning, i.e.\ to propagate a detonation front. The propagating detonati
 is able to describe the same stages of C burning as the deflagration case, including
 the relaxation into NSE~\cite[and references therein]{townetal2016}. Finally,
 we again note that the burning model was adapted for the case of burning in
-hybrid white dwarfs. Direct numerical simulations of burning that guided
-the modifications, details of the modifications to the burning model, and
-\blust{verification tests} may be found in \citet{willcoxetal2016}. \MarginPar{Strictly speaking, that paper did not have quantitative verification tests of the FLASH burning module.}
+hybrid white dwarfs.
+Direct numerical simulations of combustion dynamics and details of how the burning model is used to capture them may be found in \citet{willcoxetal2016}.
 
 \subsection{One-dimensional Hybrid Model}
 
@@ -621,7 +619,7 @@ for the simulations of supernova explosions presented in this work
 was constructed with the one-dimensional stellar evolution code
 MESA~\citep{mesa1,mesa2,mesa3,mesa3e}. The evolution of the model
 included thermohalene mixing during the cooling phase and thus
-had a lower C fraction than previous hybrid models~\citep{brooksetal2017}.
+had a lower central C fraction than previous hybrid models~\citep{brooksetal2017}.
 The hybrid model was constructed to have conditions as similar a possible
 to a ``classic'' C-O model and the two shared the same central temperature
 and density.  Figure~\ref{fig:init_conds} shows the density and temperature
@@ -629,12 +627,12 @@ profiles of the two initial one-dimensional models.
 \begin{figure}
 \includegraphics[width=\columnwidth]{figures/initial_conds.png}
 \caption{\label{fig:init_conds}
-{\color{blue} Radial} temperature, density, and  composition profiles of the one-dimensional hybrid
+Radial temperature, density, and  composition profiles of the one-dimensional hybrid
 progenitor WD. The central temperature and density were the same as
 the traditional C-O progenitor model.
 The peak temperature of the hybrid model is at the center of the star,
-so both the hybrid and {\color{blue} C-O}  models could share the same
-	central ignition initial conditions {\color{blue} in our simulations}.
+so both the hybrid and C--O models could share the same central ignition initial conditions in our simulations.
+{\color{red} TODO: make figure style consistent with other figures.}
 }
 \end{figure}
 We centrally ignite our explosion simulations for both C-O and hybrid
@@ -659,8 +657,8 @@ techniques of~\citet{willcoxetal2016}.
 
 The process of mapping the \MESA\ models began by converting
 the \MESA\ model to a uniform grid of $4$~km resolution.
-{\color{blue}To do this, \MESA\ quantities were mass-weighted and averaged in zones with spacing less than $4$~km
-and quadratically interpolated in zones with spacing greater than $4$~km.}
+To do this, \MESA\ quantities were mass-weighted and averaged in zones with spacing less than $4$~km
+and interpolated in zones with spacing greater than $4$~km.
 At this point,
 abundances of nuclides from the \MESA\ models were aggregated
 into the abundances tracked by the flame capturing scheme in
@@ -721,7 +719,7 @@ The C-O model's composition consisted of \C{12}, \Ox{16}, and \Ne{22} in mass fr
 The C-O-Ne model used in \FLASH\ had composition consisting of \C{12}, \Ox{16}, \Ne{20}, and \Ne{22}.
 The mass fractions in the central convection zone were 0.14, 0.68, 0.23, and 0.05 respectively, and vary smoothly outside the convection zone as shown in Figure~\ref{fig:init_conds}.
 
-The simulations were performed in two-dimensional $\mathrm{z-r}$
+The simulations were performed in two-dimensional $r$-$z$
 cylindrical coordinates, extending radially from 0 to
 $65,536$~\km\ and along the axis of symmetry from $-65,536$~\km\ to
 $65,536$~\km. The maximum refinement level of the adaptive mesh
@@ -761,7 +759,7 @@ the robust ignition of a detonation shock.
 
 Once the detonation starts, the remaining fuel at densities
 high enough for the detonation to propagate is quickly consumed.
-The simulations were run to 4.0 s, at which time burning
+The simulations were run to 4.0 s, by which time burning
 has effectively ceased.
 
 
