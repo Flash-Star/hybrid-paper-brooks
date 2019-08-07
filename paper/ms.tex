@@ -1,5 +1,4 @@
-%\documentclass[12pt,preprint]{aastex}
-\documentclass[iop,apj]{emulateapj}
+\documentclass[preprint2]{aastex63}
 %\usepackage{multirow}
 \usepackage{longtable}
 \usepackage{ulem}
@@ -121,39 +120,53 @@
 % editing
 \newcommand\blust{\bgroup\markoverwith{\textcolor{blue}{\rule[0.5ex]{2pt}{0.4pt}}}\ULon}
 
+\received{June 1, 2019}
+\revised{January 10, 2019}
+\accepted{\today}
+
+\submitjournal{ApJ}
+
 \bibliographystyle{apj}
 
 \shorttitle{Hybrid Ia Progenitors}
+\shortauthors{Augustine et al.}
 
 \begin{document}
 
 \title{Type Ia Supernova Explosions from Hybrid Carbon-Oxygen-Neon White
 Dwarf Progenitors That Have Mixed During Cooling}
 
-\author{
-Carlyn N.\ Augustine\altaffilmark{1},
-Donald E.\ Willcox\altaffilmark{2},
-Dean M.\ Townsley\altaffilmark{1},
-and Alan C.\ Calder\altaffilmark{3,4}
-}
+\correspondingauthor{Alan Calder}
+\email{alan.calder@stonybrook.edu}
 
-\altaffiltext{1}{
-  Department of Physics and Astronomy,
-  The University of Alabama, Tuscaloosa, AL, 35487-0324, USA
-}
-\altaffiltext{2}{
-  Center for Computational Sciences and Engineering,
-  Lawrence Berkeley National Lab, Berkeley, CA 94720, USA; \\
-  \href{mailto:dewillcox@lbl.gov}{dewillcox@lbl.gov}
-}
-\altaffiltext{3}{
-  Department of Physics and Astronomy,
-  Stony Brook University, Stony Brook, NY, 11794-3800, USA
-}
-\altaffiltext{4}{
-  Institute for Advanced Computational Sciences,
-  Stony Brook University, Stony Brook, NY, 11794-5250, USA
-}
+
+\author[0000-0002-9741-5987]{Carlyn N. Augustine}
+\affiliation{
+  Department of Physics and Astronomy \\
+  The University of Alabama \\ 
+  Tuscaloosa, AL, 35487-0324, USA}
+
+\author[0000-0003-2300-5165]{Donald E Willcox}
+\affiliation{
+  Center for Computational Sciences and Engineering \\
+  Lawrence Berkeley National Lab \\
+  Berkeley, CA 94720, USA}
+
+\author[0000-0002-9538-5948]{Dean M. Townsley}
+\affiliation{
+  Department of Physics and Astronomy \\
+  The University of Alabama \\ 
+  Tuscaloosa, AL, 35487-0324, USA}
+
+\author[0000-0001-5525-089X]{Alan C. Calder}
+\affiliation{
+  Department of Physics and Astronomy \\
+  Stony Brook University \\
+  Stony Brook, NY, 11794-3800, USA}
+\affiliation{
+  Institute for Advanced Computational Sciences \\
+  Stony Brook University \\
+  Stony Brook, NY, 11794-5250, USA}
 
 \begin{abstract}
 The creation of ``hybrid" white dwarfs, made of a C-O
@@ -181,8 +194,8 @@ group yield, the mixed case does not and produces a smaller fraction of iron gro
 We attribute this to the higher central density required for ignition and the location, center or off-center, of deflagration ignition.
 \end{abstract}
 
-\keywords{hydrodynamics --- nuclear reactions, nucleosynthesis, abundances
---- supernovae: general --- white dwarfs}
+\keywords{Hydrodynamics, Nuclear abundances, Nucleosynthesis,
+Type Ia supernovae, White dwarf stars}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
@@ -622,8 +635,8 @@ had a lower central C fraction than previous hybrid
 models~\citep{brooksetal2017}. We selected the 1.09 \Msun WD model 
 with the 0.4 \Msun C/O core from \citep{brooksetal2017}.
 In order to grow this WD towards the Chandrasekhar mass, it was inserted into 
-a binary with a 1.4 \Msun He star donor in a 3 hour orbital period, similar to 
-the simulations in \citep{brooksetal2016},
+a binary with a 1.4 \Msun He star donor having a 3 hour orbital period, similar to 
+the simulations in \citet{brooksetal2016},
 and the system was
 allowed to evolve.  The WD grows, experiences central carbon ignition and 
 simmering, and then is stopped when its central temperature reaches 
@@ -647,6 +660,7 @@ The peak temperature of the hybrid model is at the center of the star,
 so both the hybrid and C-O models could share the same central ignition initial conditions in our simulations.
 }
 \end{figure}
+While the C-O-Ne progenitor is the result of an evolutionary calculation, the C-O progenitor is a parameterized construction, as reflected in the simplified outer thermal structure appearing in Figure~\ref{fig:init_conds}.
 We centrally ignite our explosion simulations for both C-O and hybrid
 models to coincide with the peak temperature at the center of the WDs,
 unlike the hybrid models of~\citet{willcoxetal2016}.
@@ -1074,5 +1088,6 @@ University.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \bibliography{master}
 
+%ms.bbl file here for non-bibtex submit
 
 \end{document}
