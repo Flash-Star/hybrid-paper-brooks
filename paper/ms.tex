@@ -293,7 +293,7 @@ which may explain some bright events~\citep{scalzo:2010,Yuan:2010}.
 An early concern about this model came from studies finding that
 the as the stars merge, the more massive white dwarf can ignite near
 its edge and a flame will burn inward, converting the C-O white dwarf into
-an O-Ne-Mg white dwarf~\citep{saionomoto1985,saionomoto2004}.  Further accretion
+an O-Ne-Mg white dwarf~\citep{saionomoto1985,saionomoto2004,Shenetal12}. Further accretion
 leads to the collapse of the white dwarf
 into a neutron star, a scenario termed ``accretion-induced collapse''
 \citep{nomotokondo1991}.
@@ -302,7 +302,7 @@ Subsequent work allayed this concern by demonstrating
 that a low accretion rate from the disrupted secondary, $ < 3 \times 
 10^{-6}$ \Msun per year, did not heat the primary enough for ignition
 \citep{kawai1987,saionomoto2004,yoonetal2007,lorenaguilaretal2009, 
-Shenetal12, pakmoretal2012b}
+pakmoretal2012b}
 and active research continues, motivated by the need to explain bright events
 and the estimated population of WD pairs. Contemporary
 research focuses on variations on the merger idea, including inspiraling pairs,
@@ -422,14 +422,15 @@ in the core. The situation is at best uncertain, however, and the
 results depend on assumptions about convective
 overshoot that have been questioned~\citep{chenetal2014,lecoanetetal16,lattanzioetal2017}.
 
-
-A hybrid WD can then become a progenitor of a thermonuclear supernova.
-The hybrid could be part of a binary system in which the companion star becomes
-another white dwarf and the two merge. Recent population synthesis work supports
-this pathway by indicating a substantial contribution to the Ia population rate from
-mergers where one member is a hybrid~\citep{yungelsonkuranov2017}. If, on the other hand, the hybrid
-WD is part of a binary with a main sequence or giant companion, it can gain mass and
-approach the Chandrasekhar mass, i.e.\  the single degenerate picture~\citep{willcoxetal2016}.
+{\color{blue}
+These hybrid WDs are relevant to the supernova problem because 
+they can become the progenitors thermonuclear supernovae
+if they are part of a binary system. If the companion star becomes
+another WD, the two can merge and produce an explosion.
+If, on the other hand, the hybrid WD has a main sequence 
+or giant companion, it can gain mass and approach the Chandrasekhar mass, i.e.\  
+the single degenerate picture~\citep{willcoxetal2016}.
+}
 
 In any case, the hybrid WD will experience a period of cooling,
 which will reduce the stabilizing temperature gradient (the O-Ne layer is initially hotter 
@@ -619,7 +620,18 @@ for the simulations of supernova explosions presented in this work
 was constructed with the one-dimensional stellar evolution code
 MESA~\citep{mesa1,mesa2,mesa3,mesa3e}. The evolution of the model
 included thermohalene mixing during the cooling phase and thus
-had a lower central C fraction than previous hybrid models~\citep{brooksetal2017}.
+had a lower central C fraction than previous hybrid 
+models~\citep{brooksetal2017}. We selected the 1.09 \Msun WD model 
+with the 0.4 \Msun C/O core from \citep{brooksetal2017}.
+{\color{blue}
+In order to grow this WD towards the Chandrasekhar mass, it was inserted into 
+a binary with a 1.4 \Msun He star donor in a 3 hour orbital period, similar to 
+the simulations in \citep{brooksetal2016},
+and the system was
+allowed to evolve.  The WD grows, experiences central carbon ignition and 
+simmering, and then is stopped when its central temperature reaches 
+$\log T_{\rm c}(\Kelvin) = 8.9$.}
+
 The hybrid model was constructed to have conditions as similar a possible
 to a ``classic'' C-O model and the two shared the same central temperature
 and density.  Figure~\ref{fig:init_conds} shows the density and temperature
@@ -1036,9 +1048,11 @@ Support also came from the Data + Computing = Discovery summer program at
 the Institute for Advanced Computational Science at Stony Brook University.
 The software used in this work was developed in part by the DOE-supported
 ASC/Alliances Center for Astrophysical Thermonuclear Flashes at the
-University of Chicago.
+University of Chicago. {\color{blue} The authors gratefully thank Josiah 
+Schwab for comments on the manuscript and Jared Brooks for providing
+the hybrid progenitor models used in this study.}
 The source code used for
-these studies is available as a package compatible with the
+this study is available as a package compatible with the
 current \FLASH\ code from \url{http://astronomy.ua.edu/townsley/code.}
 Results in this
 paper were obtained using the high-performance computing system at the
