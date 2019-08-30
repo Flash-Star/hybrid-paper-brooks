@@ -22,6 +22,13 @@ Reviewer's Comments:
 > text. Some of these points are of methodological character, while others
 > are more general.
 
+
+We thank the referee for reading out manuscript and offering very
+constructive criticism and suggestion. We are in almost complete agreement
+with the referee and have modified the manuscript accordingly. We address
+our changes for each point below. As a result of our revisions, we believe 
+the manuscript is stronger and we hope it is now ready for publication.
+
 > *Methodology*
 
 > - It is not clear to me if the input deflagration speed (pg 7) has been
@@ -29,9 +36,26 @@ Reviewer's Comments:
 > core. Willcox et al (2016) just reports recomputing detonations, but there
 > is no mention of deflagrations (at least I have not been able to find it).
 
+We regret no explaining the methodology of our deflagration speeds. The 
+answer is that the deflagration speeds for input to the flame model are 
+from tabulated results. Laminar flame speeds are first 
+obtained by interpolation within a
+three-dimensional table of 12C, 22Ne, and log density obtained from
+prior direct numerical simulations. These laminar flame speed are
+then boosted to account for the effects of unresolved buoyancy
+and background turbulence and passed to the flame model. We have
+updated the text of the manuscript to explain the flame speeds.
+
 > - Why is the MESA calculation stopped and mapped to FLASH just when
 > the central temperature reaches log Tc = 8.9? What is the criterion for
 > choosing such a temperature? Does it depend on composition?
+
+Again, we did not explain our methodology well. This temperature is
+high enough to ignite the deflagration that leads to the explosion.
+Yes, it is a (somewhat mildly) a funciton of composition, but at
+this temperature these models have very little evolution left before 
+the flame would be born even with differing composition. We have
+udated the text to better explain this issue. 
 
 > - Why was the C+O model constructed with the same central temperature and
 > density as the mixed hybrid model? Would it be more appropriate to follow

@@ -578,10 +578,14 @@ $\epsilon \simeq 10^{-3}$.  This scheme has been shown to be
 acoustically quiet, stable, and to give a unique flame speed
 \citep{townsley.calder.ea:flame}. The input flame speeds come from
 tabulated results obtained by direct numerical simulations of
-thermonuclear burning~\citep{timmes92,Chamulak2007The-Laminar-Fla},
-and
-these are boosted to account for speed-up of burning due to unresolved
-buoyancy and background turbulence~\citep{Khok95,
+thermonuclear burning.
+{\color{blue}
+The flame speeds are obtained via linear interpolation within a 
+three-dimensional table that combines the results of \citet{timmes92} 
+and \citet{Chametal08}, and the dimensions of the table are \C{12} 
+mass fraction, \Ne{22} mass fraction and log of density.}
+These laminar flame speeds are boosted to account for the speed-up 
+of burning due to unresolved buoyancy and background turbulence~\citep{Khok95,
 gamezo.khokhlov.ea:thermonuclear,townsley.calder.ea:flame,jacketal2014}.
 
 The two-dimensional models in this study do not utilize a sub-grid-scale
@@ -648,7 +652,9 @@ the simulations in \citet{brooksetal2016},
 and the system was
 allowed to evolve.  The WD grows, experiences central carbon ignition and 
 simmering, and then is stopped when its central temperature reaches 
-$\log T_{\rm c}(\Kelvin) = 8.9$.
+$\log T_{\rm c}(\Kelvin) = 8.9$, {\color{blue} at which point the 
+temperature is high enough to ignite the deflagration that is the first
+stage of the explosion.}
 
 Following the approach of \citet{willcoxetal2016}, we constructed a
 corresponding ``classic'' C-O model to allow comparison of explosion
