@@ -1,0 +1,80 @@
+
+
+----------------------------------------------------------------------
+Reviewer's Comments:
+
+> This paper focuses on the outcome of thermonuclear explosions of near
+> Chandrasekhar mass white dwarfs coming from the narrow range of IMS that
+> produce hybrid C+O+Ne cores. The purpose of the work is to determine
+> the differences between the thermonuclear explosion of mixed vs unmixed
+> hybrid cores, motivated by the recent finding that the cores undergo a
+> phase of convective mixing that destroys the differentiated structure
+> made of a C+O nut surrounded by O+Ne layers. The approach consists on
+> running the MESA code along the pre-explosive phase, followed by two
+> dimensional hydro simulations of the explosion. There are also calculated
+> the explosion of pure C+O white dwarfs starting from identical central
+> density and temperature as the C+O+Ne mixed white dwarfs. The conclusions
+> are that the mixed structures lead to lower yields of 56Ni as compared
+> to the pure C+O case as well as to the unmixed hybrid cores.
+
+> The paper is timely and interesting, and it merits publication in ApJ
+> after some points are addressed, and the answers be reflected in the
+> text. Some of these points are of methodological character, while others
+> are more general.
+
+> *Methodology*
+
+> - It is not clear to me if the input deflagration speed (pg 7) has been
+> recalibrated to the particular initial composition of the mixed hybrid
+> core. Willcox et al (2016) just reports recomputing detonations, but there
+> is no mention of deflagrations (at least I have not been able to find it).
+
+> - Why is the MESA calculation stopped and mapped to FLASH just when
+> the central temperature reaches log Tc = 8.9? What is the criterion for
+> choosing such a temperature? Does it depend on composition?
+
+> - Why was the C+O model constructed with the same central temperature and
+> density as the mixed hybrid model? Would it be more appropriate to follow
+> a C+O white dwarf with MESA until some runaway condition was accomplished?
+
+> - Related to the last point above: it is not clear how was assigned the
+> composition profile to the C+O model. In particular, why is the abundance
+> of 22Ne in the C+O model smaller than that in the hybrid mixed model? Does
+> it has an impact on the final yield of 56Ni?
+
+> - Why were the models calculated in this paper ignited at the center,
+> unlike the models in Willcox et al (2016)? Note that you invoke the
+> off-center ignition as one of the causes of the differing results, but you
+> do not provide a justification of the different ignition configuration.
+
+> - In the first paragraph of section 3, it is argued that the yield of 56Ni
+> was approximated by assuming the composition upon NSE freeze-out is 56Ni
+> plus equal parts 54Fe and 58Ni. However, in many models of supernova Ia
+> there is a large abundance of 56Ni in the layers that do not go beyond
+> QNSE. Have you corrected for this effect somehow?
+
+> *General*
+
+> - Which is the role played by the hybrid progenitors in the global plot of
+> supernovae type Ia? Since the lower limit of the 56Ni mass distribution
+> is 0.6 solar masses, does it mean that hybrid progenitors lead to
+> normal-to-bright supernovae while C+O progenitors represent the brighter
+> end of this kind of supernovae? Does it imply a dominant contribution
+> of double degenerate channel for the normal supernovae Ia? Most readers
+> would thank a brief discussion of these and related issues.
+
+> - Please, provide the values of the carbon abundance at the center and
+> the mean of it in the white dwarf, in the initial model as well as in
+> the final model of the MESA calculation.
+
+> - Subsections 1.1 and 1.2 are more typical of a review than a regular
+> paper, and are not at all necessary to understand what follows. They
+> should be shortened to one or two medium length paragraphs. By the way,
+> the reference Nomoto et al (1984) does not match the description of the
+> flame that precedes it.
+
+> - Figures 3, 6, and 7 are not quite informative, and the same applies
+> to the short mention of them in the text. The authors should consider
+> removing them.
+
+
