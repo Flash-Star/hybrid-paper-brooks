@@ -583,7 +583,11 @@ thermonuclear burning.
 The flame speeds are obtained via linear interpolation within a 
 three-dimensional table that combines the results of \citet{timmes92} 
 and \citet{Chametal08}, and the dimensions of the table are \C{12} 
-mass fraction, \Ne{22} mass fraction and log of density.}
+mass fraction, \Ne{22} mass fraction and log of density. While the
+WD contains additional species, we have shown that treating the
+abundance of \Ne{22} as a proxy for neutron-rich elements captures the
+speed-up of laminar flames due to neutronization and thus reasonably 
+produces variations in flame speed due to composition~\cite{jacketal2010}.}
 These laminar flame speeds are boosted to account for the speed-up 
 of burning due to unresolved buoyancy and background turbulence~\citep{Khok95,
 gamezo.khokhlov.ea:thermonuclear,townsley.calder.ea:flame,jacketal2014}.
@@ -653,8 +657,8 @@ and the system was
 allowed to evolve.  The WD grows, experiences central carbon ignition and 
 simmering, and then is stopped when its central temperature reaches 
 $\log T_{\rm c}(\Kelvin) = 8.9$, {\color{blue} at which point the 
-temperature is high enough to ignite the deflagration that is the first
-stage of the explosion.}
+temperature is just about high enough to ignite the deflagration that is 
+the first stage of the explosion.}
 
 Following the approach of \citet{willcoxetal2016}, we constructed a
 corresponding ``classic'' C-O model to allow comparison of explosion
@@ -732,11 +736,24 @@ seconds with no energy deposition.
 \subsection{DDT Process and Suites of Explosions}
 
 The simulations performed for this study consisted of a suite of
-30 two-dimensional simulations of
-thermonuclear supernova
-explosions from hybrid C-O-Ne progenitors in the DDT explosion paradigm. These
-were compared to a suite of supernova simulations from traditional
-C-O progenitors. In both suites, the simulation
+30 two-dimensional simulations of thermonuclear supernova explosions 
+from hybrid C-O-Ne progenitors in the DDT explosion paradigm. These
+were compared to a suite of supernova simulations from traditional C-O 
+progenitors. {\color{blue} The C-O progenitors are parameterized and 
+include the effects of convective ``simmering" in the core as the WD 
+approaches the Chandrasekhar mass~\citep{Chametal08,PiroBild08,jacketal2010}.
+Using parameterized C-O models allowed us to choose conditions, e.g.
+central density, to control differences between the hybrid and traditional 
+models and thus assess the effect of the hybrid structure.
+}
+
+The C-O and C-O-Ne models have the same central temperature
+and density, $8.2\times 10^8$~K and $2.2\times 10^9$~g~cm$^{-3}$ respectively.
+The C-O model's composition consisted of \C{12}, \Ox{16}, and \Ne{22} in mass fractions 0.4, 0.57, and 0.02 respectively in the convective core and 0.5, 0.48, and 0.02 outside the convective core.
+The C-O-Ne model used in \FLASH\ had composition consisting of \C{12}, \Ox{16}, \Ne{20}, and \Ne{22}.
+The mass fractions in the central convection zone were 0.14, 0.68, 0.23, and 0.05 respectively, and vary smoothly outside the convection zone as shown in Figure~\ref{fig:init_conds}.
+
+In both suites, the simulation
 begins with a progenitor model mapped to the two-dimensional
 \FLASH\ grid. The burning is initiated with a ``match head,'' a region
 in the white dwarf's center that is fully burned to nuclear statistical
@@ -752,12 +769,6 @@ the expanding star reaches low densities at which point burning
 effectively ends. This section provide details
 of the implementation of this method.
 
-
-The C-O and C-O-Ne models have the same central temperature
-and density, $8.2\times 10^8$~K and $2.2\times 10^9$~g~cm$^{-3}$ respectively.
-The C-O model's composition consisted of \C{12}, \Ox{16}, and \Ne{22} in mass fractions 0.4, 0.57, and 0.02 respectively in the convective core and 0.5, 0.48, and 0.02 outside the convective core.
-The C-O-Ne model used in \FLASH\ had composition consisting of \C{12}, \Ox{16}, \Ne{20}, and \Ne{22}.
-The mass fractions in the central convection zone were 0.14, 0.68, 0.23, and 0.05 respectively, and vary smoothly outside the convection zone as shown in Figure~\ref{fig:init_conds}.
 
 The simulations were performed in two-dimensional $r$-$z$
 cylindrical coordinates, extending radially from 0 to

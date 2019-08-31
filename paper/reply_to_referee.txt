@@ -41,21 +41,36 @@ answer is that the deflagration speeds for input to the flame model are
 from tabulated results. Laminar flame speeds are first 
 obtained by interpolation within a
 three-dimensional table of 12C, 22Ne, and log density obtained from
-prior direct numerical simulations. These laminar flame speed are
+prior direct numerical simulations. Here 22Ne is uses as a proxy for
+for neutron-rich elements so the interpolated laminar flame speeds capture
+the boost due to neutronization. These laminar flame speed are
 then boosted to account for the effects of unresolved buoyancy
 and background turbulence and passed to the flame model. We have
-updated the text of the manuscript to explain the flame speeds.
+updated the text of the manuscript to explain the flame speeds
+and included a citation to earlier work describing the tabulated
+flame speeds in detail.
+[NOTE: CHECK THIS. The models include 20Ne. Does the above
+description properly account for that? As I recall, nothing new
+was done to the tables for the hybrid Willcox et al. models.]
+
+Also, the detonation tests in Willcox et al. were tests of the
+energy release of the flame model and not flame speed tests. The 
+model identical amounts of energy for both deflagrations and 
+detonations in identical material, so detonation simulations were
+a simple check of the modifications we made to the model to
+include 20Ne in the mix.
 
 > - Why is the MESA calculation stopped and mapped to FLASH just when
 > the central temperature reaches log Tc = 8.9? What is the criterion for
 > choosing such a temperature? Does it depend on composition?
 
 Again, we did not explain our methodology well. This temperature is
-high enough to ignite the deflagration that leads to the explosion.
-Yes, it is a (somewhat mildly) a funciton of composition, but at
-this temperature these models have very little evolution left before 
-the flame would be born even with differing composition. We have
-udated the text to better explain this issue. 
+very close to that required to ignite the deflagration of the
+first phase of the explosion, so the progenitor is in a ready 
+for ignition state. Yes, it is a (somewhat mildly) a function of 
+composition, but at this temperature these models have very little 
+evolution left before the flame would be born even with differing 
+composition. We have updated the text to better explain this issue. 
 
 > - Why was the C+O model constructed with the same central temperature and
 > density as the mixed hybrid model? Would it be more appropriate to follow
@@ -65,6 +80,30 @@ udated the text to better explain this issue.
 > composition profile to the C+O model. In particular, why is the abundance
 > of 22Ne in the C+O model smaller than that in the hybrid mixed model? Does
 > it has an impact on the final yield of 56Ni?
+
+
+The referee raises an interesting point about how one might perform
+these parameter studies. Indeed, a more realistic C/O progenitor as
+would be produced by MESA would be "state of the art." The parameterized
+C/O models we chose are motivated by results from stellar evolution and,
+in particular, have compositions that reflect the effect of ``simmering", 
+that is slow convective burning, in the late stages of evolution as the
+WD approaches the Chandrasekhar limit. This effect is observed as
+the lower C fraction interior to about r =1.2e8 cm (the solid curve
+in the bottom panel of Figure 1). Accordingly, while parameterized, 
+the structure of C/O progenitor does reflect our current understanding 
+of the state just prior to ignition. 
+
+For this study we decided to use these parameterized C-O models because
+being able to construct them to match the central density and 
+temperature of the hybrid models allowed us to better control the 
+differences between the hybrid and traditional models. More realistic
+C-O models would not match the conditions of the hybrid models, and
+as we have shown in previous work, differences in density can have
+a substantial effect on the yields. 
+ 
+We have added text to the manuscript and slightly re-arranged the 
+description to better explain the motivation for our choice.
 
 > - Why were the models calculated in this paper ignited at the center,
 > unlike the models in Willcox et al (2016)? Note that you invoke the
