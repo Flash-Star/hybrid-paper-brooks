@@ -110,6 +110,12 @@ description to better explain the motivation for our choice.
 > off-center ignition as one of the causes of the differing results, but you
 > do not provide a justification of the different ignition configuration.
 
+Something else we could have better explained. The hybrid models in Willcox
+et al have a very different structure with the highest temperature, where
+ignition of the deflagration is expected, at a radius of about 300 km. 
+The profiles are illustrated in Figures 2 and 9 of Willcox et al. Yet 
+another thing we have made clear in the revised manuscript.
+
 > - In the first paragraph of section 3, it is argued that the yield of 56Ni
 > was approximated by assuming the composition upon NSE freeze-out is 56Ni
 > plus equal parts 54Fe and 58Ni. However, in many models of supernova Ia
