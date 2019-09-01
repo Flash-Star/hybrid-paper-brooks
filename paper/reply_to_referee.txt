@@ -122,6 +122,16 @@ another thing we have made clear in the revised manuscript.
 > there is a large abundance of 56Ni in the layers that do not go beyond
 > QNSE. Have you corrected for this effect somehow?
 
+[Hmmm. I think this is not right. What to say?] 
+The estimate of 56Ni yield does follow from assuming the NSE mix is
+composed of 56Ni plus equal parts 54Fe and 58Ni, and this approach is
+how all 56Ni in the simulation is calculated. 56Ni in (outer) layers
+that did not go beyond QNSE would have been synthesized by fusion 
+going to the Fe-group and then mixed. As such, the estimate we use 
+should be robust. We have added a sentence with citations and an
+additional citation to previous work verifying this approach in a variety 
+of scenaros to the paragraph.
+
 > *General*
 
 > - Which is the role played by the hybrid progenitors in the global plot of
@@ -132,9 +142,16 @@ another thing we have made clear in the revised manuscript.
 > of double degenerate channel for the normal supernovae Ia? Most readers
 > would thank a brief discussion of these and related issues.
 
+These are the questions that we are exploring with this and related work,
+and we regret not make these clear in the introductory material. We
+have added text addressing exactly these issues. 
+
 > - Please, provide the values of the carbon abundance at the center and
 > the mean of it in the white dwarf, in the initial model as well as in
 > the final model of the MESA calculation.
+
+TO BE DONE
+
 
 > - Subsections 1.1 and 1.2 are more typical of a review than a regular
 > paper, and are not at all necessary to understand what follows. They
@@ -145,5 +162,14 @@ another thing we have made clear in the revised manuscript.
 > - Figures 3, 6, and 7 are not quite informative, and the same applies
 > to the short mention of them in the text. The authors should consider
 > removing them.
+
+We appreciate the referee's point. The figures show the evolution of quantites 
+like 56Ni abundance with time and are similar to some of the figures showing 
+abundance evolution in Willcox et al. Because they allow the reader to both 
+visualize the scatter in the yields and also the character of the burning 
+(such as the DDT), we feel they are useful and would like to keep them. Also,
+they are similar to figures in Willcox et al, which allows comparison
+to results from another class of hybrid progenitors. We agree with the referee 
+that the discussion was scant and have improved that.
 
 

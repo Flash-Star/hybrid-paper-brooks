@@ -505,6 +505,24 @@ We will compare to the work of \citet{willcoxetal2016} extensively below.
 They did not allow for the mixing of the WD during cooling, before ignition of carbon burning.
 Here we utilize progenitors in which mixing during cooling has been modeled appropriately \citep{brooksetal2017}.
 
+{\color{blue} 
+Discerning the role played by hybrid progenitors in the global gamut of
+thermonuclear is the goal of the study we present in this paper. We calculate
+the yields of \Ni{56} in simulaitons of thermonuclear supernovae. Because
+the radioactive decay of \Ni{56} powers the light curve of an event, 
+the yield of \Ni{56} serves as a proxy for the event and allows us to
+discern trends in brightness. Our study thus can offer theoretical 
+insight into what events might be explained by explosions from these
+progenitors as well as the overall scatter in the brightness
+of observed events.
+
+Our simulational methododolgy is described in the next section and 
+our results, a comparison of nucleosynthetic explosion yields between these
+new mixed hybrid C-O-Ne progenitors and traditional C-O progenitors
+in the section following the methodology. Our results show systematic
+differences in the yield of \Ni{56} between explosions from the two
+types of progenitors, which we quantify and disuss.
+}
 
 \section{Methodology}
 \label{sec:method}
@@ -547,7 +565,7 @@ thermonuclear burning during both the deflagration and detonation phases,
 as well as routines to describe the evolution of the dynamic ash.
 This description of the burning was developed during the course of research in
 thermonuclear supernovae and has been presented in a series of
-papers \citep[See][and references therein]{chandlery}. For completeness,
+papers \citep[See][and references therein]{townetal2016,chandlery}. For completeness,
 we briefly review the flame capturing scheme here.
 
 For the deflagration phase, the flame capturing scheme propagates an
@@ -825,10 +843,15 @@ principally in terms of the yield of \Ni{56}, the energy source of
 the light curve of an event. \Ni{56} thus serves as a proxy
 for the brightness of an explosion and comparison of the yields
 is equivalent to comparing the brightness of events. The
-yields were estimated from $Y_e$ and the NSE progress
-variable, by assuming the composition upon NSE freeze-out is \Ni{56} plus equal
+yields were estimated from $Y_e$ and the NSE progress variable, by 
+assuming the composition upon NSE freeze-out is \Ni{56} plus equal
 parts \Fe{54} and \Ni{58} \citep{townetal2009,Meaketal09}.
-This assumption allows the fraction of IGEs in the form of \Ni{56} to be estimated from the $Y_e$ tracked by the burning model.
+This assumption allows the fraction of IGEs in the form of \Ni{56} to be 
+estimated from the $Y_e$ tracked by the burning model. 
+{\color{blue}
+This process has been shown to provide estimated \Ni{56} yields consistent with
+the results of detailed network and NSE calculations~\cite{caldertownsley2018}.
+}
 
 \begin{figure}
 \includegraphics[width=\columnwidth]{figures/cum_dis_Ni56.pdf}
@@ -847,8 +870,8 @@ The figure shows that the hybrid models consistently have a higher
 cumulative fraction at a given mass of \Ni{56}, which indicates
 that the yields of \Ni{56} are consistently lower in explosions
 from hybrid progenitors of the same central density.
-This contrast is in a similar direction but not as large as the difference between C-O and C-O-Ne progenitors seen in \citep{willcoxetal2016}.
-{\color{red} CHECK FORMAT OF WILLCOX CITATION}
+This contrast is in a similar direction but not as large as the difference 
+between C-O and C-O-Ne progenitors seen in \citet{willcoxetal2016}.
 
 \begin{table}
 \caption{\label{tab:ave_yields}Average Yields and Kinetic Energies}
@@ -867,16 +890,17 @@ C--O--Ne & $0.89\pm0.10$ & $1.15\pm0.11$ & $1.21\pm0.07$ \\
 \begin{figure}
 \includegraphics[width=\columnwidth]{figures/Hybrid_Ni56mass_v_time_plot.pdf}
 \includegraphics[width=\columnwidth]{figures/CO_Ni56mass_v_time_plot.pdf}
-\caption{\label{fig:nithybrid} \label{fig:nitco}
+	\caption{\label{fig:nithybrid} \label{fig:nitco}
 Evolution of expected \Ni{56} yield in time for ten hybrid C-O-Ne WD (top panel) and ten C-O WD (bottom panel) explosion simulations.
 Shown are realizations 21-30.
 }
 \end{figure}
 
-The expected final production of \Ni{56}, after NSE freeze-out, as a function of simulation time
+The production of \Ni{56}, after NSE freeze-out, as a function of simulation time
 for 10 simulations of explosions from each progenitor is shown in Figure \ref{fig:nithybrid}.
-On average, the C-O model reaches the DDT phase sooner then the
-hybrid model.
+{\color{blue} The sharp increase in the yield occuring after approximately 1.0 second indicates
+the transiton to the detonation phase with its significantly faster burning. The curves
+indicate that on average, the C-O models reach the DDT sooner then the hybrid model.}
 
 \begin{figure}
 \includegraphics[width=\columnwidth]{figures/ige_v_mass_at_high_dens.pdf}
@@ -969,7 +993,9 @@ This motivates a closer inspection of how the \Ni{56}/IGE ratio evolves during t
 \includegraphics[width=\columnwidth]{figures/RatioNi56IGE_v_time_plot.pdf}
 \caption{\label{fig:compare_ratio}
 Expected ratio of \Ni{56} to total IGE production by mass vs.\ time showing the evolution
-for both suites of simulations. Results from C-O-Ne progenitors are in blue and C-O progenitors in red.
+for both suites of simulations. 
+{\color{red} Shown are realizations 21-30.}
+Results from C-O-Ne progenitors are in blue and C-O progenitors in red.
 %SAME AS DON'S FIGURE 19
 }
 \end{figure}
@@ -983,9 +1009,14 @@ in blue and C-O progenitors red.
 }
 \end{figure}
 
-The fraction, by mass, of IGE material expected to be in the form of \Ni{56} after freeze-out is shown in Figure \ref{fig:compare_ratio} as it evolves in time.
-Also shown in Figure~\ref{fig:compare_burned} is the concurrent evolution of mass burned to IGE for both suites.
+{\color{blue} 
+The evolution of the fraction, by mass, of IGE material expected to be in the form of \Ni{56} after 
+freeze-out is shown in Figure \ref{fig:compare_ratio}. 
+Also shown in 
+%Figure~\ref{fig:compare_burned} 
+is the concurrent evolution of mass burned to IGE for both suites.
 The total IGE has a mostly similar evolution, but the ratio demonstrates important differences between C-O and C-O-Ne cases.
+}
 
 During the deflagration phase, the C-O models
 on average burn slightly more material to IGE and also had a significantly higher
