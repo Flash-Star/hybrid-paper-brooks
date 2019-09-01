@@ -159,6 +159,8 @@ TO BE DONE
 > the reference Nomoto et al (1984) does not match the description of the
 > flame that precedes it.
 
+We have substantially shortened the sections.
+
 > - Figures 3, 6, and 7 are not quite informative, and the same applies
 > to the short mention of them in the text. The authors should consider
 > removing them.
