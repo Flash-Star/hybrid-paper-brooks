@@ -23,8 +23,8 @@ Reviewer's Comments:
 > are more general.
 
 
-We thank the referee for reading out manuscript and offering very
-constructive criticism and suggestion. We are in almost complete agreement
+We thank the referee for reading our manuscript and offering very
+constructive criticism and suggestions. We are in almost complete agreement
 with the referee and have modified the manuscript accordingly. We address
 our changes for each point below. As a result of our revisions, we believe 
 the manuscript is stronger and we hope it is now ready for publication.
@@ -81,7 +81,6 @@ composition. We have updated the text to better explain this issue.
 > of 22Ne in the C+O model smaller than that in the hybrid mixed model? Does
 > it has an impact on the final yield of 56Ni?
 
-
 The referee raises an interesting point about how one might perform
 these parameter studies. Indeed, a more realistic C/O progenitor as
 would be produced by MESA would be "state of the art." The parameterized
@@ -122,7 +121,8 @@ another thing we have made clear in the revised manuscript.
 > there is a large abundance of 56Ni in the layers that do not go beyond
 > QNSE. Have you corrected for this effect somehow?
 
-[Hmmm. I think this is not right. What to say?] 
+[AC: Hmmm. I think this is not right. What to say?] 
+
 The estimate of 56Ni yield does follow from assuming the NSE mix is
 composed of 56Ni plus equal parts 54Fe and 58Ni, and this approach is
 how all 56Ni in the simulation is calculated. 56Ni in (outer) layers
@@ -150,8 +150,15 @@ have added text addressing exactly these issues.
 > the mean of it in the white dwarf, in the initial model as well as in
 > the final model of the MESA calculation.
 
-TO BE DONE
-
+The central carbon abundance in the MESA model is 0.1419 and the initial
+model for Flash is constructed to have the same central carbon abundance.
+The central carbon abundance in the C-O model is 0.4. We have added these
+numbers to the manuscript. The mean values of C abundances were not
+calculated with the models. We could integrate the models
+to obtain a mass-weighted average, but we are not sure of the utility
+of this quantity as our results show that the yields are a sensitive
+function of the density. We prefer to just state the central C abundances
+and present the profiles as we did in Figure 1 and hope this is acceptable.
 
 > - Subsections 1.1 and 1.2 are more typical of a review than a regular
 > paper, and are not at all necessary to understand what follows. They
@@ -159,7 +166,8 @@ TO BE DONE
 > the reference Nomoto et al (1984) does not match the description of the
 > flame that precedes it.
 
-We have substantially shortened the sections.
+We have substantially shortened the sections, including removing the
+Nomoto (1984) reference.
 
 > - Figures 3, 6, and 7 are not quite informative, and the same applies
 > to the short mention of them in the text. The authors should consider
@@ -174,4 +182,10 @@ they are similar to figures in Willcox et al, which allows comparison
 to results from another class of hybrid progenitors. We agree with the referee 
 that the discussion was scant and have improved that.
 
+[AC: CHECK RED TEXT IN THE CAPTION OF FIG. 6 and similar text in the description]
+
+
+In summar. we have taken the referee's criticism and suggestions and revised 
+the manuscript accordingly. The result is a greatly improved version we trust 
+is ready for publication.
 
