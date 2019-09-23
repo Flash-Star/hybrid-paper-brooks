@@ -54,9 +54,16 @@ flame speeds in detail.
 description properly account for that? As I recall, nothing new
 was done to the tables for the hybrid Willcox et al. models.]
 
+[rephrasing the question- does 20Ne count as fuel for both
+the energy release and the flame speed from the table? Don seems 
+to recall that we had the energy release of burning 20Ne in the 
+detonation tests, which says it was included for the energy 
+release. But do we just consider 12C + 12C buring for the
+flame speed?]
+
 Also, the detonation tests in Willcox et al. were tests of the
 energy release of the flame model and not flame speed tests. The 
-model identical amounts of energy for both deflagrations and 
+model releases identical amounts of energy for both deflagrations and 
 detonations in identical material, so detonation simulations were
 a simple check of the modifications we made to the model to
 include 20Ne in the mix.
