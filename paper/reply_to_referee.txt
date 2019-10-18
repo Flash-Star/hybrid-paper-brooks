@@ -43,7 +43,8 @@ obtained by interpolation within a
 three-dimensional table of 12C, 22Ne, and log density obtained from
 prior direct numerical simulations. Here 22Ne is uses as a proxy for
 for neutron-rich elements so the interpolated laminar flame speeds capture
-the boost due to neutronization. These laminar flame speed are
+the boost due to neutronization. We use the same tables that were
+used in Willcox et al. and previous work. These laminar flame speed are
 then boosted to account for the effects of unresolved buoyancy
 and background turbulence and passed to the flame model. We have
 updated the text of section 2.1 to explain the flame speeds
