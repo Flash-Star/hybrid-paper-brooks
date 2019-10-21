@@ -22,12 +22,13 @@ Reviewer's Comments:
 > text. Some of these points are of methodological character, while others
 > are more general.
 
-
-We thank the referee for reading our manuscript and offering very
-constructive criticism and suggestions. We are in almost complete agreement
-with the referee and have modified the manuscript accordingly. We address
-our changes for each point below. As a result of our revisions, we believe 
-the manuscript is stronger and we hope it is now ready for publication.
+We thank the referee for reading our manuscript and offering
+very constructive criticism and suggestions. We are in almost
+complete agreement with the referee and have modified the manuscript
+accordingly. We address our changes for each point below, and the changes
+we made to the manuscript are in blue in the revised version. As a result
+of our revisions, we believe the manuscript is stronger and we hope it
+is now ready for publication.
 
 > *Methodology*
 
@@ -36,51 +37,36 @@ the manuscript is stronger and we hope it is now ready for publication.
 > core. Willcox et al (2016) just reports recomputing detonations, but there
 > is no mention of deflagrations (at least I have not been able to find it).
 
-We regret not explaining the methodology of our deflagration speeds. The 
-answer is that the deflagration speeds for input to the flame model are 
-from tabulated results. Laminar flame speeds are first 
-obtained by interpolation within a
-three-dimensional table of 12C, 22Ne, and log density obtained from
-prior direct numerical simulations. Here 22Ne is uses as a proxy for
-for neutron-rich elements so the interpolated laminar flame speeds capture
-the boost due to neutronization. We use the same tables that were
-used in Willcox et al. and previous work. These laminar flame speed are
-then boosted to account for the effects of unresolved buoyancy
-and background turbulence and passed to the flame model. We have
-updated the text of section 2.1 to explain the flame speeds
-and included a citation to earlier work describing the tabulated
-flame speeds in detail.
+We regret not explaining the methodology of our deflagration speeds. The
+answer is that the deflagration speeds for input to the flame model
+are from tabulated results. Laminar flame speeds are first obtained by
+interpolation within a three-dimensional table of 12C, 22Ne, and log
+density obtained from prior direct numerical simulations. Here 22Ne is
+uses as a proxy for for neutron-rich elements so the interpolated laminar
+flame speeds capture the boost due to neutronization. We use the same
+tables that were used in Willcox et al. and previous work. These laminar
+flame speed are then boosted to account for the effects of unresolved
+buoyancy and background turbulence and passed to the flame model. We have
+updated the text of section 2.1 to explain the flame speeds and included a
+citation to earlier work describing the tabulated flame speeds in detail.
 
-[AC NOTE: CHECK THE ABOVE. The models include 20Ne. Does the above
-description properly account for that? As I recall, nothing new
-was done to the tables for the hybrid Willcox et al. models.]
-
-[rephrasing the question- does 20Ne count as fuel for both
-the energy release and the flame speed from the table? Don seems 
-to recall that we had the energy release of burning 20Ne in the 
-detonation tests, which says it was included for the energy 
-release. But do we just consider 12C + 12C burning for the
-flame speed?]
-
-Also, the detonation tests in Willcox et al. were tests of the
-energy release of the flame model and not flame speed tests. The 
-model releases identical amounts of energy for both deflagrations and 
-detonations in identical material, so detonation simulations were
-a simple check of the modifications we made to the model to
-include 20Ne in the mix.
+Also, the detonation tests in Willcox et al. were tests of the energy
+release of the flame model and not flame speed tests. The model releases
+identical amounts of energy for both deflagrations and detonations in
+identical material, so detonation simulations were a simple check of
+the modifications we made to the model to include 20Ne in the mix.
 
 > - Why is the MESA calculation stopped and mapped to FLASH just when
 > the central temperature reaches log Tc = 8.9? What is the criterion for
 > choosing such a temperature? Does it depend on composition?
 
 Again, we did not explain our methodology well. This temperature is
-very close to that required to ignite the deflagration of the
-first phase of the explosion, so the progenitor is in a ready 
-for ignition state. Yes, it is a (somewhat mildly) a function of 
-composition, but at this temperature these models have very little 
-evolution left before the flame would be born even with differing 
-composition. We have updated the text (Section 2.2) to better explain 
-this issue. 
+very close to that required to ignite the deflagration of the first
+phase of the explosion, so the progenitor is in a ready for ignition
+state. Yes, it is a (somewhat mildly) a function of composition, but
+at this temperature these models have very little evolution left before
+the flame would be born even with differing composition. We have updated
+the text (Section 2.2) to better explain this issue.
 
 > - Why was the C+O model constructed with the same central temperature and
 > density as the mixed hybrid model? Would it be more appropriate to follow
@@ -92,27 +78,27 @@ this issue.
 > it has an impact on the final yield of 56Ni?
 
 The referee raises an interesting point about how one might perform
-these parameter studies. Indeed, a more realistic C/O progenitor as
-would be produced by MESA would be "state of the art." The parameterized
-C/O models we chose are motivated by results from stellar evolution and,
-in particular, have compositions that reflect the effect of ``simmering", 
-that is slow convective burning, in the late stages of evolution as the
-WD approaches the Chandrasekhar limit. This effect is observed as
+these parameter studies. Indeed, a more realistic C/O progenitor as would
+be produced by MESA would be "state of the art." The parameterized C/O
+models we chose are motivated by results from stellar evolution and, in
+particular, have compositions that reflect the effect of ``simmering",
+that is slow convective burning, in the late stages of evolution as
+the WD approaches the Chandrasekhar limit. This effect is observed as
 the lower C fraction interior to about r =1.2e8 cm (the solid curve
-in the bottom panel of Figure 1). Accordingly, while parameterized, 
-the structure of C/O progenitor does reflect our current understanding 
+in the bottom panel of Figure 1). Accordingly, while parameterized,
+the structure of C/O progenitor does reflect our current understanding
 of the state just prior to ignition. 
 
 For this study we decided to use these parameterized C-O models because
-being able to construct them to match the central density and 
-temperature of the hybrid models allowed us to better control the 
-differences between the hybrid and traditional models. More realistic
-C-O models would not match the conditions of the hybrid models, and
-as we have shown in previous work, differences in density can have
-a substantial effect on the yields. 
- 
-We have added text to sections 2.2 and 2.4 of the manuscript and 
-slightly re-arranged the description to better explain the motivation 
+being able to construct them to match the central density and temperature
+of the hybrid models allowed us to better control the differences
+between the hybrid and traditional models. More realistic C-O models
+would not match the conditions of the hybrid models, and as we have
+shown in previous work, differences in density can have a substantial
+effect on the yields.
+
+We have added text to sections 2.2 and 2.4 of the manuscript and
+slightly re-arranged the description to better explain the motivation
 for our choice.
 
 > - Why were the models calculated in this paper ignited at the center,
@@ -120,12 +106,12 @@ for our choice.
 > off-center ignition as one of the causes of the differing results, but you
 > do not provide a justification of the different ignition configuration.
 
-Something else we could have better explained. The hybrid models in Willcox
-et al have a very different structure with the highest temperature, where
-ignition of the deflagration is expected, at a radius of about 300 km. 
-The profiles are illustrated in Figures 2 and 9 of Willcox et al. Yet 
-another thing we have made clear in the revised manuscript. In this
-case, we added text to section 2.4.
+Something else we could have better explained. The hybrid models
+in Willcox et al have a very different structure with the highest
+temperature, where ignition of the deflagration is expected, at a radius
+of about 300 km.  The profiles are illustrated in Figures 2 and 9 of
+Willcox et al. Yet another thing we have made clear in the revised
+manuscript. In this case, we added text to section 2.4.
 
 > - In the first paragraph of section 3, it is argued that the yield of 56Ni
 > was approximated by assuming the composition upon NSE freeze-out is 56Ni
@@ -133,17 +119,14 @@ case, we added text to section 2.4.
 > there is a large abundance of 56Ni in the layers that do not go beyond
 > QNSE. Have you corrected for this effect somehow?
 
-[AC: Hmmm. I think this is not right. What to say?] 
-
 The estimate of 56Ni yield does follow from assuming the NSE mix is
 composed of 56Ni plus equal parts 54Fe and 58Ni, and this approach is
 how all 56Ni in the simulation is calculated. 56Ni in (outer) layers
-that did not go beyond QNSE would have been synthesized by fusion 
-going to the Fe-group and then mixed. As such, the estimate we use 
-should be robust. We have added a sentence to this paragraph of 
-section 3 with citations and an additional citation to previous 
-work verifying this approach in a variety of scenarios to the 
-paragraph.
+that did not go beyond QNSE would have been synthesized by fusion going
+to the Fe-group and then mixed. As such, the estimate we use should be
+robust. We have added a sentence to this paragraph of section 3 with
+citations and an additional citation to previous work verifying this
+approach in a variety of scenarios to the paragraph.
 
 > *General*
 
@@ -156,8 +139,8 @@ paragraph.
 > would thank a brief discussion of these and related issues.
 
 These are the questions that we are exploring with this and related work,
-and we regret not make these clear in the introductory material. We
-have added text at the end of section 1.3 addressing exactly these issues. 
+and we regret not make these clear in the introductory material. We have
+added text at the end of section 1.3 addressing exactly these issues.
 
 > - Please, provide the values of the carbon abundance at the center and
 > the mean of it in the white dwarf, in the initial model as well as in
@@ -165,13 +148,13 @@ have added text at the end of section 1.3 addressing exactly these issues.
 
 The central carbon abundance in the MESA model is 0.1419 and the initial
 model for Flash is constructed to have the same central carbon abundance.
-The central carbon abundance in the C-O model is 0.4. We have added these
-numbers to the manuscript. The mean values of C abundances were not
-calculated with the models. We could integrate the models
-to obtain a mass-weighted average, but we are not sure of the utility
-of this quantity as our results show that the yields are a sensitive
-function of the density. We prefer to just state the central C abundances
-and present the profiles as we did in Figure 1 and hope this is acceptable.
+The central carbon abundance in the C-O model is 0.4. We have added
+these numbers to the manuscript. The mean values of C abundances were
+not calculated with the models. We could integrate the models to obtain
+a mass-weighted average, but we are not sure of the utility of this
+quantity as our results show that the yields are a sensitive function
+of the density. We prefer to just state the central C abundances and
+present the profiles as we did in Figure 1 and hope this is acceptable.
 
 > - Subsections 1.1 and 1.2 are more typical of a review than a regular
 > paper, and are not at all necessary to understand what follows. They
@@ -180,27 +163,25 @@ and present the profiles as we did in Figure 1 and hope this is acceptable.
 > flame that precedes it.
 
 We have substantially shortened the sections, including removing the
-Nomoto (1984) reference (good catch!). We modified both sections
-with an emphasis on just the points important to our analysis (e.g. 
-the duration of the deflagration phase and expansion).
+Nomoto (1984) reference (good catch!). We modified both sections with an
+emphasis on just the points important to our analysis (e.g.  the duration
+of the deflagration phase and expansion).
 
 > - Figures 3, 6, and 7 are not quite informative, and the same applies
 > to the short mention of them in the text. The authors should consider
 > removing them.
 
-We appreciate the referee's point. The figures show the evolution of quantities 
-like 56Ni abundance with time and are similar to some of the figures showing 
-abundance evolution in Willcox et al. Because they allow the reader to both 
-visualize the scatter in the yields and also the character of the burning 
-(such as the DDT), we feel they are useful and would like to keep them. Also,
-they are similar to figures in Willcox et al, which allows comparison
-to results from another class of hybrid progenitors. We agree with the referee 
-that the discussion was scant and have improved that.
+We appreciate the referee's point. The figures show the evolution of
+quantities like 56Ni abundance with time and are similar to some of
+the figures showing abundance evolution in Willcox et al. Because they
+allow the reader to both visualize the scatter in the yields and also the
+character of the burning (such as the DDT), we feel they are useful and
+would like to keep them. Also, they are similar to figures in Willcox
+et al, which allows comparison to results from another class of hybrid
+progenitors. We agree with the referee that the discussion was scant
+and have improved that.
 
-[AC: CHECK RED TEXT IN THE CAPTION OF FIG. 6 and similar text in the description]
-
-
-In summary. we have taken the referee's criticism and suggestions and revised 
-the manuscript accordingly. The result is a significantly improved version we trust 
-is ready for publication.
+In summary. we have taken the referee's criticism and suggestions and
+revised the manuscript accordingly. The result is a significantly improved
+version we trust is ready for publication.
 
