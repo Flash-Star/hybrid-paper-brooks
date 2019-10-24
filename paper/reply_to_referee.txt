@@ -93,6 +93,12 @@ in the bottom panel of Figure 1). Accordingly, while parameterized,
 the structure of C/O progenitor does reflect our current understanding
 of the state just prior to ignition. 
 
+Also, earlier studies (Jackson et al. 2010) indicated that the allowing
+the metallicity to dictate a change in the DDT threshold density gave
+a substantial change in the final 56Ni yield. We did not consider this
+effect of metallicity by restricting the comparison here to one DDT
+threshold density.
+
 For this study we decided to use these parameterized C-O models because
 being able to construct them to match the central density and temperature
 of the hybrid models allowed us to better control the differences
