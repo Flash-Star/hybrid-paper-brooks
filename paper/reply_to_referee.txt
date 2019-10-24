@@ -50,11 +50,15 @@ buoyancy and background turbulence and passed to the flame model. We have
 updated the text of section 2.1 to explain the flame speeds and included a
 citation to earlier work describing the tabulated flame speeds in detail.
 
-Also, the detonation tests in Willcox et al. were tests of the energy
-release of the flame model and not flame speed tests. The model releases
-identical amounts of energy for both deflagrations and detonations in
-identical material, so detonation simulations were a simple check of
-the modifications we made to the model to include 20Ne in the mix.
+Also, the detonation tests in Willcox et al. were tests that the
+addition of 20Ne did not alter the four-stage structure assumed by
+the flame model. The ZND detonations indicated that the burning still
+proceeds through four main stages of burning distinguished by "steps"
+in the density/pressure profiles behind the ZND shock corresponding to
+mass fraction crossing times for fuel->ash, ash->NSQE, NSQE->NSE. This
+justified the minimal modification to the burning in FLASH where
+we included 20Ne in the initial composition and included its energy
+generation assuming 20Ne burns to 24Mg.
 
 > - Why is the MESA calculation stopped and mapped to FLASH just when
 > the central temperature reaches log Tc = 8.9? What is the criterion for
