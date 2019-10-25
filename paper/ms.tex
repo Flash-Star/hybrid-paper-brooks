@@ -260,7 +260,7 @@ are those in which the burning begins as a subsonic deflagration
 during which the star expands that is then followed by supersonic 
 detonation~\citep{Khokhlov1991Delayed-detonat,HoefKhok96,GameKhokOran05,
 hillebrandtetal2013,calderetal2013}. We simulate thermonuclear explosion 
-properties assuming this scenario and our describe  methodology in 
+properties assuming this scenario and describe our methodology in
 detail below.
 
 The double detonation picture also has a white dwarf gaining mass from 
@@ -270,7 +270,7 @@ another detonation in the underlying white dwarf \citep{woosleyweavertaam80,taam
 nomoto80,nomoto82b}. Early studies indicated that this scenario could work 
 for a wide range of white dwarf masses, not just the near-Chandrasekhar case 
 \citep{livne90}, hence the moniker ``sub-Chandrasekhar'' also applied to this 
-scenario \citep{ww94}. The mass of accretted He 
+scenario \citep{ww94}. The mass of accreted He
 is a concern because heavier
 elements synthesized in the He detonation will appear in
 the outer ejecta, which does not match observations~\citep{HoefKhok96,
@@ -326,7 +326,7 @@ the amount of expansion of the star prior to the bulk of burning,
 which is critical to the composition of material synthesized in the 
 explosion. Also, early burning during the deflagration phase is at 
 high enough densities that the effects of electron capture are 
-significant and similarly influence the composition the material 
+significant and similarly influence the composition of the material
 synthesized in the explosion~\citep{hoeflichetal2004,
 hoeflich2006,fesenetal2007,diamondetal2018}.
 }
@@ -348,7 +348,7 @@ results depend on assumptions about convective
 overshoot that have been questioned~\citep{chenetal2014,lecoanetetal16,lattanzioetal2017}.
 
 These hybrid WDs are relevant to the supernova problem because 
-they can become the progenitors thermonuclear supernovae
+they can become the progenitors of thermonuclear supernovae
 if they are part of a binary system. If the companion star becomes
 another WD, the two can merge and produce an explosion.
 If, on the other hand, the hybrid WD has a main sequence 
@@ -413,7 +413,7 @@ Here we utilize progenitors in which mixing during cooling has been modeled appr
 
 {\color{blue} 
 Discerning the role played by hybrid progenitors in the global gamut of
-thermonuclear is the goal of the study we present in this paper. Our simulations
+thermonuclear supernovae is the goal of the study we present in this paper. Our simulations
 provide the yields of \Ni{56} in the supernova explosions. Because
 the radioactive decay of \Ni{56} powers the light curve of an event, 
 the yield of \Ni{56} serves as a proxy for brightness of the event so
@@ -422,8 +422,8 @@ can offer insight into the relative brightness of explosions from these
 progenitors as well as the overall scatter in the brightness
 of observed events.
 
-Our simulational methodology is described in the next section and 
-our results, a comparison of nucleosynthetic explosion yields between these
+Our simulation methodology is described in the next section and
+our results include a comparison of nucleosynthetic explosion yields between these
 new mixed hybrid C-O-Ne progenitors and traditional C-O progenitors
 in the section following the methodology. Our results show systematic
 differences in the yield of \Ni{56} between explosions from the two
@@ -442,7 +442,7 @@ the deflagration to detonation transition explosion paradigm, and the
 transition densities were the same in both suites. We briefly review our methodology
 here, and refer the reader to previous work for additional details.
 In particular, we use the same simulation instrument, a modified version
-of the \FLASH\ Code, as \citet{willcoxetal2016} and we refer the reader there
+of the \FLASH\ code, as \citet{willcoxetal2016} and we refer the reader there
 for a description of the process and treatment of burning of C--O--Ne fuel and how it differs from C--O fuel.
 
 \subsection{Simulation Instrument}
@@ -512,6 +512,12 @@ WD contains additional species, we have shown that treating the
 abundance of \Ne{22} as a proxy for neutron-rich elements captures the
 speed-up of laminar flames due to neutronization and thus reasonably 
 produces variations in flame speed due to composition~\citep{jacketal2010}.}
+{\color{blue} Using these tables, which were made for mixtures without $^{20}$Ne,
+effectively assumes that the substitution of $^{20}$Ne for $^{16}$O will not
+change the flame speeds significantly.  We consider this a reasonable
+approximation given that, in the interior of our star, $^{16}$O is still much
+more abundant than $^{20}$Ne, and that the flame propagation is largely
+dominated by turbulent effects.}
 These laminar flame speeds are boosted to account for the speed-up 
 of burning due to unresolved buoyancy and background turbulence~\citep{Khok95,
 gamezo.khokhlov.ea:thermonuclear,townsley.calder.ea:flame,jacketal2014}.
@@ -560,7 +566,7 @@ is able to describe the same stages of C burning as the deflagration case, inclu
 the relaxation into NSE~\cite[and references therein]{townetal2016}. Finally,
 we again note that the burning model was adapted for the case of burning in
 hybrid white dwarfs.
-Direct numerical simulations of combustion dynamics and details of how the burning model is used to capture them may be found in \citet{willcoxetal2016}.
+{\color{blue} Parameter studies of detonations in C-O-Ne material and details of how the burning model is used to capture C-O-Ne burning may be found in \citet{willcoxetal2016}.}
 
 \subsection{One-dimensional Hybrid Model}
 
@@ -609,7 +615,12 @@ The peak temperature of the hybrid model is at the center of the star,
 so both the hybrid and C-O models could share the same central ignition initial conditions in our simulations.
 }
 \end{figure}
-While the C-O-Ne progenitor is the result of an evolutionary calculation, the C-O progenitor is a parameterized construction, as reflected in the simplified outer thermal structure appearing in Figure~\ref{fig:init_conds}.
+{\color{blue} While the C-O-Ne progenitor is the result of an evolutionary calculation,
+the C-O progenitor is constructed by integrating the equation of hydrostatic equilibrium
+using the Helmholtz stellar equation of state of \citet{timmes.swesty:accuracy} starting
+from the central density and temperature of the C-O-Ne WD model.
+This parameterized construction is reflected in the simplified
+outer thermal structure for the C-O WD model appearing in Figure~\ref{fig:init_conds}.}
 We centrally ignite our explosion simulations for both C-O and hybrid
 models to coincide with the peak temperature at the center of the WDs,
 unlike the hybrid models of~\citet{willcoxetal2016}.
@@ -672,6 +683,11 @@ approaches the Chandrasekhar mass~\citep{Chametal08,PiroBild08,jacketal2010}.
 Using parameterized C-O models allowed us to choose conditions, e.g.\
 central density, to control differences between the hybrid and traditional 
 models and thus assess the effect of the hybrid structure.
+The central density at ignition depends on both the carbon abundance 
+and the binary history, mainly cooling time before accretion 
+\citep{Kruegeretal2012}, and so this comparison does not correspond 
+to a comparable binary scenario, but is intended as a more 
+straightforward comparison.
 }
 
 The C-O and C-O-Ne models have the same central temperature
@@ -905,7 +921,7 @@ This motivates a closer inspection of how the \Ni{56}/IGE ratio evolves during t
 \caption{\label{fig:compare_ratio}
 Expected ratio of \Ni{56} to total IGE production by mass vs.\ time showing the evolution
 for both suites of simulations. 
-{\color{red} Shown are realizations 21-30.}
+{\color{blue} Shown are realizations 21-30.}
 Results from C-O-Ne progenitors are in blue and C-O progenitors in red.
 %SAME AS DON'S FIGURE 19
 }
@@ -923,7 +939,7 @@ in blue and C-O progenitors red.
 {\color{blue} 
 The evolution of the fraction, by mass, of IGE material expected to be in the form of \Ni{56} after 
 freeze-out is shown in Figure \ref{fig:compare_ratio}. The figure presents the results from the
-same realizations as in Figure \ref{fig:nithybrid} The ratios for the yields of 
+same realizations as in Figure \ref{fig:nithybrid}. The ratios for the yields of 
 explosions from hybrid progenitors are consistently lower than the ratios of yields from
 traditional progenitors.
 Figure~\ref{fig:compare_burned} shows the 
