@@ -1,0 +1,37 @@
+
+The ORCID iDs are correct.
+
+Q1. MESA is Modules for Experiments in Stellar Astrophysics. FLASH is not an acronym, that is the name of the code. 
+
+Q2. WD is "white dwarf." We should have just written that. 
+
+Q3. EOS is "equation of state." CASTRO is a name and not an acronym.
+
+Q4. The "10.5281/zenodo.44579" is not supplementary data. It is part of the DOI for the Matplotlib software we used in making the plots in the manuscript. ZENODO is a digital archive that allows developers to make software available as a way of enabling open, repeatable science. Someone could download the exact version of the software we used from there, but the link is really an identifier. To our knowledge, there is not an associated reference. 
+
+Q5. Marked in the annotated PDF.
+
+Q6. Yes, that reference was repeated. Good catch!
+
+Q7. The Harkness and Wheeler reference is in "Supernovae" edited by Albert Petschek. The publisher is Springer-Verlag New York. Here's a link: https://www.springer.com/gp/book/9781461279518
+
+Q7 and Q9.  The Woosley et al. 1980 reference was from a proceedings that I *think* was self-published. I have only a copy of that chapter and there is no bibliographic information. The ADS link for the reference is
+https://ui.adsabs.harvard.edu/abs/1980tsup.work...96W/abstract
+
+and the ADS link for the proceedings is
+https://ui.adsabs.harvard.edu/abs/1980tsup.work.....W/abstract
+
+I hope that does it!
+
+Q8. The reference is 
+Paxton, B., Bildsten, L., Dotter, A., Herwig, F., Lesaffre, P., & Timmes, F. 2011, ApJS, 192, 3
+http://adsabs.harvard.edu/abs/2011ApJS..192....3P
+
+
+
+In addition, a sentence in the acknowledgments was mangled (our fault). The sentence currently reads 
+"The authors gratefully thank Josiah Schwab for discussion of the study and comments on the manuscript, this would not have been possible without their kind help."
+
+Please delete the last part of the sentence and make it
+"The authors gratefully thank Josiah Schwab for discussion of the
+study and comments on the manuscript."
