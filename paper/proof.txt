@@ -3,7 +3,7 @@ The ORCID iDs are correct.
 
 Q1. MESA is Modules for Experiments in Stellar Astrophysics. FLASH is not an acronym, that is the name of the code. 
 
-Q2. WD is "white dwarf." We should have just written that. 
+Q2. WD is "white dwarf." Maybe it should just be "white dwarf" in the abstract and then the acronym defined when it is first used in the main text? 
 
 Q3. EOS is "equation of state." CASTRO is a name and not an acronym.
 
