@@ -15,17 +15,17 @@ Q6. Yes, that reference was repeated. Good catch!
 
 Q7. The Harkness and Wheeler reference is in "Supernovae" edited by Albert Petschek. The publisher is Springer-Verlag New York. Here's a link: https://www.springer.com/gp/book/9781461279518
 
-Q7 and Q9.  The Woosley et al. 1980 reference was from a proceedings that I *think* was self-published. I have only a copy of that chapter and there is no bibliographic information. The ADS link for the reference is
+Q8. The reference is 
+Paxton, B., Bildsten, L., Dotter, A., Herwig, F., Lesaffre, P., & Timmes, F. 2011, ApJS, 192, 3
+http://adsabs.harvard.edu/abs/2011ApJS..192....3P
+
+Q9. The Woosley et al. 1980 reference was from a proceedings that I *think* was self-published. I have only a hard copy of that chapter and there is no bibliographic information. The ADS link for the reference is
 https://ui.adsabs.harvard.edu/abs/1980tsup.work...96W/abstract
 
 and the ADS link for the proceedings is
 https://ui.adsabs.harvard.edu/abs/1980tsup.work.....W/abstract
 
 I hope that does it!
-
-Q8. The reference is 
-Paxton, B., Bildsten, L., Dotter, A., Herwig, F., Lesaffre, P., & Timmes, F. 2011, ApJS, 192, 3
-http://adsabs.harvard.edu/abs/2011ApJS..192....3P
 
 
 
