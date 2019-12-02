@@ -29,7 +29,7 @@ I hope that does it!
 
 
 
-In addition, a sentence in the acknowledgments was mangled (our fault). The sentence currently reads 
+A sentence in the acknowledgments was mangled (our fault). The sentence currently reads 
 "The authors gratefully thank Josiah Schwab for discussion of the study and comments on the manuscript, this would not have been possible without their kind help."
 
 Please delete the last part of the sentence and make it
